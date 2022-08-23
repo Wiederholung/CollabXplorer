@@ -79,10 +79,12 @@ if __name__ == '__main__':
                          '@dev.metattri.com:27017')
     db = client.bupt
 
-    # 需要指定中心作者的id、name_ch、name_en中的一个
     # TODO: 目前finalJson['categories']为空
     # TODO: 需要将finalJson写入JSON文件
+    # 需要指定中心作者的id、name_ch、name_en中的一个，以下三种方式皆可
     finalJson = get_data(name_ch="丰雷")  # 演示：假设中心作者为“丰雷”老师
+    # finalJson = get_data(id="101")
+    # finalJson = get_data(name_en="Lei_Feng_0001")
 
     print(finalJson['nodes'])
     print(len(finalJson['nodes']))
