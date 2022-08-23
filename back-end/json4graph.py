@@ -1,15 +1,5 @@
 from pymongo import MongoClient
 
-client = MongoClient('mongodb://rwAll:ARS 5111-rwAll'
-                     '@dev.metattri.com:27017')
-
-db = client.bupt
-finalJson = {'nodes': [], 'links': [], 'categories': []}
-nodes = ['id', 'name', 'symbolSize', 'x', 'y', 'value', 'category', 'type']
-links = ['source', 'target', 'value']
-# TODO: categories是什么？
-categories = ['name']
-
 
 # 获取作者信息，只接受单一参数
 def get_auth_info(id, name_ch, name_en, category):
@@ -37,18 +27,23 @@ def get_auth_info(id, name_ch, name_en, category):
 
 
 def get_data(id=None, name_ch=None, name_en=None, category=None):
+    final_json = {'nodes': [], 'links': [], 'categories': []}
+    # nodes = ['id', 'name', 'symbolSize', 'x', 'y', 'value', 'category', 'type']
+    # links = ['source', 'target', 'value']
+    # TODO: categories是什么？
+    # categories = ['name']
     index = None
     var = 1
 
     # 获取中心作者个人信息
     auth_info = get_auth_info(id, name_ch, name_en, category)
-    print(auth_info)
+    # print(auth_info)
     if auth_info is None:
         print('没有找到相关作者信息，请检查参数是否正确！')
         return None
 
     # 将中心作者添加至finalJson['nodes']
-    finalJson['nodes'].append(
+    final_json['nodes'].append(
         {'id': auth_info['id'], 'name': auth_info['name'], 'symbolSize': 30, 'x': 0, 'y': 0, 'value': 0,
          'category': auth_info['category'], 'type': 'node'})
 
@@ -64,24 +59,32 @@ def get_data(id=None, name_ch=None, name_en=None, category=None):
         res = db[index].find({}, {'_id': 0, '相关老师' + str(var): 1, '相关文献:' + str(var): 1}).limit(1).skip(1)
         # 获取合作者信息
         co_auth_info = get_auth_info(None, None, res[0]['相关老师' + str(var)], None)
-        # TODO: 如果合作者不隶属BUPT，则跳过
+        # TODO: 目前，如果合作者不隶属BUPT，则跳过
         if co_auth_info is not None:
             # 添加合作者信息至finalJson['nodes']
-            finalJson['nodes'].append(
+            final_json['nodes'].append(
                 {'id': co_auth_info['id'], 'name': co_auth_info['name'], 'symbolSize': 60, 'x': 0, 'y': 0,
                  'value': int(res[0]['相关文献:' + str(var)]), 'category': co_auth_info['category'], 'type': 'node'})
             # 添加合作信息至finalJson['links']
-            finalJson['links'].append(
+            final_json['links'].append(
                 {'source': auth_info['id'], 'target': co_auth_info['id'], 'value': int(res[0]['相关文献:' + str(var)])})
         var += 1
         # print(res[0])
         # 继续遍历下一段合作关系
+    return final_json
 
 
-# main函数，假设中心作者为“丰雷”老师
-get_data(name_ch="丰雷")
+if __name__ == '__main__':
+    client = MongoClient('mongodb://rwAll:ARS 5111-rwAll'
+                         '@dev.metattri.com:27017')
+    db = client.bupt
 
-print(finalJson['nodes'])
-print(len(finalJson['nodes']))
-print(finalJson['links'])
-print(len(finalJson['links']))
+    # 需要指定中心作者的id、name_ch、name_en中的一个
+    # TODO: 目前finalJson['categories']为空
+    # TODO: 需要将finalJson写入JSON文件
+    finalJson = get_data(name_ch="丰雷")  # 演示：假设中心作者为“丰雷”老师
+
+    print(finalJson['nodes'])
+    print(len(finalJson['nodes']))
+    print(finalJson['links'])
+    print(len(finalJson['links']))
