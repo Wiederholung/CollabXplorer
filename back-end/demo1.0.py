@@ -10,7 +10,7 @@ import re
 
 # ##链接数据库
 from pymongo import MongoClient
-client =MongoClient("metattri.com",27017)
+client =MongoClient("metattri.com", 27017)
 
     
 

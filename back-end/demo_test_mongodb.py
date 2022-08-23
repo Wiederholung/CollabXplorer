@@ -1,8 +1,14 @@
-from flask import Flask
-from flask_pymongo import PyMongo
+from pymongo import MongoClient
 
-app = Flask(__name__)
-app.config["MONGO_URI"] = "mongodb://dev.metattri.com:27017/bupt"
-mongo = PyMongo(app)
-online_users = mongo.db.users.find({"online": True})
-print(online_users)
+client = MongoClient('mongodb://rwAll:ARS 5111-rwAll'
+                     '@dev.metattri.com:27017')
+db = client.bupt
+collection = db.丰雷
+x = collection.find_one()
+
+print(x)
+
+finalJson = {'nodes': [], 'links': [], 'categories': []}
+nodes = ['id', 'name', 'symbolSize', 'x', 'y', 'value', 'category', 'type']
+links = ['source', 'target', 'value']
+categories = ['name']
