@@ -4,6 +4,7 @@ import random
 
 testjson = {'nodes': [
     {"id": "0", "name": "王俊翔", "symbolSize": 60, "x": 0, "y": 0, "value": 108, "category": 0, "type": "node"},
+    {"id": "0", "name": "wyz", "symbolSize": 60, "x": 0, "y": 0, "value": 108, "category": 1, "type": "node"},
     {"id": "0", "name": "wyz", "symbolSize": 60, "x": 0, "y": 0, "value": 108, "category": 2, "type": "node"}],
     'links': [],
     'categories': [{"name": "计算机学院"}, {"name": "信通学院"}, {"name": "国际学院"}]}
