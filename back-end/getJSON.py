@@ -53,7 +53,7 @@ def get_data(id=None, name_ch=None, name_en=None, category=None):
     final_json['nodes'].append(
         # {'id': auth_info['id'], 'name': auth_info['name'], 'symbolSize': 30, 'x': 0, 'y': 0, 'value': 0,
         #  'category': auth_info['category'], 'type': 'node'}
-        {'id': auth_info['id'], 'name': auth_info['name'], 'symbolSize': 30, 'x': 0, 'y': 0, 'value': 0,
+        {'id': auth_info['id'], 'name': auth_info['name'], 'symbolSize': 60, 'x': 0, 'y': 0, 'value': 0,
          'category': 0, 'type': 'node'}
     )
 
@@ -112,10 +112,12 @@ def get_data(id=None, name_ch=None, name_en=None, category=None):
         randomNum = random.randint(interval[category], interval[category] + 119)  # 生成随机数
         x = r * math.cos(randomNum * 2 * math.pi / 360)
         y = r * math.sin(randomNum * 2 * math.pi / 360)
-        temp = {'x': x, 'y': y}
-        range.append(temp)
+
+        # 将xy值添加至finalJson中
+        final_json['nodes'][i]['x'] = x
+        final_json['nodes'][i]['y'] = y
+
         i += 1
-    # print(range)
     return final_json
 
 

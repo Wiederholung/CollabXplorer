@@ -36,6 +36,8 @@ while i < numData:
     x = r * math.cos(randomNum * 2 * math.pi / 360)
     y = r * math.sin(randomNum * 2 * math.pi / 360)
     temp = {'x': x, 'y': y}
+    testjson['nodes'][i]['x'] = x
+    testjson['nodes'][i]['y'] = y
     range.append(temp)
     i += 1
 print(range)
