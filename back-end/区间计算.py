@@ -29,7 +29,7 @@ while i < numCategory:
 print(interval)
 
 # 计算x与y的具体值
-i = 0  # 进行循环赋值
+i = 1  # 进行循环赋值
 while i < numData:
     category = testjson['nodes'][i]["category"]  # 学院是哪个
     randomNum = random.randint(interval[category], interval[category] + 119)  # 生成随机数
