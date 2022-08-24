@@ -132,8 +132,9 @@ if __name__ == '__main__':
     # finalJson = get_data(id="101")
     # finalJson = get_data(name_en="Lei_Feng_0001")
 
-    dict_json = json.dumps(finalJson)  # 将查找的数据转化为JSON
-    with open('file.json', 'w+') as file:
+    # 将finalJson字典转化为json，utf-8编码
+    dict_json = json.dumps(finalJson, ensure_ascii=False)
+    with open('file.json', 'w+', encoding="utf-8") as file:
         file.write(dict_json)
 
     print(finalJson['nodes'])
