@@ -53,7 +53,7 @@ def get_data(id=None, name_ch=None, name_en=None, category=None):
     final_json['nodes'].append(
         # {'id': auth_info['id'], 'name': auth_info['name'], 'symbolSize': 30, 'x': 0, 'y': 0, 'value': 0,
         #  'category': auth_info['category'], 'type': 'node'}
-        {'id': auth_info['id'], 'name': auth_info['name'], 'symbolSize': 60, 'x': 0, 'y': 0, 'value': 0,
+        {'id': auth_info['id'], 'name': auth_info['name'], 'symbolSize': 70, 'x': 0, 'y': 0, 'value': 0,
          'category': 0, 'type': 'node'}
     )
 
@@ -108,10 +108,14 @@ def get_data(id=None, name_ch=None, name_en=None, category=None):
     # 计算x与y的具体值
     i = 1  # 进行循环赋值（从1开始跳过自己
     while i < numData:
+        symbolSize = final_json['nodes'][i]["symbolSize"]  # 点大小是多少
         category = final_json['nodes'][i]["category"]  # 学院是哪个
+
+        # 半径加权计算
+        weight = symbolSize / 70  # 权值,自身点大小为70
         randomNum = random.randint(interval[category], interval[category] + 119)  # 生成随机数
-        x = r * math.cos(randomNum * 2 * math.pi / 360)
-        y = r * math.sin(randomNum * 2 * math.pi / 360)
+        x = r * math.cos(randomNum * 2 * math.pi / 360) * weight
+        y = r * math.sin(randomNum * 2 * math.pi / 360) * weight
 
         # 将xy值添加至finalJson中
         final_json['nodes'][i]['x'] = x
