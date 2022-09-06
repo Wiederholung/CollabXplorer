@@ -1,12 +1,19 @@
 import json
+import time
 
 from pymongo import MongoClient
 import math
 import random
 
+client = MongoClient('mongodb://rwAll:ARS 5111-rwAll'
+                     '@dev.metattri.com:27017')
+db = client.bupt
+
 
 # 获取作者信息，只接受单一参数
 def get_auth_info(id, name_ch, name_en, category):
+
+    remember = None
     if id is not None:
         for col in db.list_collection_names():
             res = db[col].find_one({'id': id})
@@ -66,6 +73,8 @@ def get_data(id=None, name_ch=None, name_en=None, category=None):
 
     # 遍历中心作者的所有合作者
     while db[index].find_one({'相关老师' + str(var): {'$gte': "0"}}) is not None:
+        T1 = time.time()
+
         # 获取合作信息
         res = db[index].find({}, {'_id': 0, '相关老师' + str(var): 1, '相关文献:' + str(var): 1}).limit(1).skip(1)
         # 获取合作者信息
@@ -127,24 +136,24 @@ def get_data(id=None, name_ch=None, name_en=None, category=None):
 
 
 if __name__ == '__main__':
-    client = MongoClient('mongodb://rwAll:ARS 5111-rwAll'
-                         '@dev.metattri.com:27017')
-    db = client.bupt
-
-    # TODO: 目前finalJson['categories']为空
-    # TODO: 判断是传入JSON文件 还是直接以JSON格式直接进行文本传递
-
-    # 需要指定中心作者的id、name_ch、name_en中的一个，以下三种方式皆可
-    finalJson = get_data(name_ch="丰雷")  # 演示：假设中心作者为“丰雷”老师
-    # finalJson = get_data(id="101")
-    # finalJson = get_data(name_en="Lei_Feng_0001")
-
-    # 将finalJson字典转化为json，utf-8编码
-    dict_json = json.dumps(finalJson, ensure_ascii=False)
-    with open('file.json', 'w+', encoding="utf-8") as file:
-        file.write(dict_json)
-
-    print(finalJson['nodes'])
-    print(len(finalJson['nodes']))
-    print(finalJson['links'])
-    print(len(finalJson['links']))
+    # client = MongoClient('mongodb://rwAll:ARS 5111-rwAll'
+    #                      '@dev.metattri.com:27017')
+    # db = client.bupt
+    db['Anfu_Zhou'].createIndex({id: 1})
+    # # TODO: 目前finalJson['categories']为空
+    # # TODO: 判断是传入JSON文件 还是直接以JSON格式直接进行文本传递
+    #
+    # # 需要指定中心作者的id、name_ch、name_en中的一个，以下三种方式皆可
+    # finalJson = get_data(name_ch="丰雷")  # 演示：假设中心作者为“丰雷”老师
+    # # finalJson = get_data(id="101")
+    # # finalJson = get_data(name_en="Lei_Feng_0001")
+    #
+    # # 将finalJson字典转化为json，utf-8编码
+    # dict_json = json.dumps(finalJson, ensure_ascii=False)
+    # with open('file.json', 'w+', encoding="utf-8") as file:
+    #     file.write(dict_json)
+    #
+    # print(finalJson['nodes'])
+    # print(len(finalJson['nodes']))
+    # print(finalJson['links'])
+    # print(len(finalJson['links']))
