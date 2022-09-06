@@ -13,21 +13,22 @@ def get_auth_info(id, name_ch, name_en, category):
             if res is not None:
                 return res
         return None
-    if name_ch is not None:
+    elif name_ch is not None:
         for col in db.list_collection_names():
             res = db[col].find_one({'name': name_ch})
             if res is not None:
                 return res
         return None
-    if name_en is not None:
+    elif name_en is not None:
         for col in db.list_collection_names():
             if col == name_en:
                 return db[col].find_one()
         return None
-    if category is not None:
+    elif category is not None:
         # TODO: 按学院分类
         return None
-    return None
+    else:
+        return None
 
 
 def get_data(id=None, name_ch=None, name_en=None, category=None):
