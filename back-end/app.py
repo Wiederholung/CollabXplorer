@@ -1,10 +1,10 @@
 import json
-
+from flask_cors import CORS
 from flask import Flask
-
 import getJSON
 
 app = Flask(__name__)
+CORS(app, supports_credentials=True)
 
 
 @app.route('/')
