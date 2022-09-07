@@ -51,7 +51,7 @@ def get_data(id_s=None, name_ch=None, name_en=None, category=None):
 
     # 将中心作者添加至finalJson['nodes']
     final_json['nodes'].append(
-        {'id': auth_info['id'], 'name': auth_info['name'], 'symbolSize': 70, 'x': 0, 'y': 0,
+        {'id': auth_info['id'], 'name': auth_info['name'], 'symbolSize': 60, 'x': 0, 'y': 0,
          'value': auth_info['pageNum'], 'category': 0, 'type': 'node'}
     )
 
@@ -68,8 +68,9 @@ def get_data(id_s=None, name_ch=None, name_en=None, category=None):
         # TODO: 目前，如果合作者不隶属BUPT，则跳过
         if co_auth_info is not None:
             # 添加合作者信息至finalJson['nodes']
-            final_json['nodes'].append(
-                {'id': co_auth_info['id'], 'name': co_auth_info['name'], 'symbolSize': 60, 'x': 0, 'y': 0,
+            final_json['nodes'].append(  # int(int(i[1])*(5/3)) 最大是symbolSize是50 中心大小是60 合作数的阈值是20 进行强转
+                {'id': co_auth_info['id'], 'name': co_auth_info['name'], 'symbolSize': int(int(i[1]) * (60 / 20)),
+                 'x': 0, 'y': 0,
                  'value': int(i[1]), 'category': 0, 'type': 'node'}
             )
             # 添加合作信息至finalJson['links']
@@ -106,15 +107,15 @@ def get_data(id_s=None, name_ch=None, name_en=None, category=None):
         category = final_json['nodes'][i]["category"]  # 学院是哪个
 
         # 半径加权计算
-        weight = symbolSize / 70  # 权值,自身点大小为70
+        weight = symbolSize / 60  # 权值,自身点大小为60
         randomNum = random.randint(interval[category], interval[category] + 119)  # 生成随机数
-        x = r * math.cos(randomNum * 2 * math.pi / 360) * weight
-        y = r * math.sin(randomNum * 2 * math.pi / 360) * weight
+        x = 20 + r * math.cos(randomNum * 2 * math.pi / 360) * weight
+        y = 20 + r * math.sin(randomNum * 2 * math.pi / 360) * weight
 
         # 将xy值添加至finalJson中
         final_json['nodes'][i]['x'] = x
         final_json['nodes'][i]['y'] = y
-
+        print(x, y)
         i += 1
     return final_json
 
