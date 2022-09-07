@@ -1,4 +1,3 @@
-import json
 import math
 import random
 
@@ -52,8 +51,8 @@ def get_data(id_s=None, name_ch=None, name_en=None, category=None):
 
     # 将中心作者添加至finalJson['nodes']
     final_json['nodes'].append(
-        {'id': auth_info['id'], 'name': auth_info['name'], 'symbolSize': 70, 'x': 0, 'y': 0, 'value': 0,
-         'category': 0, 'type': 'node'}
+        {'id': auth_info['id'], 'name': auth_info['name'], 'symbolSize': 70, 'x': 0, 'y': 0,
+         'value': auth_info['pageNum'], 'category': 0, 'type': 'node'}
     )
 
     # 获取中心作者所在的collection
@@ -71,7 +70,8 @@ def get_data(id_s=None, name_ch=None, name_en=None, category=None):
             # 添加合作者信息至finalJson['nodes']
             final_json['nodes'].append(
                 {'id': co_auth_info['id'], 'name': co_auth_info['name'], 'symbolSize': 60, 'x': 0, 'y': 0,
-                 'value': int(i[1]), 'category': 0, 'type': 'node'})
+                 'value': int(i[1]), 'category': 0, 'type': 'node'}
+            )
             # 添加合作信息至finalJson['links']
             final_json['links'].append(
                 {'source': auth_info['id'], 'target': co_auth_info['id'],
