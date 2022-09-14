@@ -28,7 +28,7 @@ def get_page():
 # 对应关系为 第一个是本人 后面为相关对应人员
 def getpage_number():
     result = get_page()
-    paper_numb = re.findall(r'.*sc":"(\S)"', result)
+    paper_numb = re.findall(r'.*sc":"(\S*)"', result)
     return paper_numb
 
 
