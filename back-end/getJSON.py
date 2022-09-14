@@ -69,9 +69,9 @@ def get_data(id_s=None, name_ch=None, name_en=None, category=None):
         if co_auth_info is not None:
             # 添加合作者信息至finalJson['nodes']
             final_json['nodes'].append(  # int(int(i[1])*(5/3)) 最大是symbolSize是60 中心大小是60 合作数的阈值是20 进行强转
-                {'id': co_auth_info['id'], 'name': co_auth_info['name'], 'symbolSize': int(int(i[1]) + 10),
-                 'x': 0, 'y': 0,
-                 'value': int(i[1]), 'category': 0, 'type': 'node'}
+                {'id': co_auth_info['id'], 'name': co_auth_info['name'],
+                 'symbolSize': int(co_auth_info['pageNum']) + 10, 'x': 0, 'y': 0,
+                 'value': co_auth_info['pageNum'], 'category': 0, 'type': 'node'}
             )
             # 添加合作信息至finalJson['links']
             final_json['links'].append(
