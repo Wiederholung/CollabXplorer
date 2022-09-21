@@ -1,11 +1,8 @@
 import math
 import random
+import db_connetor
 
-from pymongo import MongoClient
-
-client = MongoClient('mongodb://rwAll:ARS 5111-rwAll'
-                     '@dev.metattri.com:27017')
-db = client.bupt
+db = db_connetor.get_connection()  # 连接数据库
 
 
 # 获取作者信息，只接受单一参数
@@ -115,7 +112,7 @@ def get_data(id_s=None, name_ch=None, name_en=None, category=None):
         # 将xy值添加至finalJson中
         final_json['nodes'][i]['x'] = x
         final_json['nodes'][i]['y'] = y
-        print(x, y)
+        # print(x, y)
         i += 1
     return final_json
 

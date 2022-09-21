@@ -18,4 +18,4 @@ def get_json(name_ch):
 
 
 if __name__ == '__main__':
-    app.run(host='::')
+    app.run(host='0.0.0.0')
