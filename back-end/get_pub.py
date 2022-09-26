@@ -1,6 +1,6 @@
 import urllib.request
 from xml.dom.minidom import parse
-import db_connetor
+from DB import db_connetor
 
 
 # 获取 db 内所有 collection 的名字

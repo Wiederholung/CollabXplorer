@@ -2,17 +2,13 @@
 
 
 # -*- coding:UTF-8 -*-
-from cgitb import reset, text
-from enum import unique
-from unicodedata import name
-from unittest import result
 import requests
 import re
 import pymongo
-# ##链接数据库
-from pymongo import MongoClient
 
-client = MongoClient(host="metattri.com", port=27017, username='root', password='ARS 5111-root')
+
+# ##链接数据库
+#TODO:填写数据库链接信息
 
 
 # 获取页面信息
