@@ -2,7 +2,7 @@ import math
 import random
 import db_connetor
 
-db = db_connetor.get_connection()  # 连接数据库
+db = db_connetor.get_connection().bupt  # 连接数据库
 
 
 # 获取作者信息，只接受单一参数
