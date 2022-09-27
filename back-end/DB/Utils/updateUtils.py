@@ -1,4 +1,4 @@
-import db_connetor
+from DB import db_connetor
 
 client = db_connetor.get_connection()
 
@@ -33,3 +33,21 @@ def update_abstract(name_en, abstract, url):
         }
     )
     print("更新abstract成功")
+
+
+def get_all_col():
+    db = db_connetor.get_connection().bupt
+    return db.list_collection_names()
+
+
+if __name__ == '__main__':
+    data1 = {
+        "id": 92,
+        "Article": {
+            "aid2": {"title": "学科推荐系统2", "author": {"王俊翔": "02/2100", "王伊哲": "02/2100"},
+                     "url": "https://doi.org/10.1109/COMPSAC54236.2022.00123", "year": 2100, "abstract": "xxxxxx"},
+            "aid1": {"title": "学科推荐系统1", "author": {"朱子炫": "02/2100", "胡逸同": "02/2100"},
+                     "url": "https://dblp.org/pid/65/9612.xml", "year": 2100, "abstract": "xxxxxx"}
+        }
+    }
+    insert_pid("Anfu_Zhou", data1)

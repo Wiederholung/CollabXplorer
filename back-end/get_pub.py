@@ -1,13 +1,7 @@
 import urllib.request
 from xml.dom.minidom import parse
-from DB import db_connetor
-import crawler
-
-
-# 获取 db 内所有 collection 的名字
-def get_all_col():
-    db = db_connetor.get_connection().bupt
-    return db.list_collection_names()
+import DB.Utils.updateUtils as updateUtils
+import crawler.crawlerUtils
 
 
 def get_xml(url):
@@ -21,18 +15,58 @@ def get_pid(name_en):
     return root.getElementsByTagName('author')[0].getAttribute('pid')
 
 
-def get_pub(pid):
+def get_dblp_pub(pid):
     url = 'https://dblp.org/pid/' + pid + '.xml'
     xml = get_xml(url)
-    root = xml.documentElement
-    # TODO: 获取所有需要的 publication 信息 @王少
-    for i in root.getElementsByTagName('title'):
-        print(i.firstChild.data)
+    return xml
 
 
 # TODO: 获取所有需要的 abstract 信息 @胡 @川泽
-def get_abstract(url):
-    pass
+
+
+def xml_browser(xml):
+    # 范例
+    # data1 = {
+    #     "id": 92,
+    #     "Article": {
+    #         "aid2": {"title": "学科推荐系统2", "author": {"王俊翔": "02/2100", "王伊哲": "02/2100"},
+    #                  "url": "https://doi.org/10.1109/COMPSAC54236.2022.00123", "year": 2100, "abstract": "xxxxxx"},
+    #         "aid1": {"title": "学科推荐系统1", "author": {"朱子炫": "02/2100", "胡逸同": "02/2100"},
+    #                  "url": "https://dblp.org/pid/65/9612.xml", "year": 2100, "abstract": "xxxxxx"}
+    #     }
+    # }
+
+    # 获取根节点
+    root = xml.documentElement
+
+    # 最终返回的字典
+    result = {'id': root.getAttribute('pid'), 'name': root.getAttribute('name'), 'Article': {}}
+
+    # 获取查询对象基本信息
+
+    # 获取合作者信息
+    # 遍历每个合作文章
+    papers = root.getElementsByTagName('inproceedings')
+    for paper in papers:
+        # 获取key值
+        article_name = paper.getAttribute('key')
+        result['Article'][article_name] = {}
+        # 获取title
+        result['Article'][article_name]['title'] = paper.getElementsByTagName('title')[0].childNodes[0].data
+        # 获取url
+        result['Article'][article_name]['url'] = paper.getElementsByTagName('ee')[0].childNodes[0].data
+        # 获取year
+        result['Article'][article_name]['year'] = paper.getElementsByTagName('year')[0].childNodes[0].data
+        # 获取合作者
+        result['Article'][article_name]['author'] = {}
+        for i in range(0, len(paper.getElementsByTagName('author'))):
+            result['Article'][article_name]['author'][paper.getElementsByTagName('author')[i].childNodes[0].data] = \
+                paper.getElementsByTagName('author')[i].getAttribute('pid')
+        # 写入摘要
+        result['Article'][article_name]['abstract'] = crawler.crawlerUtils.get_abstract(
+            result['Article'][article_name]['url'])
+
+    return result
 
 
 if __name__ == '__main__':
@@ -41,7 +75,9 @@ if __name__ == '__main__':
     # TODO: 将 pub 写入数据库 @川泽
 
     # TODO: 将 abstract 写入数据库 @川泽
-    for col in get_all_col():
+    for col in updateUtils.get_all_col():
         dblp_id = get_pid(col)
-        get_pub(dblp_id)
+        dblp_xml = get_dblp_pub(dblp_id)
+        json = xml_browser(dblp_xml)
+        updateUtils.insert_pid(col, json)
         break
