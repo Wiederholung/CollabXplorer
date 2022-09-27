@@ -36,7 +36,9 @@ def get_abstract(url):
 
 if __name__ == '__main__':
     # TODO: 将 pid 写入数据库 @川泽
+
     # TODO: 将 pub 写入数据库 @川泽
+
     # TODO: 将 abstract 写入数据库 @川泽
     for col in get_all_col():
         dblp_id = get_pid(col)
