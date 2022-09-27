@@ -61,15 +61,11 @@ def xml_browser(xml):
 
 
 if __name__ == '__main__':
-    # TODO: 将 pid 写入数据库 @川泽
-
-    # TODO: 将 pub 写入数据库 @川泽
-
-    # TODO: 将 abstract 写入数据库 @川泽
-
     for col in updateUtils.get_all_col():
+        # 跳过第一个 col
+        if col == 'Anfu_Zhou':
+            continue
         dblp_id = get_pid(col)
         dblp_xml = get_dblp_pub(dblp_id)
         json = xml_browser(dblp_xml)
         updateUtils.insert_pid(col, json)
-        # break
