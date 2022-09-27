@@ -43,12 +43,13 @@ def get_abstract(url):
             return res
         # 如果是其他网址
         else:
-            print('未收录网址:' + url)
+            print('未收录网址:{}'.format(url))
             return ''
     except:
         # 如果出现异常，打印异常信息
         print('异常网址:' + url)
         traceback.print_exc()
+        return ''
 
 
 if __name__ == '__main__':

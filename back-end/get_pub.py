@@ -35,37 +35,60 @@ def xml_browser(xml):
 
     # 获取合作者信息
     # 遍历每个合作文章
-    papers = root.getElementsByTagName('inproceedings')
-    for paper in papers:
-        # 获取key值
-        article_name = paper.getAttribute('key')
-        result['Article'][article_name] = {}
-        # 获取title
+    inproceedings = root.getElementsByTagName('inproceedings')
+    for paper in inproceedings:
+        result = paper_manager(paper, result)
+
+    articles = root.getElementsByTagName('article')
+    for paper in articles:
+        result = paper_manager(paper, result)
+    return result
+
+
+# 处理每一个papper节点，article和inproceeding
+def paper_manager(paper, result):
+    # 获取key值
+    article_name = paper.getAttribute('key')
+    result['Article'][article_name] = {}
+    # 获取title
+    try:
         result['Article'][article_name]['title'] = paper.getElementsByTagName('title')[0].childNodes[0].data
-        # 获取url
+    except:
+        result['Article'][article_name]['title'] = ''
+    # 获取url
+    try:
+        t = paper.getElementsByTagName('ee')[0].childNodes[0].data
         result['Article'][article_name]['url'] = paper.getElementsByTagName('ee')[0].childNodes[0].data
-        # 获取year
+    except:
+        result['Article'][article_name]['url'] = ''
+    # 获取year
+    try:
         result['Article'][article_name]['year'] = paper.getElementsByTagName('year')[0].childNodes[0].data
-        # 获取合作者
-        result['Article'][article_name]['author'] = {}
-        for i in range(0, len(paper.getElementsByTagName('author'))):
+    except:
+        result['Article'][article_name]['year'] = ''
+    # 获取合作者
+    result['Article'][article_name]['author'] = {}
+    for i in range(0, len(paper.getElementsByTagName('author'))):
+        try:
             result['Article'][article_name]['author'][paper.getElementsByTagName('author')[i].childNodes[0].data] = \
                 paper.getElementsByTagName('author')[i].getAttribute('pid')
-        # 获取摘要
+        except:
+            result['Article'][article_name]['author'][
+                paper.getElementsByTagName('author')[i].childNodes[0].data] = ''
+    # 获取摘要
+    try:
         result['Article'][article_name]['abstract'] = crawler.crawlerUtils.get_abstract(
             result['Article'][article_name]['url'])
-
-        print(result['Article'][article_name])
-
+    except:
+        result['Article'][article_name]['abstract'] = ''
+    print(result['Article'][article_name])
     return result
 
 
 if __name__ == '__main__':
     for col in updateUtils.get_all_col():
-        # 跳过第一个 col
-        if col == 'Anfu_Zhou':
-            continue
         dblp_id = get_pid(col)
         dblp_xml = get_dblp_pub(dblp_id)
         json = xml_browser(dblp_xml)
         updateUtils.insert_pid(col, json)
+
