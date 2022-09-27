@@ -28,3 +28,8 @@ def get_abstract(url):
     except:
         print("获取摘要失败")
         pass
+
+
+if __name__ == '__main__':
+    url = 'https://dl.acm.org/doi/10.1145/3550298'
+    print(get_abstract(url))

@@ -18,5 +18,5 @@ def get_abstract(url):
 
 
 if __name__ == '__main__':
-    url = 'https://link.springer.com/article/10.1007/s42486-021-00067-1'
-    print(get_abstract(url))
+    url0 = 'https://link.springer.com/article/10.1007/s42486-021-00067-1'
+    print(get_abstract(url0))
