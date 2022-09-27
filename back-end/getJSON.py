@@ -1,6 +1,6 @@
 import math
 import random
-import db_connetor
+from DB import db_connetor
 
 db = db_connetor.get_connection().bupt  # 连接数据库
 

@@ -1,7 +1,8 @@
 import urllib.request
 from xml.dom.minidom import parse
 from DB import db_connetor
-from crawler import IEEE
+import crawler
+
 
 # 获取 db 内所有 collection 的名字
 def get_all_col():
@@ -27,9 +28,6 @@ def get_pub(pid):
     # TODO: 获取所有需要的 publication 信息 @王少
     for i in root.getElementsByTagName('title'):
         print(i.firstChild.data)
-    # a_list = root.getElementsByTagName('article')
-    # a_url = a_list[2].getAttribute('ee').getFirstChild().data
-    # IEEE.get_abstract(a_url)
 
 
 # TODO: 获取所有需要的 abstract 信息 @胡 @川泽
