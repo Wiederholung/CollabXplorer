@@ -1,7 +1,7 @@
 from xml.dom.minidom import parse
 
-def getfundinfor(xml):
 
+def xml_brower(xml):
     # 范例
     # data1 = {
     #     "id": 92,
@@ -40,7 +40,8 @@ def getfundinfor(xml):
         result['Article'][articlename]['year'] = papper.getElementsByTagName('year')[0].childNodes[0].data
         # 获取合作者
         result['Article'][articlename]['author'] = {}
-        for i in range(0,len(papper.getElementsByTagName('author'))):
-            result['Article'][articlename]['author'][papper.getElementsByTagName('author')[i].childNodes[0].data] = papper.getElementsByTagName('author')[i].getAttribute('pid')
+        for i in range(0, len(papper.getElementsByTagName('author'))):
+            result['Article'][articlename]['author'][papper.getElementsByTagName('author')[i].childNodes[0].data] = \
+            papper.getElementsByTagName('author')[i].getAttribute('pid')
 
     return result
