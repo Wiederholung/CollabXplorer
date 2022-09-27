@@ -51,9 +51,11 @@ def xml_browser(xml):
         for i in range(0, len(paper.getElementsByTagName('author'))):
             result['Article'][article_name]['author'][paper.getElementsByTagName('author')[i].childNodes[0].data] = \
                 paper.getElementsByTagName('author')[i].getAttribute('pid')
-        # 写入摘要
+        # 获取摘要
         result['Article'][article_name]['abstract'] = crawler.crawlerUtils.get_abstract(
             result['Article'][article_name]['url'])
+
+        print(result['Article'][article_name])
 
     return result
 
@@ -64,6 +66,7 @@ if __name__ == '__main__':
     # TODO: 将 pub 写入数据库 @川泽
 
     # TODO: 将 abstract 写入数据库 @川泽
+
     for col in updateUtils.get_all_col():
         dblp_id = get_pid(col)
         dblp_xml = get_dblp_pub(dblp_id)

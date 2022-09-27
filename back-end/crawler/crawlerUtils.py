@@ -3,33 +3,53 @@ from crawler import arxiv
 from crawler import IEEE
 from crawler import sciencedirect
 from crawler import springer
+from crawler import cvpr
+from crawler import driver
+from crawler import AAAI
+import traceback
 
 
 def get_abstract(url):
     try:
-        while True:
-            res = IEEE.get_abstract(url)
-            if res != '':
-                return res
-            res = acm.get_abstract(url)
-            if res != '':
-                return res
-            res = arxiv.get_abstract(url)
-            if res != '':
-                return res
-            res = sciencedirect.get_abstract(url)
-            if res != '':
-                return res
-            res = springer.get_abstract(url)
-            if res != '':
-                return res
-            else:
-                return ''
+        browser = driver.init_driver(url)
+        c_url = browser.current_url
+        # 如果是 IEEE 的网址
+        if c_url.find('ieee.org') != -1:
+            res = IEEE.get_abstract(browser)
+            return res
+        # 如果是 ACM 的网址
+        elif c_url.find('dl.acm.org') != -1:
+            res = acm.get_abstract(browser)
+            return res
+        # 如果是 arxiv 的网址
+        elif c_url.find('arxiv.org') != -1:
+            res = arxiv.get_abstract(browser)
+            return res
+        # 如果是 science direct 的网址
+        elif c_url.find('sciencedirect.com') != -1:
+            res = sciencedirect.get_abstract(browser)
+            return res
+        # 如果是 springer 的网址
+        elif c_url.find('springer.com') != -1:
+            res = springer.get_abstract(browser)
+            return res
+        # 如果是 cvpr 网址
+        elif c_url.find('thecvf.com') != -1:
+            res = cvpr.get_abstract(browser)
+            return res
+        # 如果是 AAAI 网址
+        elif c_url.find('aaai.org') != -1:
+            res = AAAI.get_abstract(browser)
+            return res
+        # 如果是其他网址
+        else:
+            print('未收录网址:' + url)
+            return ''
     except:
-        print("获取摘要失败")
-        pass
+        # 如果出现异常，打印异常信息
+        traceback.print_exc()
 
 
 if __name__ == '__main__':
-    url = 'https://dl.acm.org/doi/10.1145/3550298'
-    print(get_abstract(url))
+    url0 = 'https://ojs.aaai.org/index.php/AAAI/article/view/4686'
+    print(get_abstract(url0))
