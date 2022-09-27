@@ -72,4 +72,4 @@ if __name__ == '__main__':
         dblp_xml = get_dblp_pub(dblp_id)
         json = xml_browser(dblp_xml)
         updateUtils.insert_pid(col, json)
-        break
+        # break

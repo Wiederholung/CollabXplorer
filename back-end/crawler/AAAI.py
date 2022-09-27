@@ -10,5 +10,5 @@ def get_abstract(browser):
 
 
 if __name__ == '__main__':
-    url = 'https://ojs.aaai.org/index.php/AAAI/article/view/4686'
+    url = 'https://doi.org/10.1145/3447993.3483259'
     print(get_abstract(driver.init_driver(url)))

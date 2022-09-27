@@ -47,9 +47,10 @@ def get_abstract(url):
             return ''
     except:
         # 如果出现异常，打印异常信息
+        print('异常网址:' + url)
         traceback.print_exc()
 
 
 if __name__ == '__main__':
-    url0 = 'https://ojs.aaai.org/index.php/AAAI/article/view/4686'
+    url0 = 'https://doi.org/10.1145/3447993.3483259'
     print(get_abstract(url0))
