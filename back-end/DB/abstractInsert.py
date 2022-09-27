@@ -1,5 +1,5 @@
 import db_connetor
-import updateUtils
+from Utils import updateUtils
 # 连接数据库
 client = db_connetor.get_connection()
 db = client.bupt
