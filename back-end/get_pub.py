@@ -112,7 +112,7 @@ if __name__ == '__main__':
         json_dict = xml_browser(dblp_xml)
         # 将字典格式化为 json
         json_str = json.dumps(json_dict, ensure_ascii=False)
-        # 将json写入文件
+        # 将 json 写入文件
         with open('res/dblp/' + col + '.json', 'w', encoding='utf-8') as f:
             f.write(str(json_str))
         # 将 json 写入数据库
