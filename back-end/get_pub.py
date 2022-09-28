@@ -5,14 +5,27 @@ import crawler.crawlerUtils
 
 
 def get_xml(url):
-    return parse(urllib.request.urlopen(url))
+    try:
+        response = urllib.request.urlopen(url)
+        xml_root = parse(response).documentElement
+    except Exception as e:
+        print(e)
+        xml_root = ''
+    return xml_root
 
 
 def get_pid(name_en):
     url = 'https://dblp.uni-trier.de/search/author?xauthor=' + name_en
-    xml = get_xml(url)
-    root = xml.documentElement
-    return root.getElementsByTagName('author')[0].getAttribute('pid')
+    root = get_xml(url)
+    try:
+        pid = root.getElementsByTagName('author')[0].getAttribute('pid')
+    except IndexError as e:
+        print('错误：{}，未找到 pid：{}'.format(e, name_en))
+        pid = ''
+    except Exception as e:
+        print(e)
+        pid = ''
+    return pid
 
 
 def get_dblp_pub(pid):
@@ -21,25 +34,25 @@ def get_dblp_pub(pid):
     return xml
 
 
-# TODO: 获取所有需要的 abstract 信息 @胡 @川泽
-
-
 def xml_browser(xml):
     # 获取根节点
-    root = xml.documentElement
+    root = xml
+    try:
+        # 最终返回的字典
+        result = {'id': root.getAttribute('pid'), 'name': root.getAttribute('name'), 'Article': {}}
 
-    # 最终返回的字典
-    result = {'id': root.getAttribute('pid'), 'name': root.getAttribute('name'), 'Article': {}}
-
-    # 获取合作者信息
-    # 遍历每个合作文章
-    in_proceedings = root.getElementsByTagName('inproceedings')
-    for paper in in_proceedings:
-        result = paper_manager(paper, result)
-
-    articles = root.getElementsByTagName('article')
-    for paper in articles:
-        result = paper_manager(paper, result)
+        # 获取合作者信息，遍历每个合作文章
+        # 获取 inproceedings 节点
+        in_proceedings = root.getElementsByTagName('inproceedings')
+        for paper in in_proceedings:
+            result = paper_manager(paper, result)
+        # 获取 articles 节点
+        articles = root.getElementsByTagName('article')
+        for paper in articles:
+            result = paper_manager(paper, result)
+    except Exception as e:
+        print(e)
+        result = ''
     return result
 
 
@@ -88,9 +101,18 @@ def paper_manager(paper, result):
 
 
 if __name__ == '__main__':
-    n_list = updateUtils.get_all_col()
-    for col in n_list[53:]:
+    # 从 Shao-yong_Gao 继续
+    for col in updateUtils.get_all_col()[53:]:
+        # 获取 pid
         dblp_id = get_pid(col)
+        # 根据 pid 获取 dblp_pub_xml
         dblp_xml = get_dblp_pub(dblp_id)
+        # 解析 xml 并添加摘要，得到格式化后的字典
         json = xml_browser(dblp_xml)
+        # 将字典格式化为 json
+        json_str = json.dumps(json)
+        # 将json写入文件
+        with open('res/dblp/' + col + '.json', 'w', encoding='utf-8') as f:
+            f.write(str(json_str))
+        # 将 json 写入数据库
         updateUtils.insert_pid(col, json)
