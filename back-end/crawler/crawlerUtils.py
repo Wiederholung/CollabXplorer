@@ -6,7 +6,6 @@ from crawler import springer
 from crawler import cvpr
 from crawler import driver
 from crawler import AAAI
-import traceback
 
 
 def get_abstract(url):
@@ -33,7 +32,7 @@ def get_abstract(url):
         elif c_url.find('springer.com') != -1:
             res = springer.get_abstract(browser)
             return res
-        # 如果是 cvpr 网址
+        # 如果是 CVPR 网址
         elif c_url.find('thecvf.com') != -1:
             res = cvpr.get_abstract(browser)
             return res
@@ -43,15 +42,14 @@ def get_abstract(url):
             return res
         # 如果是其他网址
         else:
-            print('未收录网址:{}'.format(url))
+            print('未收录网址：{}'.format(url))
             return ''
-    except:
+    except Exception as e:
         # 如果出现异常，打印异常信息
-        print('异常网址:' + url)
-        traceback.print_exc()
+        print('错误：{}，异常网址：{}'.format(e, url))
         return ''
 
 
 if __name__ == '__main__':
     url0 = 'https://doi.org/10.1145/3447993.3483259'
-    print(get_abstract(url0))
+    print(get_abstract(''))

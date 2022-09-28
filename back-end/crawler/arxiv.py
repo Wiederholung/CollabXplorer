@@ -3,8 +3,12 @@ from crawler import driver
 
 
 def get_abstract(browser):
-    res_list = browser.find_elements(by=By.CSS_SELECTOR, value="[class='abstract mathjax']")
-    result = browser.execute_script("return arguments[0].textContent", res_list[0])
+    try:
+        res_list = browser.find_elements(by=By.CSS_SELECTOR, value="[class='abstract mathjax']")
+        result = browser.execute_script("return arguments[0].textContent", res_list[0])
+    except IndexError as e:
+        result = ''
+        print('错误：{}，未找到摘要：{}' .format(e, browser.current_url))
     return result
 
 
