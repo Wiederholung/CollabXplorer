@@ -1,3 +1,4 @@
+import json
 import urllib.request
 from xml.dom.minidom import parse
 import DB.Utils.updateUtils as updateUtils
@@ -108,11 +109,15 @@ if __name__ == '__main__':
         # 根据 pid 获取 dblp_pub_xml
         dblp_xml = get_dblp_pub(dblp_id)
         # 解析 xml 并添加摘要，得到格式化后的字典
-        json = xml_browser(dblp_xml)
+        json_dict = xml_browser(dblp_xml)
         # 将字典格式化为 json
-        json_str = json.dumps(json)
+        json_str = json.dumps(json_dict, ensure_ascii=False)
         # 将json写入文件
         with open('res/dblp/' + col + '.json', 'w', encoding='utf-8') as f:
             f.write(str(json_str))
         # 将 json 写入数据库
-        updateUtils.insert_pid(col, json)
+        updateUtils.insert_pid(col, json_dict)
+
+    # xml = parse('Shao-Yong_Guo.xml')
+    # json_dict = xml_browser(xml.documentElement)
+    # json_str = json.dumps(json_dict, ensure_ascii=False)
