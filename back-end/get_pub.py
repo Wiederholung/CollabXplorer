@@ -10,7 +10,7 @@ def get_xml(url):
         response = urllib.request.urlopen(url)
         xml_root = parse(response).documentElement
     except Exception as e:
-        print(e)
+        print('[\n错误：{}\n函数：{}\n]'.format(e, get_xml.__name__))
         xml_root = ''
     return xml_root
 
@@ -24,7 +24,7 @@ def get_pid(name_en):
         print('错误：{}，未找到 pid：{}'.format(e, name_en))
         pid = ''
     except Exception as e:
-        print(e)
+        print('[\n错误：{}\n函数：{}\n]'.format(e, get_pid.__name__))
         pid = ''
     return pid
 
@@ -52,7 +52,7 @@ def xml_browser(xml):
         for paper in articles:
             result = paper_manager(paper, result)
     except Exception as e:
-        print(e)
+        print('[\n错误：{}\n函数：{}\n]'.format(e, xml_browser.__name__))
         result = ''
     return result
 
@@ -103,7 +103,7 @@ def paper_manager(paper, result):
 
 if __name__ == '__main__':
     # 从 Shao-yong_Gao 继续
-    for col in updateUtils.get_all_col()[53:]:
+    for col in updateUtils.get_all_col()[68:]:
         # 获取 pid
         dblp_id = get_pid(col)
         # 根据 pid 获取 dblp_pub_xml

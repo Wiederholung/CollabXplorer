@@ -46,7 +46,7 @@ def get_abstract(url):
             return ''
     except Exception as e:
         # 如果出现异常，打印异常信息
-        print('错误：{}，异常网址：{}'.format(e, url))
+        print('错误：{}\n异常网址：{}'.format(e, url))
         return ''
 
 

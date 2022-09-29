@@ -19,9 +19,12 @@ def update_pid(name_en, pid):
 
 # 插入pub到个人document
 def insert_pid(name_en, pub):
-    collection = client.bupt[name_en]
-    collection.insert_one(pub)
-    print("插入pub成功")
+    try:
+        collection = client.bupt[name_en]
+        collection.insert_one(pub)
+        print("插入 {}: pub 成功".format(name_en))
+    except Exception as e:
+        print('[\n错误：{}\n函数：{}\n]'.format(e, insert_pid.__name__))
 
 
 def update_abstract(name_en, abstract, url):
