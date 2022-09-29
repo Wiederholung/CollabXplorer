@@ -102,10 +102,11 @@ def paper_manager(paper, result):
 
 
 if __name__ == '__main__':
-    # 从 Shao-yong_Gao 继续
+    # 从 68 继续
     for col in updateUtils.get_all_col()[68:]:
         # 获取 pid
         dblp_id = get_pid(col)
+        print('正在获取：{}: pid：{}'.format(col, dblp_id))
         # 根据 pid 获取 dblp_pub_xml
         dblp_xml = get_dblp_pub(dblp_id)
         # 解析 xml 并添加摘要，得到格式化后的字典
