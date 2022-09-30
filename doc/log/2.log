@@ -1,0 +1,184 @@
+C:\Users\Wiede\anaconda3\envs\acrs\python.exe "C:\Users\Wiede\OneDrive - Queen Mary, University of London\Documentation\Projects\Academic-Collaboration-RS\back-end\get_pub.py" 
+未收录网址：http://dl.ifip.org/db/conf/im/im2019/188792.pdf
+未收录网址：https://doi.org/10.1155/2022/8390241
+未收录网址：https://doi.org/10.13052/jwe1540-9589.20810
+未收录网址：https://doi.org/10.1155/2021/8851121
+未收录网址：https://doi.org/10.1002/nem.2095
+未收录网址：https://doi.org/10.1155/2020/8870438
+错误：list index out of range，未找到摘要：https://ieeexplore.ieee.org/document/8727524/
+未收录网址：https://doi.org/10.1177/1550147719861556
+未收录网址：https://doi.org/10.3390/s17050983
+未收录网址：https://doi.org/10.3390/s16122059
+未收录网址：https://doi.org/10.12720/jcm.10.10.821-827
+未收录网址：http://www.oldcitypublishing.com/journals/ahswn-home/ahswn-issue-contents/ahswn-volume-23-number-1-2-2014/ahswn-23-1-2-p-137-157/
+插入pub成功
+插入pub成功
+未收录网址：https://doi.org/10.1049/iet-com.2013.1188
+未收录网址：https://doi.org/10.1186/1687-1499-2013-283
+插入pub成功
+未收录网址：https://doi.org/10.24963/ijcai.2022/236
+错误：Message: chrome not reachable
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x0045DF13+2219795]
+	Ordinal0 [0x003F2841+1779777]
+	Ordinal0 [0x00304100+803072]
+	Ordinal0 [0x002F9B1A+760602]
+	Ordinal0 [0x00325E4A+941642]
+	Ordinal0 [0x003219F0+924144]
+	Ordinal0 [0x0031F179+913785]
+	Ordinal0 [0x003536B9+1128121]
+	Ordinal0 [0x0035331A+1127194]
+	Ordinal0 [0x0034E616+1107478]
+	Ordinal0 [0x00327F89+950153]
+	Ordinal0 [0x00328F56+954198]
+	GetHandleVerifier [0x00752CB2+3040210]
+	GetHandleVerifier [0x00742BB4+2974420]
+	GetHandleVerifier [0x004F6A0A+565546]
+	GetHandleVerifier [0x004F5680+560544]
+	Ordinal0 [0x003F9A5C+1808988]
+	Ordinal0 [0x003FE3A8+1827752]
+	Ordinal0 [0x003FE495+1827989]
+	Ordinal0 [0x004080A4+1867940]
+	BaseThreadInitThunk [0x76276739+25]
+	RtlGetFullPathName_UEx [0x775D8FD2+1218]
+	RtlGetFullPathName_UEx [0x775D8F9D+1165]
+，异常网址：https://doi.org/10.1109/BICTA.2010.5645176
+未收录网址：https://doi.org/10.1186/1687-6180-2012-110
+未收录网址：https://doi.org/10.4304/jsw.6.10.2064-2067
+插入pub成功
+未收录网址：https://doi.org/10.13052/jwe1540-9589.20810
+未收录网址：https://doi.org/10.1155/2021/8851121
+未收录网址：https://doi.org/10.1186/s13638-020-01857-4
+未收录网址：https://doi.org/10.3390/info11010049
+未收录网址：https://doi.org/10.1155/2020/8870438
+未收录网址：https://doi.org/10.1177/1550147719879049
+未收录网址：https://doi.org/10.3390/s17050983
+未收录网址：https://doi.org/10.1587/transcom.2016CNP0012
+未收录网址：https://doi.org/10.12720/jcm.11.9.827-833
+未收录网址：https://doi.org/10.12720/jcm.8.8.480-489
+插入pub成功
+未收录网址：https://doi.org/10.24963/ijcai.2022/132
+未收录网址：https://doi.org/10.24963/ijcai.2022/236
+未收录网址：http://doi.ieeecomputersociety.org/10.1109/MDSO.2007.55
+插入pub成功
+未收录网址：https://doi.org/10.18293/SEKE2021-084
+未收录网址：https://doi.org/10.24963/ijcai.2020/301
+未收录网址：https://doi.org/10.24963/ijcai.2018/460
+未收录网址：http://proceedings.mlr.press/v36/qiu14.html
+未收录网址：https://doi.org/10.1137/1.9781611972825.31
+list index out of range
+错误：Message: invalid argument
+  (Session info: chrome=105.0.5195.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x0045DF13+2219795]
+	Ordinal0 [0x003F2841+1779777]
+	Ordinal0 [0x00304100+803072]
+	Ordinal0 [0x002F760A+751114]
+	Ordinal0 [0x002F61A8+745896]
+	Ordinal0 [0x002F63FD+746493]
+	Ordinal0 [0x00305A8E+809614]
+	Ordinal0 [0x0035F87D+1177725]
+	Ordinal0 [0x0034E7FC+1107964]
+	Ordinal0 [0x0035F192+1175954]
+	Ordinal0 [0x0034E616+1107478]
+	Ordinal0 [0x00327F89+950153]
+	Ordinal0 [0x00328F56+954198]
+	GetHandleVerifier [0x00752CB2+3040210]
+	GetHandleVerifier [0x00742BB4+2974420]
+	GetHandleVerifier [0x004F6A0A+565546]
+	GetHandleVerifier [0x004F5680+560544]
+	Ordinal0 [0x003F9A5C+1808988]
+	Ordinal0 [0x003FE3A8+1827752]
+	Ordinal0 [0x003FE495+1827989]
+	Ordinal0 [0x004080A4+1867940]
+	BaseThreadInitThunk [0x76276739+25]
+	RtlGetFullPathName_UEx [0x775D8FD2+1218]
+	RtlGetFullPathName_UEx [0x775D8F9D+1165]
+，异常网址：
+未收录网址：https://doi.org/10.1111/coin.12176
+未收录网址：https://doi.org/10.1587/transinf.2016EDP7473
+未收录网址：https://doi.org/10.3991/ijoe.v11i2.3842
+未收录网址：https://doi.org/10.1111/coin.12007
+未收录网址：https://doi.org/10.1155/2013/692146
+插入pub成功
+未收录网址：https://doi.org/10.3390/s22093217
+未收录网址：https://doi.org/10.1155/2021/6671132
+未收录网址：https://doi.org/10.3390/s18051341
+未收录网址：https://doi.org/10.1155/2018/9340194
+未收录网址：https://doi.org/10.3837/tiis.2017.06.002
+未收录网址：https://doi.org/10.3837/tiis.2015.07.003
+未收录网址：https://doi.org/10.3837/tiis.2015.07.016
+未收录网址：https://doi.org/10.3837/tiis.2014.12.004
+未收录网址：https://doi.org/10.1587/transcom.E95.B.3768
+未收录网址：https://doi.org/10.1587/transcom.E94.B.3382
+插入pub成功
+插入pub成功
+未收录网址：http://proceedings.mlr.press/v89/liu19b.html
+未收录网址：https://doi.org/10.18653/v1/D19-1072
+未收录网址：https://doi.org/10.4108/ICST.WICON2008.4861
+未收录网址：https://doi.org/10.1155/2021/9970600
+未收录网址：https://doi.org/10.1049/iet-com.2019.1367
+未收录网址：https://doi.org/10.1002/dac.2792
+未收录网址：https://doi.org/10.1155/2014/930472
+未收录网址：https://doi.org/10.1155/2014/462946
+插入pub成功
+插入pub成功
+未收录网址：https://doi.org/10.1504/IJWGS.2017.10002666
+插入pub成功
+未收录网址：https://doi.org/10.1155/2015/140212
+插入pub成功
+未收录网址：https://www.bmvc2021-virtualconference.com/assets/papers/1245.pdf
+未收录网址：https://doi.org/10.18293/SEKE2020-023
+未收录网址：http://crpit.scem.westernsydney.edu.au/abstracts/CRPITV159Ding.html
+未收录网址：http://www.cmis.csiro.au/Hugues.Talbot/dicta2003/cdrom/pdf/0369.pdf
+未收录网址：https://doi.org/10.1002/ett.4067
+错误：list index out of range，未找到摘要：https://link.springer.com/article/10.1007/s11432-019-2717-4
+未收录网址：https://doi.org/10.1142/S0219691320500915
+未收录网址：https://doi.org/10.17487/RFC8991
+未收录网址：https://doi.org/10.1155/2020/3641745
+未收录网址：https://doi.org/10.1137/19M1255331
+未收录网址：https://doi.org/10.1080/01691864.2019.1621774
+未收录网址：https://doi.org/10.1049/iet-spr.2018.5037
+未收录网址：https://doi.org/10.1108/IR-05-2018-0107
+未收录网址：https://doi.org/10.1117/1.JEI.28.1.013044
+未收录网址：https://doi.org/10.3390/s19143121
+未收录网址：https://doi.org/10.1002/cae.21909
+未收录网址：https://doi.org/10.1155/2018/2818251
+未收录网址：https://doi.org/10.1049/iet-spr.2016.0381
+未收录网址：https://doi.org/10.1177/1550147718804702
+未收录网址：https://doi.org/10.11896/j.issn.1002-137X.2018.06.034
+未收录网址：https://doi.org/10.1049/iet-spr.2016.0272
+未收录网址：https://doi.org/10.3837/tiis.2017.06.004
+未收录网址：https://doi.org/10.11896/j.issn.1002-137X.2017.03.009
+未收录网址：https://doi.org/10.1137/16M1094907
+未收录网址：https://doi.org/10.1142/S0219691316500260
+未收录网址：https://doi.org/10.3390/s16060762
+未收录网址：https://doi.org/10.3390/s16071090
+未收录网址：https://doi.org/10.3390/s16091385
+未收录网址：https://doi.org/10.1155/2014/846901
+未收录网址：https://doi.org/10.3837/tiis.2014.08.021
+未收录网址：https://doi.org/10.1155/2013/692146
+'Element' object has no attribute 'data'
+未收录网址：https://doi.org/10.1155/2013/690974
+未收录网址：https://doi.org/10.1137/120879646
+未收录网址：https://doi.org/10.1080/15501320802533632
+插入pub成功
+未收录网址：https://doi.org/10.1002/cpe.2956
+插入pub成功
+错误：list index out of range，未找到 pid：Shao-Yong_Guo.xml
+HTTP Error 404: Not Found
+'str' object has no attribute 'getAttribute'
+Traceback (most recent call last):
+  File "C:\Users\Wiede\OneDrive - Queen Mary, University of London\Documentation\Projects\Academic-Collaboration-RS\back-end\get_pub.py", line 119, in <module>
+    updateUtils.insert_pid(col, json_dict)
+  File "C:\Users\Wiede\OneDrive - Queen Mary, University of London\Documentation\Projects\Academic-Collaboration-RS\back-end\DB\Utils\updateUtils.py", line 23, in insert_pid
+    collection.insert_one(pub)
+  File "C:\Users\Wiede\anaconda3\envs\acrs\lib\site-packages\pymongo\collection.py", line 699, in insert_one
+    common.validate_is_document_type("document", document)
+  File "C:\Users\Wiede\anaconda3\envs\acrs\lib\site-packages\pymongo\common.py", line 503, in validate_is_document_type
+    raise TypeError("%s must be an instance of dict, bson.son.SON, "
+TypeError: document must be an instance of dict, bson.son.SON, bson.raw_bson.RawBSONDocument, or a type that inherits from collections.MutableMapping
+
+进程已结束,退出代码1

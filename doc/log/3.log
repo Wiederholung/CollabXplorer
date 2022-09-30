@@ -1,0 +1,1379 @@
+C:\Users\Wiede\anaconda3\envs\acrs\python.exe "C:\Users\Wiede\OneDrive - Queen Mary, University of London\Documentation\Projects\Academic-Collaboration-RS\back-end\get_pub.py" 
+正在获取：Yan_Sun_0004: pid：181/2323-4
+未收录网址：https://doi.org/10.1002/int.22730
+未收录网址：https://doi.org/10.1002/int.22931
+未收录网址：https://doi.org/10.3390/s20030610
+未收录网址：https://www.oldcitypublishing.com/journals/ahswn-home/ahswn-issue-contents/ahswn-volume-42-number-3-4-2018/ahswn-42-3-4-p-259-293/
+未收录网址：https://doi.org/10.1002/wcm.2733
+未收录网址：http://www.oldcitypublishing.com/journals/ahswn-home/ahswn-issue-contents/ahswn-volume-29-number-1-4-2015/ahswn-29-1-4-p-1-29/
+未收录网址：http://www.oldcitypublishing.com/journals/ahswn-home/ahswn-issue-contents/ahswn-volume-22-number-1-2-2014/ahswn-22-1-2-p-135-156/
+未收录网址：http://www.oldcitypublishing.com/journals/ahswn-home/ahswn-issue-contents/ahswn-volume-22-number-3-4-2014/ahswn-22-3-4-p-231-257/
+未收录网址：http://www.oldcitypublishing.com/journals/ahswn-home/ahswn-issue-contents/ahswn-volume-19-number-3-4-2013/ahswn-19-3-4-p-213-239/
+未收录网址：https://doi.org/10.1155/2013/801758
+未收录网址：https://doi.org/10.1155/2012/854325
+未收录网址：https://doi.org/10.1155/2010/316342
+插入 Yan_Sun_0004: pub 成功
+正在获取：Yuyu_Yuan: pid：127/0611
+插入 Yuyu_Yuan: pub 成功
+正在获取：Wenan_Zhou: pid：86/3126
+未收录网址：https://doi.org/10.1049/iet-cvi.2019.0304
+未收录网址：https://doi.org/10.1504/IJES.2018.10016819
+未收录网址：https://doi.org/10.3837/tiis.2017.02.003
+未收录网址：https://doi.org/10.1504/IJCNDS.2016.076649
+未收录网址：http://www.jcomputers.us/index.php?m=content&c=index&a=show&catid=115&id=1631
+插入 Wenan_Zhou: pub 成功
+正在获取：Xiang_Cheng_0003: pid：29/1059-3
+未收录网址：https://doi.org/10.24963/ijcai.2018/610
+未收录网址：https://doi.org/10.24963/ijcai.2017/388
+未收录网址：https://doi.org/10.1111/exsy.12606
+未收录网址：http://www.vldb.org/pvldb/vol14/p378-yang.pdf
+未收录网址：https://doi.org/10.1002/asi.23931
+未收录网址：https://doi.org/10.1111/exsy.12190
+未收录网址：https://doi.org/10.1155/2017/4215425
+未收录网址：https://doi.org/10.1002/sec.1714
+未收录网址：https://doi.org/10.1093/comjnl/bxu002
+未收录网址：https://doi.org/10.1002/sec.1245
+未收录网址：https://doi.org/10.1002/dac.1399
+插入 Xiang_Cheng_0003: pub 成功
+正在获取：Songwei_Pei: pid：29/7673
+未收录网址：https://doi.org/10.1587/elex.15.20180093
+未收录网址：https://doi.org/10.1587/elex.15.20180160
+错误：list index out of range，未找到摘要：https://www.sciencedirect.com/science/article/pii/S1047320314001795?via%3Dihub
+错误：list index out of range，未找到摘要：https://www.sciencedirect.com/science/article/pii/S1047320314002107?via%3Dihub
+插入 Songwei_Pei: pub 成功
+正在获取：Xiaoyuan_Fu: pid：10/575
+未收录网址：https://www.oldcitypublishing.com/journals/ahswn-home/ahswn-issue-contents/ahswn-volume-45-number-1-2-2019/ahswn-45-1-p-93-115/
+未收录网址：https://doi.org/10.1002/(SICI)1096-987X(19970715)18:9<1167::AID-JCC5>3.0.CO;2-P
+插入 Xiaoyuan_Fu: pub 成功
+正在获取：Jianxin_Liao: pid：60/4951
+未收录网址：https://proceedings.mlr.press/v157/zhan21a.html
+未收录网址：https://www.bmvc2021-virtualconference.com/assets/papers/0129.pdf
+未收录网址：https://doi.org/10.18653/v1/2020.acl-main.370
+未收录网址：https://doi.org/10.3233/FAIA200134
+未收录网址：https://doi.org/10.18653/v1/D19-1043
+未收录网址：https://doi.org/10.18653/v1/D19-1551
+未收录网址：http://bmvc2018.org/contents/papers/0557.pdf
+错误：list index out of range，未找到摘要：https://www.aaai.org/ocs/index.php/AAAI/AAAI15/paper/view/9273
+错误：list index out of range，未找到摘要：https://www.aaai.org/ocs/index.php/AAAI/AAAI15/paper/view/9840
+未收录网址：http://ceur-ws.org/Vol-689/om2010_poster8.pdf
+list index out of range
+错误：Message: invalid argument
+  (Session info: chrome=105.0.5195.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x003EDF13+2219795]
+	Ordinal0 [0x00382841+1779777]
+	Ordinal0 [0x00294100+803072]
+	Ordinal0 [0x0028760A+751114]
+	Ordinal0 [0x002861A8+745896]
+	Ordinal0 [0x002863FD+746493]
+	Ordinal0 [0x00295A8E+809614]
+	Ordinal0 [0x002EF87D+1177725]
+	Ordinal0 [0x002DE7FC+1107964]
+	Ordinal0 [0x002EF192+1175954]
+	Ordinal0 [0x002DE616+1107478]
+	Ordinal0 [0x002B7F89+950153]
+	Ordinal0 [0x002B8F56+954198]
+	GetHandleVerifier [0x006E2CB2+3040210]
+	GetHandleVerifier [0x006D2BB4+2974420]
+	GetHandleVerifier [0x00486A0A+565546]
+	GetHandleVerifier [0x00485680+560544]
+	Ordinal0 [0x00389A5C+1808988]
+	Ordinal0 [0x0038E3A8+1827752]
+	Ordinal0 [0x0038E495+1827989]
+	Ordinal0 [0x003980A4+1867940]
+	BaseThreadInitThunk [0x76F06739+25]
+	RtlGetFullPathName_UEx [0x77E28FD2+1218]
+	RtlGetFullPathName_UEx [0x77E28F9D+1165]
+
+异常网址：
+未收录网址：https://doi.org/10.3991/ijet.v16i21.25001
+未收录网址：https://doi.org/10.1186/s13638-020-1640-9
+未收录网址：https://www.oldcitypublishing.com/journals/ahswn-home/ahswn-issue-contents/ahswn-volume-45-number-1-2-2019/ahswn-45-1-p-93-115/
+未收录网址：https://doi.org/10.1049/iet-ipr.2018.6644
+未收录网址：https://doi.org/10.1155/2019/4064201
+未收录网址：https://doi.org/10.4018/IJSWIS.2018040101
+未收录网址：https://doi.org/10.3837/tiis.2017.04.005
+未收录网址：https://doi.org/10.1049/iet-sen.2014.0155
+未收录网址：https://doi.org/10.1049/iet-sen.2015.0109
+未收录网址：https://doi.org/10.1049/iet-com.2015.0539
+未收录网址：https://doi.org/10.3837/tiis.2016.05.018
+未收录网址：https://doi.org/10.1155/2016/2784548
+未收录网址：https://doi.org/10.1049/iet-com.2013.1142
+未收录网址：https://doi.org/10.3837/tiis.2014.01.009
+未收录网址：https://doi.org/10.3837/tiis.2014.02.007
+未收录网址：https://doi.org/10.3837/tiis.2014.04.014
+未收录网址：https://doi.org/10.1504/IJAHUC.2012.050438
+未收录网址：https://doi.org/10.1002/dac.1263
+未收录网址：https://doi.org/10.3837/tiis.2012.04.009
+未收录网址：https://doi.org/10.1587/transcom.E94.B.128
+未收录网址：https://doi.org/10.1587/transinf.E94.D.710
+未收录网址：https://doi.org/10.1093/comjnl/bxp111
+未收录网址：https://doi.org/10.1002/dac.973
+未收录网址：https://doi.org/10.4236/wsn.2009.13019
+未收录网址：https://doi.org/10.1002/dac.832
+未收录网址：https://doi.org/10.1002/asi.20588
+未收录网址：https://doi.org/10.1002/asi.20623
+未收录网址：https://doi.org/10.1002/asi.20727
+错误：list index out of range，未找到摘要：https://www.sciencedirect.com/science/article/abs/pii/S0164121207000684?via%3Dihub
+插入 Jianxin_Liao: pub 成功
+正在获取：Tong_Xu_0002: pid：70/6770-2
+未收录网址：https://doi.org/10.18653/v1/D19-1551
+插入 Tong_Xu_0002: pub 成功
+正在获取：Fang_Zhao_0003: pid：72/4898-3
+未收录网址：http://ceur-ws.org/Vol-2498/short57.pdf
+未收录网址：https://doi.org/10.1002/int.22842
+未收录网址：https://doi.org/10.1002/int.22855
+未收录网址：https://doi.org/10.3390/rs14071691
+未收录网址：https://doi.org/10.3390/rs12111704
+未收录网址：https://doi.org/10.3390/s20092698
+未收录网址：https://doi.org/10.3390/s20164574
+未收录网址：https://doi.org/10.3390/rs11091140
+未收录网址：https://doi.org/10.3390/rs11111293
+未收录网址：https://doi.org/10.3390/s19040786
+未收录网址：https://doi.org/10.3390/s19040840
+未收录网址：https://doi.org/10.3390/s19040947
+未收录网址：https://doi.org/10.1177/1550147718758263
+未收录网址：https://doi.org/10.1177/1550147718803072
+未收录网址：https://doi.org/10.1177/1550147718807832
+未收录网址：https://doi.org/10.1177/1550147718815637
+未收录网址：https://doi.org/10.3745/JIPS.04.0055
+未收录网址：https://doi.org/10.3745/JIPS.04.0064
+未收录网址：https://doi.org/10.3390/s18103317
+未收录网址：https://doi.org/10.3390/s17112678
+未收录网址：https://doi.org/10.1155/2016/1945695
+未收录网址：https://doi.org/10.3390/s16091385
+未收录网址：https://doi.org/10.4018/japuc.2011010104
+插入 Fang_Zhao_0003: pub 成功
+正在获取：Chong_Gao: pid：272/6179
+插入 Chong_Gao: pub 成功
+正在获取：Hai_Huang_0001: pid：51/944-1
+错误：list index out of range，未找到摘要：https://link.springer.com/deleted
+错误：list index out of range，未找到摘要：https://link.springer.com/deleted
+错误：list index out of range，未找到摘要：https://link.springer.com/deleted
+错误：list index out of range，未找到摘要：https://link.springer.com/deleted
+错误：list index out of range，未找到摘要：https://link.springer.com/deleted
+错误：list index out of range，未找到摘要：https://link.springer.com/deleted
+错误：list index out of range，未找到摘要：https://link.springer.com/deleted
+错误：list index out of range，未找到摘要：https://link.springer.com/deleted
+错误：list index out of range，未找到摘要：https://link.springer.com/deleted
+错误：list index out of range，未找到摘要：https://link.springer.com/deleted
+错误：list index out of range，未找到摘要：https://link.springer.com/deleted
+错误：list index out of range，未找到摘要：https://link.springer.com/deleted
+错误：list index out of range，未找到摘要：https://link.springer.com/deleted
+错误：list index out of range，未找到摘要：https://link.springer.com/deleted
+错误：list index out of range，未找到摘要：https://link.springer.com/deleted
+未收录网址：https://doi.org/10.1002/cta.2924
+未收录网址：https://doi.org/10.1049/iet-com.2019.1367
+未收录网址：https://doi.org/10.3837/tiis.2018.04.006
+未收录网址：https://doi.org/10.1049/iet-bmt.2016.0085
+插入 Hai_Huang_0001: pub 成功
+正在获取：Xiaofeng_Du: pid：96/10111
+插入 Xiaofeng_Du: pub 成功
+正在获取：Kun_Xie_0003: pid：98/476-3
+插入 Kun_Xie_0003: pub 成功
+正在获取：Yunzhan_Gong: pid：83/6569
+未收录网址：https://doi.org/10.1111/exsy.12977
+未收录网址：https://doi.org/10.1504/IJES.2021.112002
+未收录网址：https://doi.org/10.1111/coin.12302
+未收录网址：https://doi.org/10.3390/e19020079
+未收录网址：https://doi.org/10.15837/ijccc.2017.4.2896
+未收录网址：https://doi.org/10.4018/IJOSSP.2017040104
+未收录网址：https://doi.org/10.15837/ijccc.2014.4.1169
+未收录网址：http://www.jcomputers.us/index.php?m=content&c=index&a=show&catid=110&id=1381
+未收录网址：https://doi.org/10.4304/jsw.9.2.358-364
+未收录网址：https://doi.org/10.4304/jsw.8.12.3120-3131
+插入 Yunzhan_Gong: pub 成功
+正在获取：Yang_Zhang_0015: pid：06/6785-15
+未收录网址：https://doi.org/10.3390/s19061449
+未收录网址：https://doi.org/10.1177/1550147716664231
+未收录网址：https://doi.org/10.4018/IJWSR.2016010101
+未收录网址：https://doi.org/10.1002/cpe.3170
+未收录网址：https://doi.org/10.1002/cpe.3469
+未收录网址：https://doi.org/10.1155/2015/390329
+未收录网址：https://doi.org/10.15837/ijccc.2014.3.1085
+未收录网址：http://eprint.iacr.org/2013/221
+错误：Message: chrome not reachable
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x003EDF13+2219795]
+	Ordinal0 [0x00382841+1779777]
+	Ordinal0 [0x00294100+803072]
+	Ordinal0 [0x00289B1A+760602]
+	Ordinal0 [0x002B5E4A+941642]
+	Ordinal0 [0x002B19F0+924144]
+	Ordinal0 [0x002AF179+913785]
+	Ordinal0 [0x002E36B9+1128121]
+	Ordinal0 [0x002E331A+1127194]
+	Ordinal0 [0x002DE616+1107478]
+	Ordinal0 [0x002B7F89+950153]
+	Ordinal0 [0x002B8F56+954198]
+	GetHandleVerifier [0x006E2CB2+3040210]
+	GetHandleVerifier [0x006D2BB4+2974420]
+	GetHandleVerifier [0x00486A0A+565546]
+	GetHandleVerifier [0x00485680+560544]
+	Ordinal0 [0x00389A5C+1808988]
+	Ordinal0 [0x0038E3A8+1827752]
+	Ordinal0 [0x0038E495+1827989]
+	Ordinal0 [0x003980A4+1867940]
+	BaseThreadInitThunk [0x76F06739+25]
+	RtlGetFullPathName_UEx [0x77E28FD2+1218]
+	RtlGetFullPathName_UEx [0x77E28F9D+1165]
+
+异常网址：https://doi.org/10.1016/j.jnca.2010.03.025
+未收录网址：http://eprint.iacr.org/2010/242
+插入 Yang_Zhang_0015: pub 成功
+正在获取：Changqiao_Xu: pid：51/4906
+错误：Message: chrome not reachable
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x003EDF13+2219795]
+	Ordinal0 [0x00382841+1779777]
+	Ordinal0 [0x00294100+803072]
+	Ordinal0 [0x00289B1A+760602]
+	Ordinal0 [0x002B5E4A+941642]
+	Ordinal0 [0x002B19F0+924144]
+	Ordinal0 [0x002AF179+913785]
+	Ordinal0 [0x002E36B9+1128121]
+	Ordinal0 [0x002E331A+1127194]
+	Ordinal0 [0x002DE616+1107478]
+	Ordinal0 [0x002B7F89+950153]
+	Ordinal0 [0x002B8F56+954198]
+	GetHandleVerifier [0x006E2CB2+3040210]
+	GetHandleVerifier [0x006D2BB4+2974420]
+	GetHandleVerifier [0x00486A0A+565546]
+	GetHandleVerifier [0x00485680+560544]
+	Ordinal0 [0x00389A5C+1808988]
+	Ordinal0 [0x0038E3A8+1827752]
+	Ordinal0 [0x0038E495+1827989]
+	Ordinal0 [0x003980A4+1867940]
+	BaseThreadInitThunk [0x76F06739+25]
+	RtlGetFullPathName_UEx [0x77E28FD2+1218]
+	RtlGetFullPathName_UEx [0x77E28F9D+1165]
+
+异常网址：https://doi.org/10.1002/ett.4460
+未收录网址：https://doi.org/10.1002/ett.4481
+未收录网址：https://doi.org/10.1002/ett.4488
+未收录网址：https://doi.org/10.1002/ett.4538
+未收录网址：https://doi.org/10.1002/ett.3779
+未收录网址：https://doi.org/10.1002/ett.4624
+未收录网址：https://doi.org/10.1002/ett.4625
+未收录网址：https://doi.org/10.1002/int.22934
+错误：list index out of range，未找到摘要：https://ieeexplore.ieee.org/document/9051813/
+未收录网址：https://doi.org/10.1002/ett.3221
+未收录网址：https://doi.org/10.1002/itl2.9
+未收录网址：https://doi.org/10.1155/2017/9053678
+未收录网址：https://doi.org/10.1177/155014779685385
+未收录网址：https://doi.org/10.1155/2016/7853219
+未收录网址：https://doi.org/10.1155/2016/8719763
+未收录网址：https://doi.org/10.4108/icst.mobimedia.2015.259057
+未收录网址：https://doi.org/10.1155/2015/518289
+未收录网址：https://doi.org/10.1155/2015/968167
+list index out of range
+错误：Message: invalid argument
+  (Session info: chrome=105.0.5195.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x003EDF13+2219795]
+	Ordinal0 [0x00382841+1779777]
+	Ordinal0 [0x00294100+803072]
+	Ordinal0 [0x0028760A+751114]
+	Ordinal0 [0x002861A8+745896]
+	Ordinal0 [0x002863FD+746493]
+	Ordinal0 [0x00295A8E+809614]
+	Ordinal0 [0x002EF87D+1177725]
+	Ordinal0 [0x002DE7FC+1107964]
+	Ordinal0 [0x002EF192+1175954]
+	Ordinal0 [0x002DE616+1107478]
+	Ordinal0 [0x002B7F89+950153]
+	Ordinal0 [0x002B8F56+954198]
+	GetHandleVerifier [0x006E2CB2+3040210]
+	GetHandleVerifier [0x006D2BB4+2974420]
+	GetHandleVerifier [0x00486A0A+565546]
+	GetHandleVerifier [0x00485680+560544]
+	Ordinal0 [0x00389A5C+1808988]
+	Ordinal0 [0x0038E3A8+1827752]
+	Ordinal0 [0x0038E495+1827989]
+	Ordinal0 [0x003980A4+1867940]
+	BaseThreadInitThunk [0x76F06739+25]
+	RtlGetFullPathName_UEx [0x77E28FD2+1218]
+	RtlGetFullPathName_UEx [0x77E28F9D+1165]
+
+异常网址：
+错误：list index out of range，未找到摘要：https://ieeexplore.ieee.org/document/6679189/
+未收录网址：https://doi.org/10.1155/2014/572524
+未收录网址：https://doi.org/10.3837/tiis.2014.01.005
+未收录网址：https://doi.org/10.1155/2013/460164
+未收录网址：https://doi.org/10.1155/2013/483581
+未收录网址：https://doi.org/10.1155/2012/789579
+未收录网址：https://doi.org/10.1155/2012/381726
+插入 Changqiao_Xu: pub 成功
+正在获取：Qiang_Fu_0004: pid：17/1352-4
+未收录网址：https://doi.org/10.1111/cgf.14166
+未收录网址：https://doi.org/10.1111/cgf.12808
+未收录网址：https://doi.org/10.1111/cgf.12215
+插入 Qiang_Fu_0004: pub 成功
+正在获取：Wenming_Guo: pid：89/6072
+未收录网址：https://doi.org/10.1002/cpe.3776
+插入 Wenming_Guo: pub 成功
+正在获取：Haoyu_Wang_0001: pid：50/8499-1
+未收录网址：https://doi.org/10.1145/3524613.3527818
+未收录网址：https://doi.org/10.18293/SEKE2021-132
+未收录网址：https://www.usenix.org/conference/usenixsecurity21/presentation/he-ningyu
+未收录网址：https://doi.org/10.18293/SEKE2018-180
+错误：Message: chrome not reachable
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x003EDF13+2219795]
+	Ordinal0 [0x00382841+1779777]
+	Ordinal0 [0x00294100+803072]
+	Ordinal0 [0x00289B1A+760602]
+	Ordinal0 [0x002B5E4A+941642]
+	Ordinal0 [0x002B19F0+924144]
+	Ordinal0 [0x002AF179+913785]
+	Ordinal0 [0x002E36B9+1128121]
+	Ordinal0 [0x002E331A+1127194]
+	Ordinal0 [0x002DE616+1107478]
+	Ordinal0 [0x002B7F89+950153]
+	Ordinal0 [0x002B8F56+954198]
+	GetHandleVerifier [0x006E2CB2+3040210]
+	GetHandleVerifier [0x006D2BB4+2974420]
+	GetHandleVerifier [0x00486A0A+565546]
+	GetHandleVerifier [0x00485680+560544]
+	Ordinal0 [0x00389A5C+1808988]
+	Ordinal0 [0x0038E3A8+1827752]
+	Ordinal0 [0x0038E495+1827989]
+	Ordinal0 [0x003980A4+1867940]
+	BaseThreadInitThunk [0x76F06739+25]
+	RtlGetFullPathName_UEx [0x77E28FD2+1218]
+	RtlGetFullPathName_UEx [0x77E28F9D+1165]
+
+异常网址：https://arxiv.org/abs/2012.10866
+未收录网址：https://eprint.iacr.org/2020/578
+插入 Haoyu_Wang_0001: pub 成功
+正在获取：Hongwei_Jia: pid：225/2855
+未收录网址：https://doi.org/10.1080/00207721.2018.1479004
+插入 Hongwei_Jia: pub 成功
+正在获取：Meina_Song: pid：95/4440
+未收录网址：https://doi.org/10.18653/v1/2021.naacl-main.451
+未收录网址：https://doi.org/10.18653/v1/p19-1544
+list index out of range
+错误：Message: invalid argument
+  (Session info: chrome=105.0.5195.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x003EDF13+2219795]
+	Ordinal0 [0x00382841+1779777]
+	Ordinal0 [0x00294100+803072]
+	Ordinal0 [0x0028760A+751114]
+	Ordinal0 [0x002861A8+745896]
+	Ordinal0 [0x002863FD+746493]
+	Ordinal0 [0x00295A8E+809614]
+	Ordinal0 [0x002EF87D+1177725]
+	Ordinal0 [0x002DE7FC+1107964]
+	Ordinal0 [0x002EF192+1175954]
+	Ordinal0 [0x002DE616+1107478]
+	Ordinal0 [0x002B7F89+950153]
+	Ordinal0 [0x002B8F56+954198]
+	GetHandleVerifier [0x006E2CB2+3040210]
+	GetHandleVerifier [0x006D2BB4+2974420]
+	GetHandleVerifier [0x00486A0A+565546]
+	GetHandleVerifier [0x00485680+560544]
+	Ordinal0 [0x00389A5C+1808988]
+	Ordinal0 [0x0038E3A8+1827752]
+	Ordinal0 [0x0038E495+1827989]
+	Ordinal0 [0x003980A4+1867940]
+	BaseThreadInitThunk [0x76F06739+25]
+	RtlGetFullPathName_UEx [0x77E28FD2+1218]
+	RtlGetFullPathName_UEx [0x77E28F9D+1165]
+
+异常网址：
+list index out of range
+错误：Message: invalid argument
+  (Session info: chrome=105.0.5195.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x003EDF13+2219795]
+	Ordinal0 [0x00382841+1779777]
+	Ordinal0 [0x00294100+803072]
+	Ordinal0 [0x0028760A+751114]
+	Ordinal0 [0x002861A8+745896]
+	Ordinal0 [0x002863FD+746493]
+	Ordinal0 [0x00295A8E+809614]
+	Ordinal0 [0x002EF87D+1177725]
+	Ordinal0 [0x002DE7FC+1107964]
+	Ordinal0 [0x002EF192+1175954]
+	Ordinal0 [0x002DE616+1107478]
+	Ordinal0 [0x002B7F89+950153]
+	Ordinal0 [0x002B8F56+954198]
+	GetHandleVerifier [0x006E2CB2+3040210]
+	GetHandleVerifier [0x006D2BB4+2974420]
+	GetHandleVerifier [0x00486A0A+565546]
+	GetHandleVerifier [0x00485680+560544]
+	Ordinal0 [0x00389A5C+1808988]
+	Ordinal0 [0x0038E3A8+1827752]
+	Ordinal0 [0x0038E495+1827989]
+	Ordinal0 [0x003980A4+1867940]
+	BaseThreadInitThunk [0x76F06739+25]
+	RtlGetFullPathName_UEx [0x77E28FD2+1218]
+	RtlGetFullPathName_UEx [0x77E28F9D+1165]
+
+异常网址：
+list index out of range
+错误：Message: invalid argument
+  (Session info: chrome=105.0.5195.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x003EDF13+2219795]
+	Ordinal0 [0x00382841+1779777]
+	Ordinal0 [0x00294100+803072]
+	Ordinal0 [0x0028760A+751114]
+	Ordinal0 [0x002861A8+745896]
+	Ordinal0 [0x002863FD+746493]
+	Ordinal0 [0x00295A8E+809614]
+	Ordinal0 [0x002EF87D+1177725]
+	Ordinal0 [0x002DE7FC+1107964]
+	Ordinal0 [0x002EF192+1175954]
+	Ordinal0 [0x002DE616+1107478]
+	Ordinal0 [0x002B7F89+950153]
+	Ordinal0 [0x002B8F56+954198]
+	GetHandleVerifier [0x006E2CB2+3040210]
+	GetHandleVerifier [0x006D2BB4+2974420]
+	GetHandleVerifier [0x00486A0A+565546]
+	GetHandleVerifier [0x00485680+560544]
+	Ordinal0 [0x00389A5C+1808988]
+	Ordinal0 [0x0038E3A8+1827752]
+	Ordinal0 [0x0038E495+1827989]
+	Ordinal0 [0x003980A4+1867940]
+	BaseThreadInitThunk [0x76F06739+25]
+	RtlGetFullPathName_UEx [0x77E28FD2+1218]
+	RtlGetFullPathName_UEx [0x77E28F9D+1165]
+
+异常网址：
+list index out of range
+错误：Message: invalid argument
+  (Session info: chrome=105.0.5195.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x003EDF13+2219795]
+	Ordinal0 [0x00382841+1779777]
+	Ordinal0 [0x00294100+803072]
+	Ordinal0 [0x0028760A+751114]
+	Ordinal0 [0x002861A8+745896]
+	Ordinal0 [0x002863FD+746493]
+	Ordinal0 [0x00295A8E+809614]
+	Ordinal0 [0x002EF87D+1177725]
+	Ordinal0 [0x002DE7FC+1107964]
+	Ordinal0 [0x002EF192+1175954]
+	Ordinal0 [0x002DE616+1107478]
+	Ordinal0 [0x002B7F89+950153]
+	Ordinal0 [0x002B8F56+954198]
+	GetHandleVerifier [0x006E2CB2+3040210]
+	GetHandleVerifier [0x006D2BB4+2974420]
+	GetHandleVerifier [0x00486A0A+565546]
+	GetHandleVerifier [0x00485680+560544]
+	Ordinal0 [0x00389A5C+1808988]
+	Ordinal0 [0x0038E3A8+1827752]
+	Ordinal0 [0x0038E495+1827989]
+	Ordinal0 [0x003980A4+1867940]
+	BaseThreadInitThunk [0x76F06739+25]
+	RtlGetFullPathName_UEx [0x77E28FD2+1218]
+	RtlGetFullPathName_UEx [0x77E28F9D+1165]
+
+异常网址：
+未收录网址：https://doi.org/10.1186/s12911-022-01889-4
+未收录网址：https://doi.org/10.1587/transinf.2016EDP7346
+未收录网址：https://doi.org/10.1587/transinf.2014EDP7174
+未收录网址：http://www.jcomputers.us/index.php?m=content&c=index&a=show&catid=54&id=598
+未收录网址：https://doi.org/10.1002/wcm.749
+插入 Meina_Song: pub 成功
+正在获取：Lei_Feng_0001: pid：76/847-1
+未收录网址：https://doi.org/10.13052/jwe1540-9589.21312
+未收录网址：https://doi.org/10.1186/s13638-021-01932-4
+未收录网址：https://doi.org/10.1186/s13638-021-02069-0
+未收录网址：https://doi.org/10.1186/s13638-020-01690-9
+未收录网址：https://doi.org/10.3390/info11010049
+未收录网址：https://doi.org/10.3390/s20071901
+未收录网址：https://doi.org/10.1002/ett.3266
+未收录网址：https://doi.org/10.1177/1550147718811094
+未收录网址：https://doi.org/10.1155/2018/6201386
+未收录网址：https://doi.org/10.1049/iet-com.2016.0241
+未收录网址：https://doi.org/10.1155/2016/3121538
+未收录网址：https://doi.org/10.1155/2016/6929575
+未收录网址：https://doi.org/10.1155/2016/9586287
+未收录网址：https://doi.org/10.3390/s16122059
+未收录网址：https://doi.org/10.3837/tiis.2015.10.009
+未收录网址：https://doi.org/10.3837/tiis.2014.09.002
+插入 Lei_Feng_0001: pub 成功
+正在获取：Yuchao_Zhang: pid：49/2641
+list index out of range
+错误：Message: invalid argument
+  (Session info: chrome=105.0.5195.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x003EDF13+2219795]
+	Ordinal0 [0x00382841+1779777]
+	Ordinal0 [0x00294100+803072]
+	Ordinal0 [0x0028760A+751114]
+	Ordinal0 [0x002861A8+745896]
+	Ordinal0 [0x002863FD+746493]
+	Ordinal0 [0x00295A8E+809614]
+	Ordinal0 [0x002EF87D+1177725]
+	Ordinal0 [0x002DE7FC+1107964]
+	Ordinal0 [0x002EF192+1175954]
+	Ordinal0 [0x002DE616+1107478]
+	Ordinal0 [0x002B7F89+950153]
+	Ordinal0 [0x002B8F56+954198]
+	GetHandleVerifier [0x006E2CB2+3040210]
+	GetHandleVerifier [0x006D2BB4+2974420]
+	GetHandleVerifier [0x00486A0A+565546]
+	GetHandleVerifier [0x00485680+560544]
+	Ordinal0 [0x00389A5C+1808988]
+	Ordinal0 [0x0038E3A8+1827752]
+	Ordinal0 [0x0038E495+1827989]
+	Ordinal0 [0x003980A4+1867940]
+	BaseThreadInitThunk [0x76F06739+25]
+	RtlGetFullPathName_UEx [0x77E28FD2+1218]
+	RtlGetFullPathName_UEx [0x77E28F9D+1165]
+
+异常网址：
+插入 Yuchao_Zhang: pub 成功
+正在获取：Zhengqiu_Yang: pid：31/7774
+未收录网址：https://doi.org/10.3390/rs13142672
+未收录网址：https://doi.org/10.3390/ijgi9100571
+插入 Zhengqiu_Yang: pub 成功
+正在获取：Xiangyang_Gong: pid：04/8431
+未收录网址：https://doi.org/10.18293/SEKE2020-023
+未收录网址：http://crpit.scem.westernsydney.edu.au/abstracts/CRPITV159Ding.html
+错误：Message: chrome not reachable
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x003EDF13+2219795]
+	Ordinal0 [0x00382841+1779777]
+	Ordinal0 [0x00294100+803072]
+	Ordinal0 [0x00289B1A+760602]
+	Ordinal0 [0x002B5E4A+941642]
+	Ordinal0 [0x002B19F0+924144]
+	Ordinal0 [0x002AF179+913785]
+	Ordinal0 [0x002E36B9+1128121]
+	Ordinal0 [0x002E331A+1127194]
+	Ordinal0 [0x002DE616+1107478]
+	Ordinal0 [0x002B7F89+950153]
+	Ordinal0 [0x002B8F56+954198]
+	GetHandleVerifier [0x006E2CB2+3040210]
+	GetHandleVerifier [0x006D2BB4+2974420]
+	GetHandleVerifier [0x00486A0A+565546]
+	GetHandleVerifier [0x00485680+560544]
+	Ordinal0 [0x00389A5C+1808988]
+	Ordinal0 [0x0038E3A8+1827752]
+	Ordinal0 [0x0038E495+1827989]
+	Ordinal0 [0x003980A4+1867940]
+	BaseThreadInitThunk [0x76F06739+25]
+	RtlGetFullPathName_UEx [0x77E28FD2+1218]
+	RtlGetFullPathName_UEx [0x77E28F9D+1165]
+
+异常网址：https://doi.org/10.1109/CCIS.2012.6664231
+未收录网址：https://doi.org/10.1186/s12880-021-00678-1
+未收录网址：https://doi.org/10.17487/RFC8991
+未收录网址：https://doi.org/10.3390/s19143121
+未收录网址：https://doi.org/10.1177/1550147718804702
+未收录网址：https://doi.org/10.1155/2018/6308530
+未收录网址：https://doi.org/10.1155/2018/8787236
+未收录网址：https://doi.org/10.3837/tiis.2017.06.004
+未收录网址：https://doi.org/10.1155/2013/692146
+未收录网址：https://doi.org/10.1080/15501320802533632
+插入 Xiangyang_Gong: pub 成功
+正在获取：Hua_Zou: pid：65/9093
+未收录网址：https://doi.org/10.3390/info1020153
+插入 Hua_Zou: pub 成功
+正在获取：Danfeng_Yan: pid：241/1995
+插入 Danfeng_Yan: pub 成功
+正在获取：Xiuqin_Lin: pid：35/2502
+未收录网址：https://repository.isls.org/handle/1/3281
+未收录网址：http://www.booksonline.iospress.nl/Content/View.aspx?piid=2243
+插入 Xiuqin_Lin: pub 成功
+正在获取：Quan_Yuan_0004: pid：29/5782-4
+错误：list index out of range，未找到摘要：https://link.springer.com/article/10.1007/s12083-021-01170-x
+未收录网址：https://doi.org/10.1155/2019/9242598
+未收录网址：https://doi.org/10.1155/2018/1287969
+未收录网址：https://doi.org/10.4018/IJWSR.2016070105
+插入 Quan_Yuan_0004: pub 成功
+正在获取：MeiYu_Liang: pid：150/1513
+未收录网址：https://doi.org/10.24963/ijcai.2021/445
+未收录网址：https://doi.org/10.1504/IJCAT.2019.102089
+未收录网址：https://jise.iis.sinica.edu.tw/JISESearch/pages/View/PaperView.jsf?keyId=169_2248
+未收录网址：https://doi.org/10.1049/iet-ipr.2014.0658
+插入 MeiYu_Liang: pub 成功
+正在获取：Jingyu_Wang_0001: pid：37/2749-1
+未收录网址：https://proceedings.mlr.press/v157/zhan21a.html
+未收录网址：https://doi.org/10.18653/v1/2020.acl-main.370
+未收录网址：https://doi.org/10.3233/FAIA200134
+未收录网址：https://doi.org/10.3233/FAIA200350
+未收录网址：https://bmvc2019.org/wp-content/uploads/papers/0918-paper.pdf
+未收录网址：https://doi.org/10.18653/v1/D19-1043
+未收录网址：https://doi.org/10.18653/v1/D19-1551
+未收录网址：http://bmvc2018.org/contents/papers/0557.pdf
+未收录网址：https://doi.org/10.1186/s13638-020-1640-9
+未收录网址：https://www.oldcitypublishing.com/journals/ahswn-home/ahswn-issue-contents/ahswn-volume-45-number-1-2-2019/ahswn-45-1-p-93-115/
+未收录网址：https://doi.org/10.1049/iet-ipr.2018.6644
+未收录网址：https://doi.org/10.1155/2019/4064201
+未收录网址：https://doi.org/10.4018/IJSWIS.2018040101
+未收录网址：https://doi.org/10.3837/tiis.2017.04.005
+未收录网址：https://doi.org/10.1049/iet-sen.2014.0155
+未收录网址：https://doi.org/10.1049/iet-sen.2015.0109
+未收录网址：https://doi.org/10.1049/iet-com.2015.0539
+未收录网址：https://doi.org/10.3837/tiis.2016.05.018
+未收录网址：https://doi.org/10.1155/2016/2784548
+未收录网址：https://doi.org/10.1002/dac.2792
+未收录网址：https://doi.org/10.3837/tiis.2014.01.009
+未收录网址：https://doi.org/10.3837/tiis.2014.02.007
+未收录网址：https://doi.org/10.3837/tiis.2014.04.014
+未收录网址：https://doi.org/10.1504/IJAHUC.2012.050438
+未收录网址：https://doi.org/10.1002/dac.1263
+未收录网址：https://doi.org/10.3837/tiis.2012.04.009
+未收录网址：https://doi.org/10.1587/transinf.E94.D.710
+插入 Jingyu_Wang_0001: pub 成功
+正在获取：Xingquan_Zuo: pid：54/3298
+未收录网址：https://doi.org/10.1080/00207543.2020.1847342
+错误：list index out of range，未找到摘要：https://link.springer.com/article/10.1007/s12065-020-00369-w
+未收录网址：https://doi.org/10.1049/trit.2019.0053
+未收录网址：https://doi.org/10.1049/trit.2019.0018
+错误：Message: chrome not reachable
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x003EDF13+2219795]
+	Ordinal0 [0x00382841+1779777]
+	Ordinal0 [0x00294100+803072]
+	Ordinal0 [0x00289B1A+760602]
+	Ordinal0 [0x002B5E4A+941642]
+	Ordinal0 [0x002B19F0+924144]
+	Ordinal0 [0x002AF179+913785]
+	Ordinal0 [0x002E36B9+1128121]
+	Ordinal0 [0x002E331A+1127194]
+	Ordinal0 [0x002DE616+1107478]
+	Ordinal0 [0x002B7F89+950153]
+	Ordinal0 [0x002B8F56+954198]
+	GetHandleVerifier [0x006E2CB2+3040210]
+	GetHandleVerifier [0x006D2BB4+2974420]
+	GetHandleVerifier [0x00486A0A+565546]
+	GetHandleVerifier [0x00485680+560544]
+	Ordinal0 [0x00389A5C+1808988]
+	Ordinal0 [0x0038E3A8+1827752]
+	Ordinal0 [0x0038E495+1827989]
+	Ordinal0 [0x003980A4+1867940]
+	BaseThreadInitThunk [0x76F06739+25]
+	RtlGetFullPathName_UEx [0x77E28FD2+1218]
+	RtlGetFullPathName_UEx [0x77E28F9D+1165]
+
+异常网址：https://doi.org/10.1109/TASE.2018.2873098
+未收录网址：https://doi.org/10.1049/trit.2017.0006
+未收录网址：https://doi.org/10.4018/ijsir.2015010101
+未收录网址：https://doi.org/10.1080/08839514.2014.923166
+未收录网址：https://doi.org/10.1587/transinf.2014EDP7069
+未收录网址：https://doi.org/10.1080/18756891.2013.805584
+插入 Xingquan_Zuo: pub 成功
+正在获取：Lanlan_Rui: pid：03/4227
+错误：Message: chrome not reachable
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x003EDF13+2219795]
+	Ordinal0 [0x00382841+1779777]
+	Ordinal0 [0x00294100+803072]
+	Ordinal0 [0x00289B1A+760602]
+	Ordinal0 [0x002B5E4A+941642]
+	Ordinal0 [0x002B19F0+924144]
+	Ordinal0 [0x002AF179+913785]
+	Ordinal0 [0x002E36B9+1128121]
+	Ordinal0 [0x002E331A+1127194]
+	Ordinal0 [0x002DE616+1107478]
+	Ordinal0 [0x002B7F89+950153]
+	Ordinal0 [0x002B8F56+954198]
+	GetHandleVerifier [0x006E2CB2+3040210]
+	GetHandleVerifier [0x006D2BB4+2974420]
+	GetHandleVerifier [0x00486A0A+565546]
+	GetHandleVerifier [0x00485680+560544]
+	Ordinal0 [0x00389A5C+1808988]
+	Ordinal0 [0x0038E3A8+1827752]
+	Ordinal0 [0x0038E495+1827989]
+	Ordinal0 [0x003980A4+1867940]
+	BaseThreadInitThunk [0x76F06739+25]
+	RtlGetFullPathName_UEx [0x77E28FD2+1218]
+	RtlGetFullPathName_UEx [0x77E28F9D+1165]
+
+异常网址：https://doi.org/10.1109/TrustCom53373.2021.00159
+未收录网址：https://doi.org/10.1177/1550147721993403
+错误：list index out of range，未找到摘要：https://www.sciencedirect.com/science/article/pii/S1084804521001077?via%3Dihub
+未收录网址：https://doi.org/10.1002/spe.2775
+未收录网址：https://doi.org/10.1002/ett.3283
+未收录网址：https://doi.org/10.3837/tiis.2018.01.003
+未收录网址：https://doi.org/10.1186/s13638-017-0991-3
+未收录网址：https://doi.org/10.1177/1550147717700897
+未收录网址：https://doi.org/10.1587/transcom.2016CNP0012
+未收录网址：https://doi.org/10.1177/1550147716669627
+未收录网址：https://doi.org/10.1093/comjnl/bxu044
+未收录网址：https://doi.org/10.1186/s13638-015-0310-9
+未收录网址：http://www.oldcitypublishing.com/journals/ahswn-home/ahswn-issue-contents/ahswn-volume-23-number-1-2-2014/ahswn-23-1-2-p-137-157/
+未收录网址：https://doi.org/10.3390/s110303117
+插入 Lanlan_Rui: pub 成功
+正在获取：Lejian_Zhang: pid：188/8007
+未收录网址：https://doi.org/10.3390/rs13163330
+未收录网址：https://doi.org/10.3390/rs11202457
+插入 Lejian_Zhang: pub 成功
+正在获取：Zhongbao_Zhang: pid：95/9457
+未收录网址：https://doi.org/10.18653/v1/2022.naacl-main.308
+未收录网址：https://doi.org/10.24963/ijcai.2020/200
+未收录网址：https://doi.org/10.1137/1.9781611975673.25
+未收录网址：https://doi.org/10.24963/ijcai.2018/537
+未收录网址：https://doi.org/10.3233/978-1-61499-672-9-1559
+未收录网址：https://doi.org/10.3745/JIPS.02.0112
+错误：list index out of range，未找到摘要：https://link.springer.com/article/10.1007/s11704-019-8084-6
+未收录网址：https://doi.org/10.20965/jaciii.2019.p0209
+未收录网址：https://doi.org/10.1177/1550147718793799
+未收录网址：https://doi.org/10.1117/1.JEI.27.4.043026
+未收录网址：https://doi.org/10.1177/1550147717726714
+未收录网址：https://doi.org/10.20965/jaciii.2017.p0650
+未收录网址：https://doi.org/10.3745/JIPS.04.0041
+未收录网址：https://doi.org/10.1186/s13638-016-0766-2
+未收录网址：https://doi.org/10.1002/dac.1399
+插入 Zhongbao_Zhang: pub 成功
+正在获取：Xiaoru_Wang: pid：13/174
+插入 Xiaoru_Wang: pub 成功
+正在获取：Zhonghong_Ou: pid：58/6143
+未收录网址：http://doi.ieeecomputersociety.org/10.1109/UCC.2015.14
+未收录网址：https://www.usenix.org/conference/hotcloud12/workshop-program/presentation/ou
+未收录网址：https://www.usenix.org/conference/nsdr12/workshop-program/presentation/zhuang
+插入 Zhonghong_Ou: pub 成功
+正在获取：Wen-Jun_Hou: pid：126/8068
+未收录网址：https://doi.org/10.1080/10447318.2020.1826190
+插入 Wen-Jun_Hou: pub 成功
+正在获取：Lirong_Qiu: pid：63/3087
+未收录网址：http://ceur-ws.org/Vol-250/paper_24.pdf
+未收录网址：https://dl.gi.de/20.500.12116/23535
+未收录网址：https://doi.org/10.1155/2018/2503816
+未收录网址：https://doi.org/10.1155/2018/5809043
+未收录网址：https://doi.org/10.1155/2017/5342601
+未收录网址：https://doi.org/10.1155/2017/6254842
+未收录网址：http://dline.info/fpaper/jdim/v12i3/2.pdf
+未收录网址：http://dline.info/fpaper/jdim/v12i4/5.pdf
+插入 Lirong_Qiu: pub 成功
+正在获取：Qibo_Sun: pid：06/43
+未收录网址：http://doi.ieeecomputersociety.org/10.1109/ICCVE.2012.9
+未收录网址：https://doi.org/10.1002/spe.2758
+未收录网址：https://doi.org/10.1155/2020/4529429
+未收录网址：https://doi.org/10.1504/IJWGS.2020.107917
+未收录网址：https://doi.org/10.1186/s13677-020-00175-w
+未收录网址：https://doi.org/10.1155/2018/9787503
+未收录网址：https://doi.org/10.1080/13614568.2016.1152315
+未收录网址：https://doi.org/10.1186/s13638-015-0257-x
+未收录网址：https://doi.org/10.1186/s13638-015-0256-y
+未收录网址：https://doi.org/10.1504/IJWGS.2015.072804
+未收录网址：https://doi.org/10.1504/IJWGS.2015.072805
+未收录网址：https://doi.org/10.1155/2015/949436
+未收录网址：https://doi.org/10.1093/comjnl/bxt009
+未收录网址：https://doi.org/10.3233/MIS-130178
+未收录网址：https://doi.org/10.1049/iet-sen.2010.0093
+未收录网址：https://doi.org/10.1002/sec.426
+未收录网址：https://doi.org/10.1002/sec.428
+未收录网址：https://doi.org/10.1049/iet-sen.2010.0077
+未收录网址：https://doi.org/10.1504/IJWGS.2011.040446
+未收录网址：https://doi.org/10.1504/IJWGS.2011.044696
+未收录网址：https://doi.org/10.1080/18756891.2010.9727750
+未收录网址：https://doi.org/10.1504/IJWGS.2010.036406
+插入 Qibo_Sun: pub 成功
+正在获取：Hongbo_Wang_0001: pid：15/6060-1
+未收录网址：https://doi.org/10.1016/j.procs.2018.03.013
+错误：Message: chrome not reachable
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x003EDF13+2219795]
+	Ordinal0 [0x00382841+1779777]
+	Ordinal0 [0x00294100+803072]
+	Ordinal0 [0x00289B1A+760602]
+	Ordinal0 [0x002B5E4A+941642]
+	Ordinal0 [0x002B19F0+924144]
+	Ordinal0 [0x002AF179+913785]
+	Ordinal0 [0x002E36B9+1128121]
+	Ordinal0 [0x002E331A+1127194]
+	Ordinal0 [0x002DE616+1107478]
+	Ordinal0 [0x002B7F89+950153]
+	Ordinal0 [0x002B8F56+954198]
+	GetHandleVerifier [0x006E2CB2+3040210]
+	GetHandleVerifier [0x006D2BB4+2974420]
+	GetHandleVerifier [0x00486A0A+565546]
+	GetHandleVerifier [0x00485680+560544]
+	Ordinal0 [0x00389A5C+1808988]
+	Ordinal0 [0x0038E3A8+1827752]
+	Ordinal0 [0x0038E495+1827989]
+	Ordinal0 [0x003980A4+1867940]
+	BaseThreadInitThunk [0x76F06739+25]
+	RtlGetFullPathName_UEx [0x77E28FD2+1218]
+	RtlGetFullPathName_UEx [0x77E28F9D+1165]
+
+异常网址：https://doi.org/10.1109/GLOCOM.2008.ECP.334
+未收录网址：https://doi.org/10.1142/S0219265913600025
+插入 Hongbo_Wang_0001: pub 成功
+正在获取：Ying_Wang_0002: pid：94/3104-2
+未收录网址：http://dl.ifip.org/db/conf/im/im2019/189192.pdf
+未收录网址：https://doi.org/10.1155/2021/6629852
+未收录网址：https://doi.org/10.1177/1550147720935775
+未收录网址：https://doi.org/10.1002/spe.2775
+未收录网址：https://doi.org/10.1049/iet-com.2018.5100
+未收录网址：https://doi.org/10.1049/iet-com.2017.0488
+未收录网址：https://doi.org/10.1002/ett.2906
+未收录网址：https://doi.org/10.1177/1550147717717163
+未收录网址：https://doi.org/10.1186/s13638-016-0702-5
+未收录网址：https://doi.org/10.1049/iet-com.2015.1132
+未收录网址：https://doi.org/10.1049/iet-com.2016.0120
+未收录网址：https://doi.org/10.1002/nem.1939
+未收录网址：https://doi.org/10.1002/nem.1940
+未收录网址：https://doi.org/10.3837/tiis.2016.09.001
+未收录网址：https://doi.org/10.1186/s13638-015-0242-4
+未收录网址：https://doi.org/10.1002/ett.2914
+未收录网址：http://www.cai.sk/ojs/index.php/cai/article/view/841
+未收录网址：https://doi.org/10.1587/transcom.E97.B.674
+未收录网址：https://doi.org/10.1587/transcom.E96.B.2923
+未收录网址：https://doi.org/10.1186/1687-1499-2012-111
+未收录网址：https://doi.org/10.1186/1687-1499-2012-334
+未收录网址：https://doi.org/10.1587/transcom.E94.B.838
+未收录网址：https://doi.org/10.1587/transcom.E93.B.629
+未收录网址：https://doi.org/10.1587/transcom.E93.B.2462
+未收录网址：https://doi.org/10.1587/transcom.E93.B.3102
+未收录网址：https://doi.org/10.1155/2009/670265
+未收录网址：https://doi.org/10.1587/transcom.E92.B.2961
+未收录网址：https://doi.org/10.1002/wcm.491
+插入 Ying_Wang_0002: pub 成功
+正在获取：Mengshi_Qi: pid：191/2586
+插入 Mengshi_Qi: pub 成功
+正在获取：Xuesong_Qiu_0001: pid：13/342
+未收录网址：http://dl.ifip.org/db/conf/im/im2019/188792.pdf
+未收录网址：http://dl.ifip.org/db/conf/im/im2019/189322.pdf
+未收录网址：http://dl.ifip.org/db/conf/im/im2019/189192.pdf
+错误：Message: chrome not reachable
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x003EDF13+2219795]
+	Ordinal0 [0x00382841+1779777]
+	Ordinal0 [0x00294100+803072]
+	Ordinal0 [0x00289B1A+760602]
+	Ordinal0 [0x002B5E4A+941642]
+	Ordinal0 [0x002B19F0+924144]
+	Ordinal0 [0x002AF179+913785]
+	Ordinal0 [0x002E36B9+1128121]
+	Ordinal0 [0x002E331A+1127194]
+	Ordinal0 [0x002DE616+1107478]
+	Ordinal0 [0x002B7F89+950153]
+	Ordinal0 [0x002B8F56+954198]
+	GetHandleVerifier [0x006E2CB2+3040210]
+	GetHandleVerifier [0x006D2BB4+2974420]
+	GetHandleVerifier [0x00486A0A+565546]
+	GetHandleVerifier [0x00485680+560544]
+	Ordinal0 [0x00389A5C+1808988]
+	Ordinal0 [0x0038E3A8+1827752]
+	Ordinal0 [0x0038E495+1827989]
+	Ordinal0 [0x003980A4+1867940]
+	BaseThreadInitThunk [0x76F06739+25]
+	RtlGetFullPathName_UEx [0x77E28FD2+1218]
+	RtlGetFullPathName_UEx [0x77E28F9D+1165]
+
+异常网址：https://doi.org/10.1109/ICWS.2013.85
+未收录网址：https://doi.org/10.1186/s13638-022-02094-7
+未收录网址：https://doi.org/10.1177/15501329221087055
+未收录网址：https://doi.org/10.1049/ntw2.12005
+错误：list index out of range，未找到摘要：https://www.sciencedirect.com/science/article/pii/S1084804521001077?via%3Dihub
+未收录网址：https://doi.org/10.1155/2021/6629852
+未收录网址：https://doi.org/10.1155/2021/8851121
+未收录网址：https://doi.org/10.1186/s13638-020-1653-4
+未收录网址：https://doi.org/10.1177/1550147720935775
+未收录网址：https://doi.org/10.1002/nem.2095
+未收录网址：https://doi.org/10.1177/0165551519828616
+未收录网址：https://doi.org/10.3390/s20071901
+未收录网址：https://doi.org/10.1002/ett.3283
+未收录网址：https://doi.org/10.1177/1550147719861556
+未收录网址：https://doi.org/10.1002/ett.3221
+未收录网址：https://doi.org/10.1177/1550147718811094
+未收录网址：https://doi.org/10.3837/tiis.2018.01.003
+未收录网址：https://doi.org/10.1155/2018/4801465
+未收录网址：https://doi.org/10.1155/2018/6201386
+未收录网址：https://doi.org/10.1186/s13638-017-0991-3
+未收录网址：https://doi.org/10.1177/1550147717715558
+未收录网址：https://doi.org/10.3390/s17050983
+未收录网址：https://doi.org/10.1587/transcom.2016CNP0012
+未收录网址：https://doi.org/10.1155/2016/3028642
+未收录网址：https://doi.org/10.1155/2016/6469341
+未收录网址：https://doi.org/10.1177/1550147716669627
+未收录网址：https://doi.org/10.1002/nem.1939
+未收录网址：https://doi.org/10.1002/nem.1940
+未收录网址：https://doi.org/10.3837/tiis.2016.09.001
+未收录网址：https://doi.org/10.3837/tiis.2016.09.004
+未收录网址：https://doi.org/10.12720/jcm.11.9.827-833
+未收录网址：https://doi.org/10.1166/jolpe.2016.1460
+未收录网址：https://doi.org/10.1155/2016/3121538
+未收录网址：https://doi.org/10.1155/2016/9586287
+未收录网址：https://doi.org/10.1093/comjnl/bxu044
+未收录网址：https://doi.org/10.1186/s13638-015-0310-9
+未收录网址：https://doi.org/10.1155/2015/341579
+未收录网址：https://doi.org/10.1155/2015/435391
+未收录网址：https://doi.org/10.3837/tiis.2015.10.009
+未收录网址：https://doi.org/10.3390/s150306066
+未收录网址：http://www.oldcitypublishing.com/journals/ahswn-home/ahswn-issue-contents/ahswn-volume-23-number-1-2-2014/ahswn-23-1-2-p-137-157/
+未收录网址：https://doi.org/10.1002/dac.2470
+未收录网址：https://doi.org/10.3837/tiis.2014.08.010
+未收录网址：https://doi.org/10.3837/tiis.2014.09.002
+未收录网址：https://doi.org/10.12720/jcm.9.9.680-686
+未收录网址：http://www.rintonpress.com/xjwe13/jwe-13-56/450-468.pdf
+未收录网址：https://doi.org/10.3390/s140507655
+未收录网址：https://doi.org/10.1587/transcom.E96.B.522
+未收录网址：https://doi.org/10.1002/dac.1332
+未收录网址：https://doi.org/10.12720/jcm.8.8.480-489
+未收录网址：https://doi.org/10.1155/2012/721957
+错误：Message: timeout: Timed out receiving message from renderer: -0.004
+  (Session info: chrome=105.0.5195.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x003EDF13+2219795]
+	Ordinal0 [0x00382841+1779777]
+	Ordinal0 [0x0029423D+803389]
+	Ordinal0 [0x00287163+749923]
+	Ordinal0 [0x00285F94+745364]
+	Ordinal0 [0x00286528+746792]
+	Ordinal0 [0x0028F42F+783407]
+	Ordinal0 [0x0029A695+829077]
+	Ordinal0 [0x0029DA60+842336]
+	Ordinal0 [0x002867F6+747510]
+	Ordinal0 [0x0029A4A9+828585]
+	Ordinal0 [0x002EF0BA+1175738]
+	Ordinal0 [0x002DE616+1107478]
+	Ordinal0 [0x002B7F89+950153]
+	Ordinal0 [0x002B8F56+954198]
+	GetHandleVerifier [0x006E2CB2+3040210]
+	GetHandleVerifier [0x006D2BB4+2974420]
+	GetHandleVerifier [0x00486A0A+565546]
+	GetHandleVerifier [0x00485680+560544]
+	Ordinal0 [0x00389A5C+1808988]
+	Ordinal0 [0x0038E3A8+1827752]
+	Ordinal0 [0x0038E495+1827989]
+	Ordinal0 [0x003980A4+1867940]
+	BaseThreadInitThunk [0x76F06739+25]
+	RtlGetFullPathName_UEx [0x77E28FD2+1218]
+	RtlGetFullPathName_UEx [0x77E28F9D+1165]
+
+异常网址：http://www.oldcitypublishing.com/journals/ahswn-home/ahswn-issue-contents/ahswn-volume-13-number-3-4-2011/ahswn-13-3-4-p-227-249/
+未收录网址：https://doi.org/10.3390/s110303117
+插入 Xuesong_Qiu_0001: pub 成功
+正在获取：Hong_Luo_0001: pid：67/876-1
+未收录网址：https://doi.org/10.1002/int.22730
+未收录网址：https://doi.org/10.1002/int.22931
+未收录网址：https://doi.org/10.3390/s20030610
+未收录网址：https://www.oldcitypublishing.com/journals/ahswn-home/ahswn-issue-contents/ahswn-volume-42-number-3-4-2018/ahswn-42-3-4-p-259-293/
+未收录网址：https://doi.org/10.1002/wcm.2733
+未收录网址：http://www.oldcitypublishing.com/journals/ahswn-home/ahswn-issue-contents/ahswn-volume-22-number-1-2-2014/ahswn-22-1-2-p-135-156/
+未收录网址：http://www.oldcitypublishing.com/journals/ahswn-home/ahswn-issue-contents/ahswn-volume-22-number-3-4-2014/ahswn-22-3-4-p-231-257/
+未收录网址：http://www.oldcitypublishing.com/journals/ahswn-home/ahswn-issue-contents/ahswn-volume-19-number-3-4-2013/ahswn-19-3-4-p-213-239/
+未收录网址：https://doi.org/10.1155/2013/801758
+未收录网址：https://doi.org/10.1155/2012/854325
+插入 Hong_Luo_0001: pub 成功
+正在获取：Xianlin_Zhang: pid：221/0836
+插入 Xianlin_Zhang: pub 成功
+正在获取：Huiyuan_Fu: pid：39/10696
+未收录网址：https://doi.org/10.18293/SEKE2019-147
+未收录网址：https://doi.org/10.3390/rs13091738
+未收录网址：https://doi.org/10.1155/2016/9825820
+插入 Huiyuan_Fu: pub 成功
+正在获取：Feifei_Kou: pid：223/2313
+未收录网址：https://doi.org/10.1002/int.22846
+未收录网址：https://doi.org/10.1155/2021/1766743
+未收录网址：https://doi.org/10.34028/iajit/17/5/15
+未收录网址：https://jise.iis.sinica.edu.tw/JISESearch/pages/View/PaperView.jsf?keyId=169_2248
+插入 Feifei_Kou: pub 成功
+正在获取：Budan_Wu: pid：80/6229
+list index out of range
+错误：Message: invalid argument
+  (Session info: chrome=105.0.5195.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x003EDF13+2219795]
+	Ordinal0 [0x00382841+1779777]
+	Ordinal0 [0x00294100+803072]
+	Ordinal0 [0x0028760A+751114]
+	Ordinal0 [0x002861A8+745896]
+	Ordinal0 [0x002863FD+746493]
+	Ordinal0 [0x00295A8E+809614]
+	Ordinal0 [0x002EF87D+1177725]
+	Ordinal0 [0x002DE7FC+1107964]
+	Ordinal0 [0x002EF192+1175954]
+	Ordinal0 [0x002DE616+1107478]
+	Ordinal0 [0x002B7F89+950153]
+	Ordinal0 [0x002B8F56+954198]
+	GetHandleVerifier [0x006E2CB2+3040210]
+	GetHandleVerifier [0x006D2BB4+2974420]
+	GetHandleVerifier [0x00486A0A+565546]
+	GetHandleVerifier [0x00485680+560544]
+	Ordinal0 [0x00389A5C+1808988]
+	Ordinal0 [0x0038E3A8+1827752]
+	Ordinal0 [0x0038E495+1827989]
+	Ordinal0 [0x003980A4+1867940]
+	BaseThreadInitThunk [0x76F06739+25]
+	RtlGetFullPathName_UEx [0x77E28FD2+1218]
+	RtlGetFullPathName_UEx [0x77E28F9D+1165]
+
+异常网址：
+未收录网址：https://doi.org/10.1080/17517575.2019.1600724
+未收录网址：https://doi.org/10.4018/ijwsr.2014010101
+未收录网址：https://doi.org/10.1002/spe.1132
+未收录网址：https://doi.org/10.4304/jsw.6.12.2486-2494
+未收录网址：https://doi.org/10.4018/jwsr.2010070104
+插入 Budan_Wu: pub 成功
+正在获取：Jinpeng_Chen: pid：316/1101
+插入 Jinpeng_Chen: pub 成功
+正在获取：Jiapeng_Xiu: pid：181/6486
+未收录网址：https://doi.org/10.3390/ijgi9100571
+插入 Jiapeng_Xiu: pub 成功
+正在获取：Kai_Shuang: pid：61/5754
+插入 Kai_Shuang: pub 成功
+正在获取：Yonghao_Gu: pid：65/4610
+未收录网址：https://doi.org/10.1002/jcc.26163
+未收录网址：https://doi.org/10.3837/tiis.2017.05.026
+插入 Yonghao_Gu: pub 成功
+正在获取：Xiaolong_Zheng_0002: pid：98/3341-2
+错误：Message: chrome not reachable
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x003EDF13+2219795]
+	Ordinal0 [0x00382841+1779777]
+	Ordinal0 [0x00294100+803072]
+	Ordinal0 [0x00289B1A+760602]
+	Ordinal0 [0x002B5E4A+941642]
+	Ordinal0 [0x002B19F0+924144]
+	Ordinal0 [0x002AF179+913785]
+	Ordinal0 [0x002E36B9+1128121]
+	Ordinal0 [0x002E331A+1127194]
+	Ordinal0 [0x002DE616+1107478]
+	Ordinal0 [0x002B7F89+950153]
+	Ordinal0 [0x002B8F56+954198]
+	GetHandleVerifier [0x006E2CB2+3040210]
+	GetHandleVerifier [0x006D2BB4+2974420]
+	GetHandleVerifier [0x00486A0A+565546]
+	GetHandleVerifier [0x00485680+560544]
+	Ordinal0 [0x00389A5C+1808988]
+	Ordinal0 [0x0038E3A8+1827752]
+	Ordinal0 [0x0038E495+1827989]
+	Ordinal0 [0x003980A4+1867940]
+	BaseThreadInitThunk [0x76F06739+25]
+	RtlGetFullPathName_UEx [0x77E28FD2+1218]
+	RtlGetFullPathName_UEx [0x77E28F9D+1165]
+
+异常网址：http://dl.acm.org/citation.cfm?id=3234865
+未收录网址：https://doi.org/10.3390/s20082279
+未收录网址：https://doi.org/10.1155/2016/8793025
+插入 Xiaolong_Zheng_0002: pub 成功
+正在获取：Shujie_Yang: pid：78/10624
+错误：Message: unknown error: net::ERR_CONNECTION_RESET
+  (Session info: chrome=105.0.5195.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x003EDF13+2219795]
+	Ordinal0 [0x00382841+1779777]
+	Ordinal0 [0x0029423D+803389]
+	Ordinal0 [0x00290A12+789010]
+	Ordinal0 [0x002878FD+751869]
+	Ordinal0 [0x0028853F+755007]
+	Ordinal0 [0x00287B11+752401]
+	Ordinal0 [0x0028706A+749674]
+	Ordinal0 [0x00285F94+745364]
+	Ordinal0 [0x002863FD+746493]
+	Ordinal0 [0x00295A8E+809614]
+	Ordinal0 [0x002EF87D+1177725]
+	Ordinal0 [0x002DE7FC+1107964]
+	Ordinal0 [0x002EF192+1175954]
+	Ordinal0 [0x002DE616+1107478]
+	Ordinal0 [0x002B7F89+950153]
+	Ordinal0 [0x002B8F56+954198]
+	GetHandleVerifier [0x006E2CB2+3040210]
+	GetHandleVerifier [0x006D2BB4+2974420]
+	GetHandleVerifier [0x00486A0A+565546]
+	GetHandleVerifier [0x00485680+560544]
+	Ordinal0 [0x00389A5C+1808988]
+	Ordinal0 [0x0038E3A8+1827752]
+	Ordinal0 [0x0038E495+1827989]
+	Ordinal0 [0x003980A4+1867940]
+	BaseThreadInitThunk [0x76F06739+25]
+	RtlGetFullPathName_UEx [0x77E28FD2+1218]
+	RtlGetFullPathName_UEx [0x77E28F9D+1165]
+
+异常网址：https://doi.org/10.1109/DSC.2019.00078
+错误：Message: unknown error: net::ERR_CONNECTION_RESET
+  (Session info: chrome=105.0.5195.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x003EDF13+2219795]
+	Ordinal0 [0x00382841+1779777]
+	Ordinal0 [0x0029423D+803389]
+	Ordinal0 [0x00290A12+789010]
+	Ordinal0 [0x002878FD+751869]
+	Ordinal0 [0x0028853F+755007]
+	Ordinal0 [0x00287B11+752401]
+	Ordinal0 [0x0028706A+749674]
+	Ordinal0 [0x00285F94+745364]
+	Ordinal0 [0x002863FD+746493]
+	Ordinal0 [0x00295A8E+809614]
+	Ordinal0 [0x002EF87D+1177725]
+	Ordinal0 [0x002DE7FC+1107964]
+	Ordinal0 [0x002EF192+1175954]
+	Ordinal0 [0x002DE616+1107478]
+	Ordinal0 [0x002B7F89+950153]
+	Ordinal0 [0x002B8F56+954198]
+	GetHandleVerifier [0x006E2CB2+3040210]
+	GetHandleVerifier [0x006D2BB4+2974420]
+	GetHandleVerifier [0x00486A0A+565546]
+	GetHandleVerifier [0x00485680+560544]
+	Ordinal0 [0x00389A5C+1808988]
+	Ordinal0 [0x0038E3A8+1827752]
+	Ordinal0 [0x0038E495+1827989]
+	Ordinal0 [0x003980A4+1867940]
+	BaseThreadInitThunk [0x76F06739+25]
+	RtlGetFullPathName_UEx [0x77E28FD2+1218]
+	RtlGetFullPathName_UEx [0x77E28F9D+1165]
+
+异常网址：https://doi.org/10.1109/HPSR.2019.8808102
+错误：Message: unknown error: net::ERR_CONNECTION_RESET
+  (Session info: chrome=105.0.5195.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x003EDF13+2219795]
+	Ordinal0 [0x00382841+1779777]
+	Ordinal0 [0x0029423D+803389]
+	Ordinal0 [0x00290A12+789010]
+	Ordinal0 [0x002878FD+751869]
+	Ordinal0 [0x0028853F+755007]
+	Ordinal0 [0x00287B11+752401]
+	Ordinal0 [0x0028706A+749674]
+	Ordinal0 [0x00285F94+745364]
+	Ordinal0 [0x002863FD+746493]
+	Ordinal0 [0x00295A8E+809614]
+	Ordinal0 [0x002EF87D+1177725]
+	Ordinal0 [0x002DE7FC+1107964]
+	Ordinal0 [0x002EF192+1175954]
+	Ordinal0 [0x002DE616+1107478]
+	Ordinal0 [0x002B7F89+950153]
+	Ordinal0 [0x002B8F56+954198]
+	GetHandleVerifier [0x006E2CB2+3040210]
+	GetHandleVerifier [0x006D2BB4+2974420]
+	GetHandleVerifier [0x00486A0A+565546]
+	GetHandleVerifier [0x00485680+560544]
+	Ordinal0 [0x00389A5C+1808988]
+	Ordinal0 [0x0038E3A8+1827752]
+	Ordinal0 [0x0038E495+1827989]
+	Ordinal0 [0x003980A4+1867940]
+	BaseThreadInitThunk [0x76F06739+25]
+	RtlGetFullPathName_UEx [0x77E28FD2+1218]
+	RtlGetFullPathName_UEx [0x77E28F9D+1165]
+
+异常网址：https://doi.org/10.1109/IWCMC.2019.8766708
+错误：Message: unknown error: net::ERR_CONNECTION_RESET
+  (Session info: chrome=105.0.5195.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x003EDF13+2219795]
+	Ordinal0 [0x00382841+1779777]
+	Ordinal0 [0x0029423D+803389]
+	Ordinal0 [0x00290A12+789010]
+	Ordinal0 [0x002878FD+751869]
+	Ordinal0 [0x0028853F+755007]
+	Ordinal0 [0x00287B11+752401]
+	Ordinal0 [0x0028706A+749674]
+	Ordinal0 [0x00285F94+745364]
+	Ordinal0 [0x002863FD+746493]
+	Ordinal0 [0x00295A8E+809614]
+	Ordinal0 [0x002EF87D+1177725]
+	Ordinal0 [0x002DE7FC+1107964]
+	Ordinal0 [0x002EF192+1175954]
+	Ordinal0 [0x002DE616+1107478]
+	Ordinal0 [0x002B7F89+950153]
+	Ordinal0 [0x002B8F56+954198]
+	GetHandleVerifier [0x006E2CB2+3040210]
+	GetHandleVerifier [0x006D2BB4+2974420]
+	GetHandleVerifier [0x00486A0A+565546]
+	GetHandleVerifier [0x00485680+560544]
+	Ordinal0 [0x00389A5C+1808988]
+	Ordinal0 [0x0038E3A8+1827752]
+	Ordinal0 [0x0038E495+1827989]
+	Ordinal0 [0x003980A4+1867940]
+	BaseThreadInitThunk [0x76F06739+25]
+	RtlGetFullPathName_UEx [0x77E28FD2+1218]
+	RtlGetFullPathName_UEx [0x77E28F9D+1165]
+
+异常网址：https://doi.org/10.1109/NaNA.2019.00017
+错误：Message: unknown error: net::ERR_CONNECTION_RESET
+  (Session info: chrome=105.0.5195.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x003EDF13+2219795]
+	Ordinal0 [0x00382841+1779777]
+	Ordinal0 [0x0029423D+803389]
+	Ordinal0 [0x00290A12+789010]
+	Ordinal0 [0x002878FD+751869]
+	Ordinal0 [0x0028853F+755007]
+	Ordinal0 [0x00287B11+752401]
+	Ordinal0 [0x0028706A+749674]
+	Ordinal0 [0x00285F94+745364]
+	Ordinal0 [0x002863FD+746493]
+	Ordinal0 [0x00295A8E+809614]
+	Ordinal0 [0x002EF87D+1177725]
+	Ordinal0 [0x002DE7FC+1107964]
+	Ordinal0 [0x002EF192+1175954]
+	Ordinal0 [0x002DE616+1107478]
+	Ordinal0 [0x002B7F89+950153]
+	Ordinal0 [0x002B8F56+954198]
+	GetHandleVerifier [0x006E2CB2+3040210]
+	GetHandleVerifier [0x006D2BB4+2974420]
+	GetHandleVerifier [0x00486A0A+565546]
+	GetHandleVerifier [0x00485680+560544]
+	Ordinal0 [0x00389A5C+1808988]
+	Ordinal0 [0x0038E3A8+1827752]
+	Ordinal0 [0x0038E495+1827989]
+	Ordinal0 [0x003980A4+1867940]
+	BaseThreadInitThunk [0x76F06739+25]
+	RtlGetFullPathName_UEx [0x77E28FD2+1218]
+	RtlGetFullPathName_UEx [0x77E28F9D+1165]
+
+异常网址：https://doi.org/10.1109/NaNA.2019.00022
+错误：Message: unknown error: net::ERR_CONNECTION_RESET
+  (Session info: chrome=105.0.5195.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x003EDF13+2219795]
+	Ordinal0 [0x00382841+1779777]
+	Ordinal0 [0x0029423D+803389]
+	Ordinal0 [0x00290A12+789010]
+	Ordinal0 [0x002878FD+751869]
+	Ordinal0 [0x0028853F+755007]
+	Ordinal0 [0x00287B11+752401]
+	Ordinal0 [0x0028706A+749674]
+	Ordinal0 [0x00285F94+745364]
+	Ordinal0 [0x002863FD+746493]
+	Ordinal0 [0x00295A8E+809614]
+	Ordinal0 [0x002EF87D+1177725]
+	Ordinal0 [0x002DE7FC+1107964]
+	Ordinal0 [0x002EF192+1175954]
+	Ordinal0 [0x002DE616+1107478]
+	Ordinal0 [0x002B7F89+950153]
+	Ordinal0 [0x002B8F56+954198]
+	GetHandleVerifier [0x006E2CB2+3040210]
+	GetHandleVerifier [0x006D2BB4+2974420]
+	GetHandleVerifier [0x00486A0A+565546]
+	GetHandleVerifier [0x00485680+560544]
+	Ordinal0 [0x00389A5C+1808988]
+	Ordinal0 [0x0038E3A8+1827752]
+	Ordinal0 [0x0038E495+1827989]
+	Ordinal0 [0x003980A4+1867940]
+	BaseThreadInitThunk [0x76F06739+25]
+	RtlGetFullPathName_UEx [0x77E28FD2+1218]
+	RtlGetFullPathName_UEx [0x77E28F9D+1165]
+
+异常网址：https://doi.org/10.1109/WCNC.2019.8885585
+错误：Message: unknown error: net::ERR_CONNECTION_RESET
+  (Session info: chrome=105.0.5195.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x003EDF13+2219795]
+	Ordinal0 [0x00382841+1779777]
+	Ordinal0 [0x0029423D+803389]
+	Ordinal0 [0x00290A12+789010]
+	Ordinal0 [0x002878FD+751869]
+	Ordinal0 [0x0028853F+755007]
+	Ordinal0 [0x00287B11+752401]
+	Ordinal0 [0x0028706A+749674]
+	Ordinal0 [0x00285F94+745364]
+	Ordinal0 [0x002863FD+746493]
+	Ordinal0 [0x00295A8E+809614]
+	Ordinal0 [0x002EF87D+1177725]
+	Ordinal0 [0x002DE7FC+1107964]
+	Ordinal0 [0x002EF192+1175954]
+	Ordinal0 [0x002DE616+1107478]
+	Ordinal0 [0x002B7F89+950153]
+	Ordinal0 [0x002B8F56+954198]
+	GetHandleVerifier [0x006E2CB2+3040210]
+	GetHandleVerifier [0x006D2BB4+2974420]
+	GetHandleVerifier [0x00486A0A+565546]
+	GetHandleVerifier [0x00485680+560544]
+	Ordinal0 [0x00389A5C+1808988]
+	Ordinal0 [0x0038E3A8+1827752]
+	Ordinal0 [0x0038E495+1827989]
+	Ordinal0 [0x003980A4+1867940]
+	BaseThreadInitThunk [0x76F06739+25]
+	RtlGetFullPathName_UEx [0x77E28FD2+1218]
+	RtlGetFullPathName_UEx [0x77E28F9D+1165]
+
+异常网址：https://doi.org/10.1109/NANA.2018.8648770
+错误：Message: unknown error: net::ERR_CONNECTION_RESET
+  (Session info: chrome=105.0.5195.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x003EDF13+2219795]
+	Ordinal0 [0x00382841+1779777]
+	Ordinal0 [0x0029423D+803389]
+	Ordinal0 [0x00290A12+789010]
+	Ordinal0 [0x002878FD+751869]
+	Ordinal0 [0x0028853F+755007]
+	Ordinal0 [0x00287B11+752401]
+	Ordinal0 [0x0028706A+749674]
+	Ordinal0 [0x00285F94+745364]
+	Ordinal0 [0x002863FD+746493]
+	Ordinal0 [0x00295A8E+809614]
+	Ordinal0 [0x002EF87D+1177725]
+	Ordinal0 [0x002DE7FC+1107964]
+	Ordinal0 [0x002EF192+1175954]
+	Ordinal0 [0x002DE616+1107478]
+	Ordinal0 [0x002B7F89+950153]
+	Ordinal0 [0x002B8F56+954198]
+	GetHandleVerifier [0x006E2CB2+3040210]
+	GetHandleVerifier [0x006D2BB4+2974420]
+	GetHandleVerifier [0x00486A0A+565546]
+	GetHandleVerifier [0x00485680+560544]
+	Ordinal0 [0x00389A5C+1808988]
+	Ordinal0 [0x0038E3A8+1827752]
+	Ordinal0 [0x0038E495+1827989]
+	Ordinal0 [0x003980A4+1867940]
+	BaseThreadInitThunk [0x76F06739+25]
+	RtlGetFullPathName_UEx [0x77E28FD2+1218]
+	RtlGetFullPathName_UEx [0x77E28F9D+1165]
+
+异常网址：https://doi.org/10.1109/NaNA.2017.11
+未收录网址：https://doi.org/10.1002/ett.4430
+未收录网址：https://doi.org/10.1002/ett.4411
+未收录网址：https://doi.org/10.1002/ett.3779
+未收录网址：https://doi.org/10.1002/int.22934
+未收录网址：https://jise.iis.sinica.edu.tw/JISESearch/pages/View/PaperView.jsf?keyId=184_2472
+未收录网址：https://doi.org/10.3390/s22155796
+未收录网址：https://doi.org/10.20965/jaciii.2021.p0101
+未收录网址：https://jise.iis.sinica.edu.tw/JISESearch/pages/View/PaperView.jsf?keyId=175_2334
+未收录网址：https://doi.org/10.1155/2020/8863865
+未收录网址：https://doi.org/10.1002/ett.3221
+未收录网址：https://jise.iis.sinica.edu.tw/JISESearch/pages/View/PaperView.jsf?keyId=163_2161
+未收录网址：https://doi.org/10.1049/iet-spr.2015.0497
+未收录网址：https://doi.org/10.1155/2016/8695102
+未收录网址：https://doi.org/10.1186/1752-0509-4-57
+插入 Shujie_Yang: pub 成功
+正在获取：Xiao-hong_Huang: pid：150/7129
+插入 Xiao-hong_Huang: pub 成功
+正在获取：Zhipeng_Gao: pid：25/2165
+未收录网址：https://doi.org/10.7717/peerj-cs.996
+未收录网址：https://doi.org/10.1117/1.jei.30.4.043023
+错误：list index out of range，未找到摘要：https://www.sciencedirect.com/science/article/pii/S1084804521001077?via%3Dihub
+未收录网址：https://doi.org/10.1177/0165551519828616
+未收录网址：https://doi.org/10.1155/2018/4801465
+未收录网址：https://doi.org/10.1155/2016/3028642
+未收录网址：https://doi.org/10.1155/2016/6469341
+未收录网址：https://doi.org/10.1186/s13638-015-0310-9
+未收录网址：https://doi.org/10.1155/2015/341579
+未收录网址：https://doi.org/10.1155/2015/435391
+未收录网址：https://doi.org/10.3390/s150306066
+未收录网址：https://doi.org/10.3390/s140507655
+插入 Zhipeng_Gao: pub 成功
+正在获取：Yuanyuan_Zuo: pid：50/9488
+未收录网址：https://www-nlpir.nist.gov/projects/tvpubs/tv5.papers/tsinghua.pdf
+未收录网址：https://doi.org/10.3390/rs13091779
+未收录网址：https://doi.org/10.4018/jssci.2011010101
+插入 Yuanyuan_Zuo: pub 成功
+
+进程已结束,退出代码0
