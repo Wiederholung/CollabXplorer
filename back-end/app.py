@@ -13,7 +13,7 @@ def hello_world():
 
 
 @app.route('/getjson/<name_ch>')
-def get_json(name_ch):
+def get_graph(name_ch):
     return json.dumps(get_json.get_data(name_ch=name_ch), ensure_ascii=False)
 
 
