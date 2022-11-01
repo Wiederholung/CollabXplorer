@@ -7,6 +7,6 @@ client = db_connetor.get_connection()
 def get_abstract(name_en):
     collection = client.bupt[name_en]
     abstracts = []
-    for i in collection.find():
+    for i in collection.find().skip(2):
         abstracts.append(i['abstract'])
     return abstracts
