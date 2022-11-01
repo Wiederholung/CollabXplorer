@@ -3,7 +3,7 @@ from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 
 
-##去除标点符号，返回值为一个列表
+# 去除标点符号，返回值为一个列表
 def punctuation(content):
     content.lower()
     cutwords1 = word_tokenize(content)  # 分词
@@ -12,7 +12,7 @@ def punctuation(content):
     return cutwords2
 
 
-##词干提取,返回值为一个列表
+# 词干提取,返回值为一个列表
 def stemmer(content):
     content.lower()
     cutwords1 = word_tokenize(content)  # 分词
@@ -27,6 +27,9 @@ def stemmer(content):
         cutwords4.append(PorterStemmer().stem(cutword))  # 词干提取
     return cutwords4
 
-#测试
-# if __name__ == '__main__':
-#     print(stemmer("The first time I heard that song was in Hawaii on radio. I was just a kid, and loved it very much! What a fantastic song!"))
+
+# 测试
+if __name__ == '__main__':
+    print(stemmer(
+        "The first time I heard that song was in Hawaii on radio. I was just a kid, and loved it very much! What a "
+        "fantastic song!"))
