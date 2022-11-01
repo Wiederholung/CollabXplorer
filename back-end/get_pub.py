@@ -1,7 +1,7 @@
 import json
 import urllib.request
 from xml.dom.minidom import parse
-import DB.Utils.updateUtils as updateUtils
+import Utils.dbUpdateUtils as updateUtils
 import crawler.crawlerUtils
 
 

@@ -1,4 +1,5 @@
-from gensim.test.utils import datapath, get_tmpfile
+##将glove转化为word2vec格式的示例文件
+
 from gensim.models import KeyedVectors
 from gensim.scripts.glove2word2vec import glove2word2vec
 
@@ -9,7 +10,7 @@ tmp_file = "../res/model/word2vec.txt"  # 希望转换到的目标文件
 glove2word2vec(glove_file, tmp_file)
 # model = KeyedVectors.load_word2vec_format(tmp_file, binary=False)
 
-model = KeyedVectors.load_word2vec_format(tmp_file)   # 读取新的模型文件
+model = KeyedVectors.load_word2vec_format(tmp_file)  # 读取新的模型文件
 
 # 获得单词cat的词向量
 cat_vec = model['cat']
