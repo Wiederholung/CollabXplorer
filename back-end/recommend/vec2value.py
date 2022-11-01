@@ -4,10 +4,10 @@ from gensim.models import Word2Vec
 import codecs
 import numpy
 import Utils.articleUtils as articleUtils
+import Utils.dbFindUtils as dbFindUtils
 
 numpy.set_printoptions(suppress=True)
 
-fcoms = codecs.open('coms_all.txt', 'r', encoding="utf8")  # 读取需要转化的内容
 w2v_model = Word2Vec.load('../res/model/word2vec.txt')  # 加载已经处理好的word2vec模型
 w = codecs.open('vec_all.txt', 'w', encoding="utf8")  # 写入结果
 size = 300  # 词向量维度
@@ -15,10 +15,11 @@ size = 300  # 词向量维度
 
 def count_vec_sentence():
     # TODO: 读取一个作者的文本内容，计算每个文章的向量，写入vec_all.txt
-    line = fcoms.readline()
+    # name_list = dbFindUtils.get_all_name()
+    fcoms = dbFindUtils.get_abstract("Anfu_Zhou")
     i = 0
     id = 0
-    while line:
+    while line in fcoms:
         words = articleUtils.stemmer(line)  # 通过stemmer分词，为一个list
         vec = numpy.zeros(size).reshape((1, size))  # 0矩阵
         vec0 = numpy.zeros(size).reshape((1, size))
