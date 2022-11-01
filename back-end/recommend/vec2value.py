@@ -8,7 +8,7 @@ import Utils.articleUtils as articleUtils
 numpy.set_printoptions(suppress=True)
 
 fcoms = codecs.open('coms_all.txt', 'r', encoding="utf8")  # 读取需要转化的内容
-w2v_model = Word2Vec.load('wiki.zh.1.6gr.model')  # 加载已经处理好的word2vec模型
+w2v_model = Word2Vec.load('../res/model/word2vec.txt')  # 加载已经处理好的word2vec模型
 w = codecs.open('vec_all.txt', 'w', encoding="utf8")  # 写入结果
 size = 300  # 词向量维度
 
@@ -19,13 +19,12 @@ def count_vec_sentence():
     i = 0
     id = 0
     while line:
-        words = articleUtils.stemmer(line)  # 通过stemmer分词
+        words = articleUtils.stemmer(line)  # 通过stemmer分词，为一个list
         vec = numpy.zeros(size).reshape((1, size))  # 0矩阵
         vec0 = numpy.zeros(size).reshape((1, size))
         count = 0
         flag = True
-        for item in words:
-            word = item.strip()
+        for word in words:
             if word.__len__() > 0:
                 if flag:
                     attitude = word
