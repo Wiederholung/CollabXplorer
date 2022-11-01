@@ -122,5 +122,3 @@ if __name__ == '__main__':
     # xml = parse('Shao-Yong_Guo.xml')
     # json_dict = xml_browser(xml.documentElement)
     # json_str = json.dumps(json_dict, ensure_ascii=False)
-
-
