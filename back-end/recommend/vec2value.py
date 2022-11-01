@@ -1,4 +1,4 @@
-#利用维基百科将Word2vec训练完成后，就得到了语料库中的相应词的词向量，将评论信息转化为词向量的实质是利用“键值对”的原理，将特定词的词向量取出。将评论中的中文词全部转化为词向量后，整条评论的向量值就是其所有分词向量的平均值。核心代码如下。
+# 利用维基百科将Word2vec训练完成后，就得到了语料库中的相应词的词向量，将评论信息转化为词向量的实质是利用“键值对”的原理，将特定词的词向量取出。将评论中的中文词全部转化为词向量后，整条评论的向量值就是其所有分词向量的平均值。核心代码如下。
 
 from gensim.models import Word2Vec
 import codecs
@@ -8,8 +8,8 @@ import Utils.dbFindUtils as dbFindUtils
 
 numpy.set_printoptions(suppress=True)
 
-w2v_model = Word2Vec.load('../res/model/word2vec.txt')  # 加载已经处理好的word2vec模型
-w = codecs.open('vec_all.txt', 'w', encoding="utf8")  # 写入结果
+w2v_model = Word2Vec.load('../res/model/word2vec.txt', 'r')  # 加载已经处理好的word2vec模型
+w = codecs.open('../res/model/vec_all.txt', 'w', encoding="utf8")  # 写入结果
 size = 300  # 词向量维度
 
 
