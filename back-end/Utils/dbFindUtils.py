@@ -5,8 +5,14 @@ client = db_connetor.get_connection()
 
 # 获取作者全部文章摘要
 def get_abstract(name_en):
-    collection = client.bupt[name_en]
     abstracts = []
-    for i in collection.find().skip(2):
-        abstracts.append(i['abstract'])
+    collection = client.bupt[name_en]
+    articles = collection.find().skip(2)[0]['Article']
+    for article in articles:
+        abstracts.append(articles[article]['abstract'])
     return abstracts
+
+
+# main
+if __name__ == '__main__':
+    print(get_abstract('Anfu_Zhou'))

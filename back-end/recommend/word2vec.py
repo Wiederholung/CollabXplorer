@@ -1,4 +1,4 @@
-##将glove转化为word2vec格式的示例文件
+# 将glove转化为word2vec格式的示例文件
 
 from gensim.models import KeyedVectors
 from gensim.scripts.glove2word2vec import glove2word2vec

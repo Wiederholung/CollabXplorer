@@ -19,7 +19,7 @@ def count_vec_sentence():
     fcoms = dbFindUtils.get_abstract("Anfu_Zhou")
     i = 0
     id = 0
-    while line in fcoms:
+    for line in fcoms:
         words = articleUtils.stemmer(line)  # 通过stemmer分词，为一个list
         vec = numpy.zeros(size).reshape((1, size))  # 0矩阵
         vec0 = numpy.zeros(size).reshape((1, size))
