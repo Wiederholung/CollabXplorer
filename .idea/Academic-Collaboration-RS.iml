@@ -5,8 +5,11 @@
       <sourceFolder url="file://$MODULE_DIR$/back-end" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/back-end/tests" isTestSource="true" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.10 (acrs)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.9 (pytorch-cuda)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+  <component name="PyDocumentationSettings">
+    <option name="renderExternalDocumentation" value="true" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Jinja2" />

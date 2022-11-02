@@ -6,8 +6,9 @@ import nltk
 
 # nltk.download("stopwords")
 # nltk.download("punkt")
-# 去除标点符号，返回值为一个列表
 
+
+# 去除标点符号，返回值为一个列表
 def punctuation(content):
     content.lower()
     cutwords1 = word_tokenize(content)  # 分词

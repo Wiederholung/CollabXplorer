@@ -9,7 +9,8 @@ def get_abstract(name_en):
     collection = client.bupt[name_en]
     articles = collection.find().skip(2)[0]['Article']
     for article in articles:
-        abstracts.append(articles[article]['abstract'])
+        if len(articles[article]['abstract']) > 0:
+            abstracts.append(articles[article]['abstract'])
     return abstracts
 
 
