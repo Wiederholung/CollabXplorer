@@ -44,10 +44,9 @@ def count_vec_sentence():
         # if i % 100 == 0:
         #     print(i)
         # i += 1
-        # line = fcoms.readline()
         # if count != 0:
         #     vec /= count  # 计算每个文章词向量的平均值
-        #     # w.write(attitude + ' ')
+        #     # w.write(attitude + ' ') # 写入单词+空格+矩阵形式
         #     # w.write(str(vec)[2:-2])
         #     w.write(str(vec))
         #     w.write('$')
