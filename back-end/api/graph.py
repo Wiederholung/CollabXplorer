@@ -1,34 +1,9 @@
 import math
 import random
 from utils.dao import db_connetor
+from utils.dao.db_utils import get_auth_info
 
 db = db_connetor.get_connection().bupt  # 连接数据库
-
-
-# 获取作者信息，只接受单一参数
-def get_auth_info(id_s, name_ch, name_en, category):
-    if id_s is not None:
-        for col in db.list_collection_names():
-            res = db[col].find_one({'id': id_s})
-            if res is not None:
-                return res
-        return None
-    elif name_ch is not None:
-        for col in db.list_collection_names():
-            res = db[col].find_one({'name': name_ch})
-            if res is not None:
-                return res
-        return None
-    elif name_en is not None:
-        for col in db.list_collection_names():
-            if col == name_en:
-                return db[col].find_one()
-        return None
-    elif category is not None:
-        # TODO: 按学院分类
-        return None
-    else:
-        return None
 
 
 def get_data(id_s=None, name_ch=None, name_en=None, category=None):

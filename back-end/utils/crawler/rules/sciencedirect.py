@@ -1,5 +1,5 @@
 from selenium.webdriver.common.by import By
-from utils.crawler import crawler_driver
+from utils.crawler import crawler_driver as driver
 
 
 def get_abstract(browser):
