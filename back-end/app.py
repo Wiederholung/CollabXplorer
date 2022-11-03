@@ -1,7 +1,7 @@
 import json
 from flask_cors import CORS
 from flask import Flask
-import get_json
+from api import graph
 
 app = Flask(__name__)
 CORS(app, supports_credentials=True)

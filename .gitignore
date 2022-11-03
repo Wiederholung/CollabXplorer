@@ -1,10 +1,8 @@
 #.idea
-/back-end/DB/db_connetor.py
+/back-end/utils/dao/db_connetor.py
+/back-end/res/model/glove.6B.50d.txt
+/back-end/res/model/glove.6B.100d.txt
+/back-end/res/model/glove.6B.200d.txt
 /back-end/res/model/glove.6B.300d.txt
-/back-end/res/model/word2vec.txt
-/back-end/recommend/.vector_cache/glove.6B.50d.txt
-/back-end/recommend/.vector_cache/glove.6B.100d.txt
-/back-end/recommend/.vector_cache/glove.6B.200d.txt
-/back-end/recommend/.vector_cache/glove.6B.300d.txt
-/back-end/recommend/.vector_cache/glove.6B.300d.txt.pt
-/back-end/recommend/.vector_cache/glove.6B.zip
+/back-end/res/model/glove.6B.300d.txt.pt
+/back-end/res/model/glove.6B.zip
