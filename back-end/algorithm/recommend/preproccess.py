@@ -58,7 +58,7 @@ def get_abs_vec_set(name_en):
 def get_author_vec(name_en):
     abs_vec_set = get_abs_vec_set(name_en)
     author_vec = torch.mean(abs_vec_set, dim=0)
-    # # 把 author_vec 的维度从 [300] 变成 [1, 300]
+    #  将 author_vec 转置，变成行向量
     # author_vec = author_vec.unsqueeze(0)
     return author_vec
 
@@ -87,4 +87,5 @@ if __name__ == '__main__':
     #     print(author)
 
     res = get_similarity('Anfu_Zhou', "Anlong_Ming")
+    print(res)
     print("done")
