@@ -61,6 +61,14 @@ def get_author_vec(name_en):
     return author_vec
 
 
+# 计算两个作者的相似度
+def get_similarity(name_en1, name_en2):
+    author_vec1 = get_author_vec(name_en1)
+    author_vec2 = get_author_vec(name_en2)
+    similarity = torch.cosine_similarity(author_vec1, author_vec2)
+    return similarity
+
+
 if __name__ == '__main__':
     # with open('res/Anfu_Zhou.article.txt', 'a', encoding='utf-8') as f:
     #     f.write('article-' + str(count))
@@ -70,9 +78,11 @@ if __name__ == '__main__':
     #     f.write('\n')
     #     count += 1
 
-    for i in db_utils.get_all_name_en():
-        # abst = get_abs_vec_set(i)
-        author = get_author_vec(i)
-        # print(abst)
-        print(author)
+    # for i in db_utils.get_all_name_en():
+    #     # abst = get_abs_vec_set(i)
+    #     author = get_author_vec(i)
+    #     # print(abst)
+    #     print(author)
+
+    res = get_similarity('Anfu_Zhou', "Yonghong_Zhao")
     print("done")
