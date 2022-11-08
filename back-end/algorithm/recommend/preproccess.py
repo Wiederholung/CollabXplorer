@@ -58,15 +58,15 @@ def get_abs_vec_set(name_en):
 def get_author_vec(name_en):
     abs_vec_set = get_abs_vec_set(name_en)
     author_vec = torch.mean(abs_vec_set, dim=0)
-    # 把 author_vec 的维度从 [300] 变成 [1, 300]
-    author_vec = author_vec.unsqueeze(0)
+    # # 把 author_vec 的维度从 [300] 变成 [1, 300]
+    # author_vec = author_vec.unsqueeze(0)
     return author_vec
 
 
 # 计算两个作者的相似度
 def get_similarity(name_en1, name_en2):
-    author_vec1 = get_author_vec(name_en1)
-    author_vec2 = get_author_vec(name_en2)
+    author_vec1 = get_author_vec(name_en1).unsqueeze(0)
+    author_vec2 = get_author_vec(name_en2).unsqueeze(0)
     similarity = torch.cosine_similarity(author_vec1, author_vec2)
     return similarity
 
