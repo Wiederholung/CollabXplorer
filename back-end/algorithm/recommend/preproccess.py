@@ -1,3 +1,8 @@
+import os
+import sys
+os.chdir('../../')
+sys.path.append(os.getcwd())
+
 import torch
 from torchtext.vocab import GloVe
 import time
