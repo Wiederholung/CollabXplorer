@@ -6,6 +6,9 @@ from utils.dao import db_utils
 GloVe_dim = 300
 # 从res/model加载glove模型
 glove = GloVe(name='6B', dim=GloVe_dim, cache='res/model')
+# 使用 CUDA
+device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+print(device)
 
 
 def get_token(content):
@@ -14,7 +17,7 @@ def get_token(content):
 
 
 def token2vec(tokens):
-    vecs = glove.get_vecs_by_tokens(tokens, lower_case_backup=True)
+    vecs = glove.get_vecs_by_tokens(tokens, lower_case_backup=True).to(device)
     return vecs
 
 
@@ -43,12 +46,12 @@ def get_abs_word_vec_set(name_en):
 def get_abs_vec_set(name_en):
     count = 0
     abstracts = db_utils.get_all_abs_per_person(name_en)
-    abs_vec_set = torch.zeros(len(abstracts), GloVe_dim)
+    abs_vec_set = torch.zeros(len(abstracts), GloVe_dim).to(device)
     # 遍历每一篇文章摘要
     for abstract in abstracts:
         tokens = get_token(abstract)  # 将摘要分词，得到tokens
         word_vecs = token2vec(tokens)  # 获取所有单词的向量
-        abs_vec = torch.mean(word_vecs, dim=0)  # 将摘要向按行行平均，作为摘要向量
+        abs_vec = torch.mean(word_vecs, dim=0)  # 将单词按行平均，作为摘要向量
         abs_vec_set[count] = abs_vec  # 将摘要向量作为新的一行，加入集合
         count += 1
     return abs_vec_set
@@ -71,21 +74,20 @@ def get_similarity(name_en1, name_en2):
     return similarity.item()
 
 
+def write_sim():
+    all_name = db_utils.get_all_name_en()
+    all_sim = torch.zeros(len(all_name), len(all_name)).to(device)
+    for i in range(len(all_name)):
+        for j in range(len(all_name)):
+            all_sim[i][j] = get_similarity(all_name[i], all_name[j])
+            print(all_sim[i][j])
+    print(all_sim)
+    # 将tensor写入文件
+    torch.save(all_sim, 'res/all_sim.pt')
+
+
 if __name__ == '__main__':
-    # with open('res/Anfu_Zhou.article.txt', 'a', encoding='utf-8') as f:
-    #     f.write('article-' + str(count))
-    #     for i in article_vec.tolist():
-    #         f.write(' ')
-    #         f.write(str(round(i, 8)))
-    #     f.write('\n')
-    #     count += 1
-
-    # for i in db_utils.get_all_name_en():
-    #     # abst = get_abs_vec_set(i)
-    #     author = get_author_vec(i)
-    #     # print(abst)
-    #     print(author)
-
     # res = get_similarity('Anfu_Zhou', "Anlong_Ming")
     # print(res)
+    write_sim()
     print("done")
