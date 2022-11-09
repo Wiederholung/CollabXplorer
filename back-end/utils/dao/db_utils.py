@@ -1,4 +1,4 @@
-from utils.dao import db_connetor
+from DB import db_connetor
 
 db = db_connetor.get_connection()  # 连接数据库
 
@@ -76,6 +76,10 @@ def get_auth_info(id_s, name_ch, name_en, category):
         return None
 
 
-# 获取所有作者名
+# 获取所有作者名 list
 def get_all_name_en():
     return db.bupt.list_collection_names()
+
+#TODO: 新建数据库，新建集合，插入相似数据
+def write_similarity(user1, user2, param):
+    return None
