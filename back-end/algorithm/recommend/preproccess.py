@@ -1,5 +1,6 @@
 import torch
 from torchtext.vocab import GloVe
+import time
 from utils import article_utils
 from utils.dao import db_utils
 
@@ -8,6 +9,7 @@ GloVe_dim = 300
 glove = GloVe(name='6B', dim=GloVe_dim, cache='res/model')
 # 使用 CUDA
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+# device = torch.device("cpu")
 print(device)
 
 
@@ -78,11 +80,16 @@ def write_sim():
     all_name = db_utils.get_all_name_en()
     all_sim = torch.zeros(len(all_name), len(all_name)).to(device)
     for i in range(len(all_name)):
+        start = time.time()  # 开始计时
+        vec_i = get_author_vec(all_name[i]).unsqueeze(0)
         j = i
+        print(all_name[i] + " start")
         while j < len(all_name):
-            all_sim[i][j] = get_similarity(all_name[i], all_name[j])
+            vec_j = get_author_vec(all_name[j]).unsqueeze(0)
+            all_sim[i][j] = torch.cosine_similarity(vec_i, vec_j)
+            print(all_sim[i][j])
             j += 1
-    print(all_sim)
+        print(all_name[i] + " cost: " + str(time.time() - start))  # 计时结束
     # 将tensor写入文件
     torch.save(all_sim, 'res/all_sim.pt')
 
