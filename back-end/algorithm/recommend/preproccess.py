@@ -78,9 +78,10 @@ def write_sim():
     all_name = db_utils.get_all_name_en()
     all_sim = torch.zeros(len(all_name), len(all_name)).to(device)
     for i in range(len(all_name)):
-        for j in range(len(all_name)):
+        j = i
+        while j < len(all_name):
             all_sim[i][j] = get_similarity(all_name[i], all_name[j])
-            print(all_sim[i][j])
+            j += 1
     print(all_sim)
     # 将tensor写入文件
     torch.save(all_sim, 'res/all_sim.pt')
