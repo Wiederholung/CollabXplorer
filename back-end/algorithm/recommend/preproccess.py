@@ -86,7 +86,6 @@ if __name__ == '__main__':
     #     # print(abst)
     #     print(author)
 
-    t = token2vec("NULL")
     # res = get_similarity('Anfu_Zhou', "Anlong_Ming")
     # print(res)
     print("done")

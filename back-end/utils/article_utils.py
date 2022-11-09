@@ -20,7 +20,7 @@ def punctuation(content):
 # 词干提取,返回值为一个列表
 def stemmer(content):
     if content == '':
-        return []
+        return ''
     content.lower()
     cutwords1 = word_tokenize(content)  # 分词
     # print('【NLTK分词结果：】')
