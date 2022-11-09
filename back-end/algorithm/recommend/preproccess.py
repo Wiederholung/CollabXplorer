@@ -63,12 +63,12 @@ def get_author_vec(name_en):
     return author_vec
 
 
-# 计算两个作者的相似度
+# 计算两个作者的相似度，返回值为0-1之间的浮点数
 def get_similarity(name_en1, name_en2):
     author_vec1 = get_author_vec(name_en1).unsqueeze(0)
     author_vec2 = get_author_vec(name_en2).unsqueeze(0)
     similarity = torch.cosine_similarity(author_vec1, author_vec2)
-    return similarity
+    return similarity.item()
 
 
 if __name__ == '__main__':
@@ -86,6 +86,7 @@ if __name__ == '__main__':
     #     # print(abst)
     #     print(author)
 
-    res = get_similarity('Anfu_Zhou', "Anlong_Ming")
-    print(res)
+    t = token2vec("NULL")
+    # res = get_similarity('Anfu_Zhou', "Anlong_Ming")
+    # print(res)
     print("done")

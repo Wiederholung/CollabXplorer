@@ -1,16 +1,27 @@
 # 一次性文件
+import torch
+
 from utils.dao import db_utils
 import preproccess
 
-#TODO: 获取所有人的名字
-allName =db_utils.get_all_name_en()
+# TODO: 获取所有人的名字
+allName = db_utils.get_all_name_en()
+
 
 # 计算两个人的相似度并写入文件：allSim.txt
-def writeFileSim(user1, user2):
-    with open('res/allSim.txt', 'a', encoding='utf-8') as f:
-        f.write(user1 + ' ' + user2 + ' ' + str(preproccess.get_similarity(user1, user2)) + '')
-        f.close()
+def writeFileSim():
+    tensor = torch.zeros(len(allName), len(allName))
+    count_i = 0
+    count_j = 0
+    for i in allName:
+        for j in allName:
+            tensor[count_i][count_j] = preproccess.get_similarity(i, j)
+            count_j += 1
+        count_i += 1
+    # 将tensor写入文件
+    torch.save(tensor, 'res/allSim.pt')
 
-# 计算两个人的相似度并写入数据库
-def writeDBSim(user1, user2):
-    db_utils.write_similarity(user1, user2, preproccess.get_similarity(user1, user2))
+
+if __name__ == '__main__':
+    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+    writeFileSim()

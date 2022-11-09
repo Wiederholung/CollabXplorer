@@ -1,4 +1,4 @@
-from DB import db_connetor
+from utils.dao import db_connetor
 
 db = db_connetor.get_connection()  # 连接数据库
 
@@ -43,10 +43,11 @@ def get_all_abs_per_person(name_en):
     collection = db.bupt[name_en]
     articles = collection.find().skip(2)[0]['Article']
     for article in articles:
-        if len(articles[article]['abstract']) > 0:  # 如果文章有摘要
-            abstracts.append(articles[article]['abstract'])
-        else:
-            abstracts.append("Null")
+        # if len(articles[article]['abstract']) > 0:  # 如果文章有摘要
+        #     abstracts.append(articles[article]['abstract'])
+        # else:
+        #     abstracts.append("Null")
+        abstracts.append(articles[article]['abstract'])
     return abstracts
 
 
@@ -79,7 +80,3 @@ def get_auth_info(id_s, name_ch, name_en, category):
 # 获取所有作者名 list
 def get_all_name_en():
     return db.bupt.list_collection_names()
-
-#TODO: 新建数据库，新建集合，插入相似数据
-def write_similarity(user1, user2, param):
-    return None
