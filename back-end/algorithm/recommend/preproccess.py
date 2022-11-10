@@ -1,8 +1,3 @@
-import os
-import sys
-os.chdir('../../')
-sys.path.append(os.getcwd())
-
 import torch
 from torchtext.vocab import GloVe
 import time
@@ -12,9 +7,7 @@ from utils.dao import db_utils
 GloVe_dim = 300
 # 从res/model加载glove模型
 glove = GloVe(name='6B', dim=GloVe_dim, cache='res/model')
-# 使用 CUDA
-device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-# device = torch.device("cpu")
+device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")  # 使用 CUDA
 print(device)
 
 

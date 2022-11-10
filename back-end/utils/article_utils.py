@@ -3,9 +3,16 @@ from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 import nltk
 
-
-# nltk.download("stopwords")
-# nltk.download("punkt")
+# 检查 punkt 是否安装
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt')
+# 检查 stopwords 是否安装
+try:
+    nltk.data.find('corpora/stopwords')
+except LookupError:
+    nltk.download('stopwords')
 
 
 # 去除标点符号，返回值为一个列表
