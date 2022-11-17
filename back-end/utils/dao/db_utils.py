@@ -1,5 +1,5 @@
 from utils.dao import db_connetor
-
+from tqdm import *
 db = db_connetor.get_connection()  # 连接数据库
 
 
@@ -42,7 +42,7 @@ def get_all_abs_per_person(name_en):
     abstracts = []
     collection = db.bupt[name_en]
     articles = collection.find().skip(2)[0]['Article']
-    for article in articles:
+    for article in tqdm(articles):
         # if len(articles[article]['abstract']) > 0:  # 如果文章有摘要
         #     abstracts.append(articles[article]['abstract'])
         # else:
@@ -80,3 +80,6 @@ def get_auth_info(id_s, name_ch, name_en, category):
 # 获取所有作者名 list
 def get_all_name_en():
     return db.bupt.list_collection_names()
+
+if __name__ == '__main__':
+    get_all_abs_per_person()
