@@ -16,9 +16,11 @@ def hello_world():
 def get_graph(name_ch):
     return json.dumps(graph.get_data_academy(name_ch=name_ch), ensure_ascii=False)
 
+
 @app.route('/selectByCluster/getjson/<name_ch>')
 def get_graph(name_ch):
     return json.dumps(graph.get_data_cluster(name_ch=name_ch), ensure_ascii=False)
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')

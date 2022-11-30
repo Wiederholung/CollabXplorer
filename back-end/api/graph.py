@@ -115,7 +115,7 @@ def get_data_cluster(id_s=None, name_ch=None, name_en=None, category=None):
             index = col
             break
 
-    # 遍历中心作者的所有合作者
+    # TODO: 获取中心作者的聚类信息
     res = db[index].find({}, {'_id': 0, 'realted': 1}).skip(1).limit(1)[0]['realted']
     for i in res:
         co_auth_info = get_auth_info(None, None, i[0], None)
