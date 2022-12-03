@@ -18,7 +18,7 @@ def get_graph(name_ch):
 
 
 @app.route('/selectByCluster/getjson/<name_ch>')
-def get_graph(name_ch):
+def get_graph_2(name_ch):
     return json.dumps(graph.get_data_cluster(name_ch=name_ch), ensure_ascii=False)
 
 
