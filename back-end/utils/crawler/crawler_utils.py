@@ -46,4 +46,4 @@ def get_abstract_by_crawler(url):
 
 if __name__ == '__main__':
     url0 = 'https://doi.org/10.1145/3447993.3483259'
-    print(get_abstract_by_crawler(''))
+    print(get_abstract_by_crawler(url0))
