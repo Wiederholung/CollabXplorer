@@ -93,7 +93,7 @@ def write_sim():
 
 
 if __name__ == '__main__':
-    # res = get_similarity('Anfu_Zhou', "Anlong_Ming")
-    # print(res)
-    write_sim()
+    res = get_similarity('Anfu_Zhou', "Anlong_Ming")
+    print(res)
+    # write_sim()
     print("done")
