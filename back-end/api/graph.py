@@ -6,6 +6,7 @@ from algorithm.unsupervisedClustering import get_cluster
 
 db = db_connetor.get_connection().bupt  # 连接数据库
 
+
 # 获取按学院查询的数据
 def get_data_academy(id_s=None, name_ch=None, name_en=None, category=None):
     final_json = {'nodes': [], 'links': [], 'categories': []}
@@ -92,6 +93,7 @@ def get_data_academy(id_s=None, name_ch=None, name_en=None, category=None):
         i += 1
     return final_json
 
+
 # 获取按聚类查询的数据
 def get_data_cluster(id_s=None, name_ch=None, name_en=None, category=None):
     final_json = {'nodes': [], 'links': [], 'categories': []}
@@ -135,11 +137,10 @@ def get_data_cluster(id_s=None, name_ch=None, name_en=None, category=None):
 
     # TODO: categories按照聚类算法函数给出的结果进行分类
     # 按照类似格式进行书写：categories = [{"name": "..."}]
-    categories=get_cluster.get_category()
+    categories = get_cluster.get_category()
 
     # 添加固定的种类数至finalJson['categories']
     final_json['categories'].append(categories)
-
 
     # 计算合作者的坐标
     # 动态赋予x y值

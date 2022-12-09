@@ -23,8 +23,9 @@ export default {
     myChart.showLoading();
 
     // 获取json信息
-    //https://raw.githubusercontent.com/Wiederholung/Academic-Collaboration-RS/main/back-end/file.json?token=GHSAT0AAAAAABXMP644TJRDVPMXYYO3IP62YYFWPRA
-    $.getJSON('https://raw.githubusercontent.com/Wiederholung/Academic-Collaboration-RS/main/back-end/file.json?token=GHSAT0AAAAAABXMP644QZ7C2HNA3LEBFINSYYFYXNA', function (graph) {
+    var starturl = 'http://dev.metattri.com:5000/graph/coworker/'
+    starturl = starturl + '丰雷'
+    $.getJSON(starturl, function (graph) {
 
       // 处理合作人数饼状图信息
       var piedata = [
@@ -33,15 +34,7 @@ export default {
         //   value:0
         // },
         // {
-        //   name:"计算机学院",
-        //   value:0
-        // },
-        // {
         //   name:"软件工程学院",
-        //   value:0
-        // },
-        // {
-        //   name:"数字媒体学院",
         //   value:0
         // },
         // {
@@ -61,11 +54,21 @@ export default {
         }
       ]
       for (var i = 0 ; i<graph.links.length ; i++){
-        if (graph.links[i].source == "0"){
-          piedata[graph.nodes[graph.links[i].target].category].value += graph.links[i].value
+        if (graph.links[i].source === graph.nodes[0].id){
+          for(var j = 0 ; j<graph.nodes.length ; j++){
+            if (graph.nodes[j].id === graph.links[i].target){
+              piedata[graph.nodes[j].category].value += graph.links[i].value
+              break
+            }
+          }
         }
-        if (graph.links[i].target == "0"){
-          piedata[graph.nodes[graph.links[i].source].category].value += graph.links[i].value
+        if (graph.links[i].target === graph.nodes[0].id){
+          for(var j = 0 ; j<graph.nodes.length ; j++){
+            if (graph.nodes[j].id === graph.links[i].source){
+              piedata[graph.nodes[j].category].value += graph.links[i].value
+              break
+            }
+          }
         }
       }
 
@@ -76,15 +79,7 @@ export default {
         //   value:0
         // },
         // {
-        //   name:"计算机学院",
-        //   value:0
-        // },
-        // {
         //   name:"软件工程学院",
-        //   value:0
-        // },
-        // {
-        //   name:"数字媒体学院",
         //   value:0
         // },
         // {
@@ -104,7 +99,7 @@ export default {
         }
       ]
       for (var i = 0 ; i<graph.nodes.length ; i++){
-        piedata2[graph.nodes[i].category].value += 1;
+        piedata2[graph.nodes[i].category].value ++;
       }
       piedata2[graph.nodes[0].category].value --;
 
@@ -114,7 +109,7 @@ export default {
       // 筛选展示的节点
       graph.nodes.forEach(function (node) {
         node.label = {
-          show: node.symbolSize > 30
+          show: node.symbolSize > 20
         };
       });
 
@@ -135,8 +130,12 @@ export default {
               return parms.data.name+"</br>文献数量:"+parms.data.value;
             }
             else if(parms.data.type == "link"){
-              var startpoint = graph.nodes[parms.data.source].name;
-              var endpoint = graph.nodes[parms.data.target].name;
+              for(var i = 0 ; i<graph.nodes.length ; i++){
+                if (parms.data.target === graph.nodes[i].id){
+                  var endpoint = graph.nodes[i].name;
+                  break
+                }
+              }
               //"主笔人:"+startpoint+"</br>合作者:"+endpoint+"</br>此关系下合作数:"+parms.data.value
               return "合作者:"+endpoint+"</br>合作篇数:"+parms.data.value;
             }
@@ -226,287 +225,188 @@ export default {
 
     option && myChart.setOption(option);
 
+
+
+
+
+
     // 点击事件
     myChart.on('click',function (arg){
-      console.log(arg)
-      if (arg.data.name == '朱子炫'){
-        myChart.showLoading();
-        $.getJSON('../static/2.json', function (graph) {
 
-          var piedata = [
-            {
-              name:"国际学院",
-              value:0
-            },
-            {
-              name:"计算机学院",
-              value:0
-            },
-            {
-              name:"软件工程学院",
-              value:0
-            },
-            {
-              name:"数字媒体学院",
-              value:0
-            },
-            {
-              name:"马克思学院",
-              value:0
-            },
-          ]
-          for (var i = 0 ; i<graph.links.length ; i++){
-            if (graph.links[i].source == "2"){
-              piedata[graph.nodes[graph.links[i].target].category].value += graph.links[i].value
-            }
-            if (graph.links[i].target == "2"){
-              piedata[graph.nodes[graph.links[i].source].category].value += graph.links[i].value
+      myChart.showLoading();
+
+      //处理网址
+      var queryurl = 'http://dev.metattri.com:5000/graph/coworker/'
+      queryurl = queryurl + arg.data.name
+
+      //直接用getjson ping目标网址
+      $.getJSON(queryurl, function (graph) {
+
+
+        var piedata = [
+          // {
+          //   name:"国际学院",
+          //   value:0
+          // },
+          // {
+          //   name:"软件工程学院",
+          //   value:0
+          // },
+          // {
+          //   name:"马克思学院",
+          //   value:0
+          // },
+          {
+            name:"计算机学院",
+            value:0
+          },
+          {
+            name:"数字媒体学院",
+            value:0
+          },
+          {
+            name: "其他",
+            value:0
+          }
+        ]
+        for (var i = 0 ; i<graph.links.length ; i++) {
+          if (graph.links[i].source === graph.nodes[0].id) {
+            for (var j = 0; j < graph.nodes.length; j++) {
+              if (graph.nodes[j].id === graph.links[i].target) {
+                piedata[graph.nodes[j].category].value += graph.links[i].value
+                break
+              }
             }
           }
-
-          var piedata2 = [
-            {
-              name:"国际学院",
-              value:0
-            },
-            {
-              name:"计算机学院",
-              value:0
-            },
-            {
-              name:"软件工程学院",
-              value:0
-            },
-            {
-              name:"数字媒体学院",
-              value:0
-            },
-            {
-              name:"马克思学院",
-              value:0
-            },
-          ]
-          for (var i = 0 ; i<graph.nodes.length ; i++){
-            piedata2[graph.nodes[i].category].value += 1;
+          if (graph.links[i].target === graph.nodes[0].id) {
+            for (var j = 0; j < graph.nodes.length; j++) {
+              if (graph.nodes[j].id === graph.links[i].source) {
+                piedata[graph.nodes[j].category].value += graph.links[i].value
+                break
+              }
+            }
           }
-          piedata2[graph.nodes[0].category].value --;
+        }
 
-          myChart.hideLoading();
-          graph.nodes.forEach(function (node) {
-            node.label = {
-              show: node.symbolSize > 30
-            };
-          });
-          option = {
-            tooltip: {
-              trigger:'item',
-              formatter:function(parms){
-                if (parms.data.type == "node"){
-                  return parms.data.name+"</br>文献数量:"+parms.data.value;
-                }
-                else if(parms.data.type == "link"){
-                  var startpoint = graph.nodes[parms.data.source].name;
-                  var endpoint = graph.nodes[parms.data.target].name;
-                  return "主笔人:"+startpoint+"</br>合作者:"+endpoint+"</br>此关系下合作数:"+parms.data.value;
-                }
-                else {
-                  return ""
-                }
-              }
-            },
-            series: [
-              {
-                name: '学者详细信息',
-                type: 'graph',
-                layout: 'none',
-                data: graph.nodes,
-                links: graph.links,
-                categories: graph.categories,
-                roam: false,
-                label: {
-                  position: 'right',
-                  formatter: '{b}'
-                },
-                lineStyle: {
-                  color: 'source',
-                  curveness: 0.3
-                },
-                emphasis: {
-                  //adjacency
-                  focus: 'adjacency',
-                  lineStyle: {
-                    width: 10
-                  },
+        var piedata2 = [
+          // {
+          //   name:"国际学院",
+          //   value:0
+          // },
+          // {
+          //   name:"软件工程学院",
+          //   value:0
+          // },
+          // {
+          //   name:"马克思学院",
+          //   value:0
+          // },
+          {
+            name:"计算机学院",
+            value:0
+          },
+          {
+            name:"数字媒体学院",
+            value:0
+          },
+          {
+            name: "其他",
+            value:0
+          }
+        ]
+        for (var i = 0 ; i<graph.nodes.length ; i++){
+          piedata2[graph.nodes[i].category].value += 1;
+        }
+        piedata2[graph.nodes[0].category].value --;
 
-                }
-              },
-              {
-                type:'pie',
-                data:piedata,
-                label:{
-                  show:true,
-                  formatter:function (arg){
-                    return arg.name+":\n共合作"+arg.value+"篇"
-                  }
-                }
-              },
-              {
-                type:'pie',
-                data:piedata2,
-                label:{
-                  show:true,
-                  formatter:function (arg){
-                    return arg.name+":\n曾与"+arg.value+"人有过合作"
-                  }
-                }
-              }
-            ]
+        myChart.hideLoading();
+        graph.nodes.forEach(function (node) {
+          node.label = {
+            show: node.symbolSize > 30
           };
-          myChart.setOption(option);
-
         });
-      }
-      if (arg.data.name == '王俊翔'){
-        myChart.showLoading();
-        $.getJSON('../static/demodata.json', function (graph) {
-          var piedata = [
-            {
-              name:"国际学院",
-              value:0
-            },
-            {
-              name:"计算机学院",
-              value:0
-            },
-            {
-              name:"软件工程学院",
-              value:0
-            },
-            {
-              name:"数字媒体学院",
-              value:0
-            },
-            {
-              name:"马克思学院",
-              value:0
-            },
-          ]
-          for (var i = 0 ; i<graph.links.length ; i++){
-            if (graph.links[i].source == "0"){
-              piedata[graph.nodes[graph.links[i].target].category].value += graph.links[i].value
-            }
-            if (graph.links[i].target == "0"){
-              piedata[graph.nodes[graph.links[i].source].category].value += graph.links[i].value
-            }
-          }
-
-          var piedata2 = [
-            {
-              name:"国际学院",
-              value:0
-            },
-            {
-              name:"计算机学院",
-              value:0
-            },
-            {
-              name:"软件工程学院",
-              value:0
-            },
-            {
-              name:"数字媒体学院",
-              value:0
-            },
-            {
-              name:"马克思学院",
-              value:0
-            },
-          ]
-          for (var i = 0 ; i<graph.nodes.length ; i++){
-            piedata2[graph.nodes[i].category].value += 1;
-          }
-          piedata2[graph.nodes[0].category].value --;
-
-          myChart.hideLoading();
-          graph.nodes.forEach(function (node) {
-            node.label = {
-              show: node.symbolSize > 30
-            };
-          });
-          option = {
-            tooltip: {
-              trigger:'item',
-              formatter:function(parms){
-                if (parms.data.type == "node"){
-                  return parms.data.name+"</br>文献数量:"+parms.data.value;
-                }
-                else if(parms.data.type == "link"){
-                  var startpoint = graph.nodes[parms.data.source].name;
-                  var endpoint = graph.nodes[parms.data.target].name;
-                  return "主笔人:"+startpoint+"</br>合作者:"+endpoint+"</br>此关系下合作数:"+parms.data.value;
-                }
-                else {
-                  return ""
-                }
+        option = {
+          tooltip: {
+            trigger:'item',
+            formatter:function(parms){
+              if (parms.data.type == "node"){
+                return parms.data.name+"</br>文献数量:"+parms.data.value;
               }
-            },
-            series: [
-              {
-                name: '学者详细信息',
-                type: 'graph',
-                layout: 'none',
-                data: graph.nodes,
-                links: graph.links,
-                categories: graph.categories,
-                roam: false,
-                label: {
-                  position: 'right',
-                  formatter: '{b}'
-                },
+              else if(parms.data.type == "link"){
+                for(var i = 0 ; i<graph.nodes.length ; i++){
+                  if (parms.data.target === graph.nodes[i].id){
+                    var endpoint = graph.nodes[i].name;
+                    break
+                  }
+                }
+                //"主笔人:"+startpoint+"</br>合作者:"+endpoint+"</br>此关系下合作数:"+parms.data.value
+                return "合作者:"+endpoint+"</br>合作篇数:"+parms.data.value;
+              }
+              else {
+                return ""
+              }
+            }
+          },
+          series: [
+            {
+              name: '学者详细信息',
+              type: 'graph',
+              layout: 'none',
+              data: graph.nodes,
+              links: graph.links,
+              categories: graph.categories,
+              roam: false,
+              label: {
+                position: 'right',
+                formatter: '{b}'
+              },
+              lineStyle: {
+                color: 'source',
+                curveness: 0
+              },
+              emphasis: {
+                //adjacency
+                focus: 'adjacency',
                 lineStyle: {
-                  color: 'source',
-                  curveness: 0.3
+                  width: 10
                 },
-                emphasis: {
-                  //adjacency
-                  focus: 'adjacency',
-                  lineStyle: {
-                    width: 10
-                  },
 
-                }
-              },
-              {
-                type:'pie',
-                data:piedata,
-                label:{
-                  show:true,
-                  formatter:function (arg){
-                    return arg.name+":\n共合作"+arg.value+"篇"
-                  }
-                }
-              },
-              {
-                type:'pie',
-                data:piedata2,
-                label:{
-                  show:true,
-                  formatter:function (arg){
-                    return arg.name+":\n曾与"+arg.value+"人有过合作"
-                  }
+              }
+            },
+            {
+              type:'pie',
+              data:piedata,
+              label:{
+                show:true,
+                formatter:function (arg){
+                  return arg.name+":\n共合作"+arg.value+"篇"
                 }
               }
-            ]
-          };
-          myChart.setOption(option);
+            },
+            {
+              type:'pie',
+              data:piedata2,
+              label:{
+                show:true,
+                formatter:function (arg){
+                  return arg.name+":\n曾与"+arg.value+"人有过合作"
+                }
+              }
+            }
+          ]
+        };
+        myChart.setOption(option);
 
-        });
-      }
+      });
 
     })
   }
 }
 </script>
+
+
+
+
 
 <style scoped>
 #main{
@@ -519,387 +419,3 @@ export default {
 
 
 
-<!--<template>-->
-<!--  <div id="main">-->
-<!--    <h1>查询结果</h1>-->
-<!--    <div id="chart1"style="height: 600px">-->
-
-<!--    </div>-->
-<!--    <div id="chart2"style="height: 600px">-->
-
-<!--    </div>-->
-<!--  </div>-->
-<!--</template>-->
-
-<!--<script type="text/javascript">-->
-<!--import * as echarts from "echarts";-->
-<!--import $ from "jquery";-->
-<!--export default {-->
-<!--  name: "chart",-->
-<!--  mounted() {-->
-<!--    var myChart = echarts.init(document.getElementById('chart1'));-->
-<!--    var option;-->
-
-<!--    myChart.showLoading();-->
-<!--    $.getJSON('../static/demodata.json', function (graph) {-->
-<!--      myChart.hideLoading();-->
-<!--      graph.nodes.forEach(function (node) {-->
-<!--        node.label = {-->
-<!--          show: node.symbolSize > 30-->
-<!--        };-->
-<!--      });-->
-<!--      option = {-->
-<!--        title: {-->
-<!--          text: '跨领域合作关系表',-->
-<!--          subtext: 'Default layout',-->
-<!--          top: 'bottom',-->
-<!--          left: 'right'-->
-<!--        },-->
-<!--        tooltip: {-->
-<!--          trigger:'item',-->
-<!--          formatter:function(parms){-->
-<!--            if (parms.data.type == "node"){-->
-<!--              return parms.data.name+"</br>文献数量:"+parms.data.value;-->
-<!--            }-->
-<!--            else if(parms.data.type == "link"){-->
-<!--              var startpoint = graph.nodes[parms.data.source].name;-->
-<!--              var endpoint = graph.nodes[parms.data.target].name;-->
-<!--              return "主笔人:"+startpoint+"</br>合作者:"+endpoint+"</br>此关系下合作数:"+parms.data.value;-->
-<!--            }-->
-<!--            else {-->
-<!--              return ""-->
-<!--            }-->
-<!--          }-->
-<!--        },-->
-<!--        toolbox:{-->
-<!--          feature:{-->
-<!--            saveAsImage:{},-->
-<!--            dataView:{},-->
-<!--            restore:{}-->
-<!--          }-->
-<!--        },-->
-<!--        legend: [-->
-<!--          {-->
-<!--            // selectedMode: 'single',-->
-<!--            data: graph.categories.map(function (a) {-->
-<!--              return a.name;-->
-<!--            })-->
-<!--          }-->
-<!--        ],-->
-<!--        animationDuration: 1500,-->
-<!--        animationEasingUpdate: 'quinticInOut',-->
-<!--        series: [-->
-<!--          {-->
-<!--            name: '学者详细信息',-->
-<!--            type: 'graph',-->
-<!--            layout: 'none',-->
-<!--            data: graph.nodes,-->
-<!--            links: graph.links,-->
-<!--            categories: graph.categories,-->
-<!--            roam: false,-->
-<!--            label: {-->
-<!--              position: 'right',-->
-<!--              formatter: '{b}'-->
-<!--            },-->
-<!--            lineStyle: {-->
-<!--              color: 'source',-->
-<!--              curveness: 0.3-->
-<!--            },-->
-<!--            emphasis: {-->
-<!--              //adjacency-->
-<!--              focus: 'adjacency',-->
-<!--              lineStyle: {-->
-<!--                width: 10-->
-<!--              },-->
-
-<!--            }-->
-<!--          }-->
-<!--        ]-->
-<!--      };-->
-<!--      myChart.setOption(option);-->
-<!--    });-->
-
-<!--    option && myChart.setOption(option);-->
-
-<!--    var myChart2 = echarts.init(document.getElementById('chart2'));-->
-<!--    var option2;-->
-
-<!--    myChart.showLoading();-->
-<!--    $.getJSON('../static/demodata.json', function (graph) {-->
-<!--      var piedata = [-->
-<!--        {-->
-<!--          name:"国际学院",-->
-<!--          value:0-->
-<!--        },-->
-<!--        {-->
-<!--          name:"计算机学院",-->
-<!--          value:0-->
-<!--        },-->
-<!--        {-->
-<!--          name:"软件工程学院",-->
-<!--          value:0-->
-<!--        },-->
-<!--        {-->
-<!--          name:"数字媒体学院",-->
-<!--          value:0-->
-<!--        },-->
-<!--        {-->
-<!--          name:"马克思学院",-->
-<!--          value:0-->
-<!--        },-->
-<!--      ]-->
-<!--      for (var i = 0 ; i<graph.links.length ; i++){-->
-<!--        if (graph.links[i].source == "0"){-->
-<!--          piedata[graph.nodes[graph.links[i].target].category].value += graph.links[i].value-->
-<!--        }-->
-<!--        if (graph.links[i].target == "0"){-->
-<!--          piedata[graph.nodes[graph.links[i].source].category].value += graph.links[i].value-->
-<!--        }-->
-<!--      }-->
-<!--      option2 = {-->
-<!--        series:[-->
-<!--          {-->
-<!--            type:'pie',-->
-<!--            data:piedata,-->
-<!--            label:{-->
-<!--              show:true,-->
-<!--              formatter:function (arg){-->
-<!--                return arg.name+"\n共合作"+arg.value+"篇"-->
-<!--              }-->
-<!--            }-->
-<!--          }-->
-<!--        ]-->
-<!--      }-->
-
-<!--      myChart2.setOption(option2);-->
-<!--    });-->
-
-<!--    option2 && myChart2.setOption(option2);-->
-
-<!--    myChart.on('click',function (arg){-->
-<!--      console.log(arg)-->
-<!--      if (arg.data.name == '朱子炫'){-->
-<!--        myChart.showLoading();-->
-<!--        $.getJSON('../static/demodata2.json', function (graph) {-->
-<!--          myChart.hideLoading();-->
-<!--          graph.nodes.forEach(function (node) {-->
-<!--            node.label = {-->
-<!--              show: node.symbolSize > 30-->
-<!--            };-->
-<!--          });-->
-<!--          option = {-->
-<!--            tooltip: {-->
-<!--              trigger:'item',-->
-<!--              formatter:function(parms){-->
-<!--                if (parms.data.type == "node"){-->
-<!--                  return parms.data.name+"</br>文献数量:"+parms.data.value;-->
-<!--                }-->
-<!--                else if(parms.data.type == "link"){-->
-<!--                  var startpoint = graph.nodes[parms.data.source].name;-->
-<!--                  var endpoint = graph.nodes[parms.data.target].name;-->
-<!--                  return "主笔人:"+startpoint+"</br>合作者:"+endpoint+"</br>此关系下合作数:"+parms.data.value;-->
-<!--                }-->
-<!--                else {-->
-<!--                  return ""-->
-<!--                }-->
-<!--              }-->
-<!--            },-->
-<!--            series: [-->
-<!--              {-->
-<!--                name: '学者详细信息',-->
-<!--                type: 'graph',-->
-<!--                layout: 'none',-->
-<!--                data: graph.nodes,-->
-<!--                links: graph.links,-->
-<!--                categories: graph.categories,-->
-<!--                roam: false,-->
-<!--                label: {-->
-<!--                  position: 'right',-->
-<!--                  formatter: '{b}'-->
-<!--                },-->
-<!--                lineStyle: {-->
-<!--                  color: 'source',-->
-<!--                  curveness: 0.3-->
-<!--                },-->
-<!--                emphasis: {-->
-<!--                  //adjacency-->
-<!--                  focus: 'adjacency',-->
-<!--                  lineStyle: {-->
-<!--                    width: 10-->
-<!--                  },-->
-
-<!--                }-->
-<!--              }-->
-<!--            ]-->
-<!--          };-->
-<!--          myChart.setOption(option);-->
-
-<!--          var piedata = [-->
-<!--            {-->
-<!--              name:"国际学院",-->
-<!--              value:0-->
-<!--            },-->
-<!--            {-->
-<!--              name:"计算机学院",-->
-<!--              value:0-->
-<!--            },-->
-<!--            {-->
-<!--              name:"软件工程学院",-->
-<!--              value:0-->
-<!--            },-->
-<!--            {-->
-<!--              name:"数字媒体学院",-->
-<!--              value:0-->
-<!--            },-->
-<!--            {-->
-<!--              name:"马克思学院",-->
-<!--              value:0-->
-<!--            },-->
-<!--          ]-->
-<!--          for (var i = 0 ; i<graph.links.length ; i++){-->
-<!--            if (graph.links[i].source == "0"){-->
-<!--              piedata[graph.nodes[graph.links[i].target].category].value += graph.links[i].value-->
-<!--            }-->
-<!--            if (graph.links[i].target == "0"){-->
-<!--              piedata[graph.nodes[graph.links[i].source].category].value += graph.links[i].value-->
-<!--            }-->
-<!--          }-->
-<!--          option2 = {-->
-<!--            series:[-->
-<!--              {-->
-<!--                type:'pie',-->
-<!--                data:piedata,-->
-<!--                label:{-->
-<!--                  show:true,-->
-<!--                  formatter:function (arg){-->
-<!--                    return arg.name+"\n共合作"+arg.value+"篇"-->
-<!--                  }-->
-<!--                }-->
-<!--              }-->
-<!--            ]-->
-<!--          }-->
-
-<!--          myChart2.setOption(option2);-->
-<!--        });-->
-<!--      }-->
-<!--      if (arg.data.name == '王俊翔'){-->
-<!--        myChart.showLoading();-->
-<!--        $.getJSON('../static/demodata.json', function (graph) {-->
-<!--          myChart.hideLoading();-->
-<!--          graph.nodes.forEach(function (node) {-->
-<!--            node.label = {-->
-<!--              show: node.symbolSize > 30-->
-<!--            };-->
-<!--          });-->
-<!--          option = {-->
-<!--            tooltip: {-->
-<!--              trigger:'item',-->
-<!--              formatter:function(parms){-->
-<!--                if (parms.data.type == "node"){-->
-<!--                  return parms.data.name+"</br>文献数量:"+parms.data.value;-->
-<!--                }-->
-<!--                else if(parms.data.type == "link"){-->
-<!--                  var startpoint = graph.nodes[parms.data.source].name;-->
-<!--                  var endpoint = graph.nodes[parms.data.target].name;-->
-<!--                  return "主笔人:"+startpoint+"</br>合作者:"+endpoint+"</br>此关系下合作数:"+parms.data.value;-->
-<!--                }-->
-<!--                else {-->
-<!--                  return ""-->
-<!--                }-->
-<!--              }-->
-<!--            },-->
-<!--            series: [-->
-<!--              {-->
-<!--                name: '学者详细信息',-->
-<!--                type: 'graph',-->
-<!--                layout: 'none',-->
-<!--                data: graph.nodes,-->
-<!--                links: graph.links,-->
-<!--                categories: graph.categories,-->
-<!--                roam: false,-->
-<!--                label: {-->
-<!--                  position: 'right',-->
-<!--                  formatter: '{b}'-->
-<!--                },-->
-<!--                lineStyle: {-->
-<!--                  color: 'source',-->
-<!--                  curveness: 0.3-->
-<!--                },-->
-<!--                emphasis: {-->
-<!--                  //adjacency-->
-<!--                  focus: 'adjacency',-->
-<!--                  lineStyle: {-->
-<!--                    width: 10-->
-<!--                  },-->
-
-<!--                }-->
-<!--              }-->
-<!--            ]-->
-<!--          };-->
-<!--          myChart.setOption(option);-->
-
-<!--          var piedata = [-->
-<!--            {-->
-<!--              name:"国际学院",-->
-<!--              value:0-->
-<!--            },-->
-<!--            {-->
-<!--              name:"计算机学院",-->
-<!--              value:0-->
-<!--            },-->
-<!--            {-->
-<!--              name:"软件工程学院",-->
-<!--              value:0-->
-<!--            },-->
-<!--            {-->
-<!--              name:"数字媒体学院",-->
-<!--              value:0-->
-<!--            },-->
-<!--            {-->
-<!--              name:"马克思学院",-->
-<!--              value:0-->
-<!--            },-->
-<!--          ]-->
-<!--          for (var i = 0 ; i<graph.links.length ; i++){-->
-<!--            if (graph.links[i].source == "0"){-->
-<!--              piedata[graph.nodes[graph.links[i].target].category].value += graph.links[i].value-->
-<!--            }-->
-<!--            if (graph.links[i].target == "0"){-->
-<!--              piedata[graph.nodes[graph.links[i].source].category].value += graph.links[i].value-->
-<!--            }-->
-<!--          }-->
-<!--          option2 = {-->
-<!--            series:[-->
-<!--              {-->
-<!--                type:'pie',-->
-<!--                data:piedata,-->
-<!--                label:{-->
-<!--                  show:true,-->
-<!--                  formatter:function (arg){-->
-<!--                    return arg.name+"\n共合作"+arg.value+"篇"-->
-<!--                  }-->
-<!--                }-->
-<!--              }-->
-<!--            ]-->
-<!--          }-->
-
-<!--          myChart2.setOption(option2);-->
-<!--        });-->
-<!--      }-->
-
-<!--    })-->
-<!--  }-->
-<!--}-->
-<!--</script>-->
-
-<!--<style scoped>-->
-<!--#main{-->
-<!--  text-align: center-->
-<!--}-->
-<!--#chart1{-->
-<!--  text-align: center-->
-<!--}-->
-<!--#chart2{-->
-<!--  text-align: center-->
-<!--}-->
-<!--</style>-->
