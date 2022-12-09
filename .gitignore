@@ -1,5 +1,5 @@
 #.idea
-/back-end/utils/dao/db_connetor.py
+/back-end/utils/dao/db_connector.py
 /back-end/res/model/glove.6B.50d.txt
 /back-end/res/model/glove.6B.100d.txt
 /back-end/res/model/glove.6B.200d.txt

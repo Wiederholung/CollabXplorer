@@ -1,10 +1,10 @@
 import math
 import random
-from utils.dao import db_connetor
+from utils.dao import db_connector
 from utils.dao.db_utils import get_auth_info
 from algorithm.unsupervisedClustering import get_cluster
 
-db = db_connetor.get_connection().bupt  # 连接数据库
+db = db_connector.get_connection().bupt  # 连接数据库
 
 
 # 获取按学院查询的数据

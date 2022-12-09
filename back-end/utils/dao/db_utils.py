@@ -1,6 +1,6 @@
-from utils.dao import db_connetor
+from utils.dao import db_connector
 from tqdm import *
-db = db_connetor.get_connection()  # 连接数据库
+db = db_connector.get_connection()  # 连接数据库
 
 
 # 插入 pub 到个人 document
