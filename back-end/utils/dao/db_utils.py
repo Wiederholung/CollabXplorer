@@ -1,5 +1,6 @@
 from utils.dao import db_connector
 from tqdm import *
+
 db = db_connector.get_connection()  # 连接数据库
 
 
@@ -80,6 +81,7 @@ def get_auth_info(id_s, name_ch, name_en, category):
 # 获取所有作者名 list
 def get_all_name_en():
     return db.bupt.list_collection_names()
+
 
 if __name__ == '__main__':
     get_all_abs_per_person()
