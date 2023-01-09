@@ -119,7 +119,4 @@ if __name__ == '__main__':
     # res = get_similarity('Anfu_Zhou', "Anlong_Ming")
     # a = get_author_vec_set()
     # get_2d_vec(a)
-    _50d = torch.load("res/author_vec_set.pt")
-    _2d = torch.load("res/author_vec_set_2d.pt")
-    print(_50d.size(), "\n", _2d.size())
     print("done")
