@@ -75,6 +75,7 @@ def get_author_vec_set():
     author_vec_set = torch.zeros(len(author_set), GloVe_dim).to(device)
     for i in range(len(author_set)):
         author_vec_set[i] = get_author_vec(author_set[i]).unsqueeze(0)
+        print(author_vec_set[i])
     torch.save(author_vec_set, 'res/author_vec_set.pt')
     return author_vec_set
 
@@ -116,7 +117,9 @@ def write_sim():
 if __name__ == '__main__':
     # v = get_author_vec('Anfu_Zhou')
     # res = get_similarity('Anfu_Zhou', "Anlong_Ming")
-    a = get_author_vec_set()
-    get_2d_vec(a)
-
+    # a = get_author_vec_set()
+    # get_2d_vec(a)
+    _50d = torch.load("res/author_vec_set.pt")
+    _2d = torch.load("res/author_vec_set_2d.pt")
+    print(_50d.size(), "\n", _2d.size())
     print("done")
