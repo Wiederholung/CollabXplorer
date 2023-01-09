@@ -1,6 +1,9 @@
-import torch
-from torchtext.vocab import GloVe
 import time
+
+import torch
+from sklearn.manifold import TSNE
+from torchtext.vocab import GloVe
+
 from utils import article_utils
 from utils.dao import db_utils
 
@@ -66,20 +69,22 @@ def get_author_vec(name_en):
     return author_vec
 
 
-# 计算不同的需要结果
-
-# 通过Tsne将vec向量降到2维
-def get_2d_vec(vec):
-    from tsne_torch import TorchTSNE as TSNE
-    tsne = TSNE(n_components=2, init='pca', random_state=0)
-    vec_2d = tsne.fit_transform(vec)
-    return vec_2d
-
-
+# 计算作者的向量集
+def get_author_vec_set():
+    author_set = db_utils.get_all_name_en()
+    author_vec_set = torch.zeros(len(author_set), GloVe_dim).to(device)
+    for i in range(len(author_set)):
+        author_vec_set[i] = get_author_vec(author_set[i]).unsqueeze(0)
+    torch.save(author_vec_set, 'res/author_vec_set.pt')
+    return author_vec_set
 
 
-
-
+# 通过TSNE将向量降到2维
+def get_2d_vec(vec_set):
+    x = vec_set.numpy()
+    x_embedded = TSNE(n_components=2).fit_transform(x)
+    torch.save(x_embedded, 'res/author_vec_set_2d.pt')
+    return x_embedded
 
 
 # 计算两个作者的相似度，返回值为0-1之间的浮点数
@@ -109,7 +114,9 @@ def write_sim():
 
 
 if __name__ == '__main__':
-    res = get_similarity('Anfu_Zhou', "Anlong_Ming")
-    print(res)
-    # write_sim()
+    # v = get_author_vec('Anfu_Zhou')
+    # res = get_similarity('Anfu_Zhou', "Anlong_Ming")
+    a = get_author_vec_set()
+    get_2d_vec(a)
+
     print("done")
