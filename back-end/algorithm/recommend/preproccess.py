@@ -4,7 +4,7 @@ import time
 from utils import article_utils
 from utils.dao import db_utils
 
-GloVe_dim = 300
+GloVe_dim = 50
 # 从res/model加载glove模型
 glove = GloVe(name='6B', dim=GloVe_dim, cache='res/model')
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")  # 使用 CUDA
@@ -64,6 +64,22 @@ def get_author_vec(name_en):
     #  将 author_vec 转置，变成行向量
     # author_vec = author_vec.unsqueeze(0)
     return author_vec
+
+
+# 计算不同的需要结果
+
+# 通过Tsne将vec向量降到2维
+def get_2d_vec(vec):
+    from tsne_torch import TorchTSNE as TSNE
+    tsne = TSNE(n_components=2, init='pca', random_state=0)
+    vec_2d = tsne.fit_transform(vec)
+    return vec_2d
+
+
+
+
+
+
 
 
 # 计算两个作者的相似度，返回值为0-1之间的浮点数
