@@ -115,8 +115,8 @@ def write_sim():
 
 
 if __name__ == '__main__':
-    # v = get_author_vec('Anfu_Zhou')
-    # res = get_similarity('Anfu_Zhou', "Anlong_Ming")
+    v = get_author_vec('Anfu_Zhou')
+    res = get_similarity('Anfu_Zhou', "Anlong_Ming")
     # a = get_author_vec_set()
     # get_2d_vec(a)
     print("done")
