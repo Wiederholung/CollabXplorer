@@ -6,9 +6,10 @@
 		"context": "..",
 		"dockerfile": "Dockerfile"
 	},
-	// "features": {
-	// 	"ghcr.io/devcontainers/features/sshd:1": {}
-	// },
+	"features": {
+		"ghcr.io/devcontainers/features/sshd:1": {},
+		"ghcr.io/devcontainers/features/anaconda:1": {}
+	},
 	"forwardPorts": [5000, 8888],
 	"portsAttributes": {
 		"5000": {
