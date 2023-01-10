@@ -5,7 +5,7 @@
       <sourceFolder url="file://$MODULE_DIR$/back-end" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/back-end/tests" isTestSource="true" />
     </content>
-    <orderEntry type="jdk" jdkName="Remote Python 3.9.13 (acrs)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Remote Python 3.9.13 (/root/anaconda3/envs/acrs/bin/python)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="PyDocumentationSettings">

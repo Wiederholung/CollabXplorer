@@ -109,8 +109,8 @@ if __name__ == "__main__":
 
     # 数据正则化，让参与的数据减去均值出方差，是临均值，标准差成了1
     datas = StandardScaler().fit_transform(datas)  # 计算训练数据的均值和方差，并基于计算出来的均值和方差来转换训练数据，从而把数据转换成标准的正态分布
-    eps = 0.3
-    min_points = 10
+    eps = 0.35
+    min_points = 5
     # 手动实现DBSCAN
     # dbscan算法，labs是最终结果，cluster_id是分成了多少类
     labs, cluster_id = dbscan(datas, eps=eps, min_points=min_points)
