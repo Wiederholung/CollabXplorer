@@ -8,6 +8,17 @@
 	},
 	"features": {
 		"ghcr.io/devcontainers/features/sshd:1": {}
+	},
+	"forwardPorts": [5000, 8888],
+	"portsAttributes": {
+		"5000": {
+			"label": "Flask",
+			"onAutoForward": "notify"
+		},
+		"8888": {
+			"label": "Jupyter",
+			"onAutoForward": "notify"
+		}
 	}
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
