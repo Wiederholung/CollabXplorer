@@ -1,3 +1,4 @@
 #.idea
 /back-end/utils/dao/db_connector.py
 /back-end/res/model/
+jupyter.log
