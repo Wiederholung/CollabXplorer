@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" promptOnRemoteOverwrite="CHECK_CONTENT" serverName="root@ECS:22 agent" createEmptyFolders="true" confirmBeforeUploading="false" notifyRemoteChanges="true">
+  <component name="PublishConfigData" autoUpload="Always" promptOnRemoteOverwrite="CHECK_CONTENT" serverName="acrs" createEmptyFolders="true" confirmBeforeUploading="false" notifyRemoteChanges="true">
     <option name="confirmBeforeUploading" value="false" />
     <serverData>
-      <paths name="root@ECS:22 agent">
+      <paths name="acrs">
         <serverdata>
           <mappings>
             <mapping deploy="/home/Projects/Academic-Collaboration-RS" local="$PROJECT_DIR$" />
