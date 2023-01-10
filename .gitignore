@@ -1,4 +1,8 @@
-#.idea
+.idea/Academic-Collaboration-RS.iml
+.idea/deployment.xml
+.idea/misc.xml
+
 /back-end/utils/dao/db_connector.py
 /back-end/res/model/
+
 jupyter.log
