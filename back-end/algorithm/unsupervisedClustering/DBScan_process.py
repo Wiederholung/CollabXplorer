@@ -1,10 +1,12 @@
 import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
 import torch
 from sklearn.datasets import make_blobs
 from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import DBSCAN
 from sklearn import metrics
+from utils.dao import db_utils as db
 
 UNCLASSIFIED = 0  # 点未被标记
 NOISE = -1  # 噪声点标记
@@ -91,20 +93,9 @@ def draw_cluster(datas, labs, n_cluster):
 
 
 if __name__ == "__main__":
-    ## 数据1
-    # centers = [[20, 1], [-2, -1], [2, -1]]  # 三个中心点的坐标
-    # # datas为样本数据集，labels_true为样本数据集的标签
-    # datas, labels_true = make_blobs(n_samples=750, centers=centers, cluster_std=0.4,
-    #                                 random_state=0)
-    # 产生一组随机数datas，中心点是centers，方差是0.4，产生750个点
-
-    ## 数据2
-    # file_name = "spiral"
-    # with open(file_name+".txt","r",encoding="utf-8") as f:
-    #    lines = f.read().splitlines()
-    # lines = [line.split("\t")[:-1] for line in lines]
-    # datas = np.array(lines).astype(np.float32)
-    ###
+    # 定义变量
+    author_set = db.get_all_name_en()
+    # 加载2维数据
     datas = torch.load("res/author_vec_set_2d.pt")
 
     # 数据正则化，让参与的数据减去均值出方差，是临均值，标准差成了1
@@ -112,8 +103,8 @@ if __name__ == "__main__":
     eps = 0.35
     min_points = 5
     # 手动实现DBSCAN
-    # dbscan算法，labs是最终结果，cluster_id是分成了多少类
-    labs, cluster_id = dbscan(datas, eps=eps, min_points=min_points)
+    # dbscan算法，labs是最终结果，cluster_num是分成了多少类
+    labs, cluster_num = dbscan(datas, eps=eps, min_points=min_points)
     print("labs of my dbscan")
     print(labs)
 
@@ -124,12 +115,39 @@ if __name__ == "__main__":
     print("labs of sk-DBSCAN")
     print(skl_labels)
     # 画出
-    draw_cluster(datas, labs, cluster_id)
+    draw_cluster(datas, skl_labels, cluster_num)
 
     # dbscan 输出，123表示聚类点，-1表示噪声点
     # sklearn 输出  012表示聚类点，-1表示噪声点
 
-    # 1）将簇id与数据实例绑定
-    # TODO 2）将离群点归到最近的簇中
-    # 3）聚类结果输出到csv文件
-    # TODO 4）写数据发送和前端接口
+    # 1）优化：将噪声放入簇中
+    # 计算每个簇的中心点
+    center = []
+    for i in range(cluster_num):
+        center.append(np.mean(datas[skl_labels == i], axis=0))
+    center = np.array(center)
+
+    # 获取噪声点的坐标
+    noise = datas[skl_labels == -1]
+    # 记录每个噪声点在res中的索引
+    noise_index = []
+    for i in range(len(skl_labels)):
+        if skl_labels[i] == -1:
+            noise_index.append(i)
+
+    # 计算每个噪声点到每个簇的中心点的距离，距离最近的簇的skl_labels作为该噪声点的簇skl_labels
+    for i in range(len(noise)):
+        dis = np.sum((noise[i] - center) ** 2, axis=1)
+        # argmin返回最小值的索引
+        res = np.argmin(dis)
+        # 将噪声点的skl_labels改为最近的簇的skl_labels
+        skl_labels[skl_labels == -1][i] = res
+    # 将簇id与数据实例绑定
+    a = np.array(author_set)[:, np.newaxis]  # 转置
+    s = np.array(skl_labels)[:, np.newaxis]
+    res = np.hstack((a, s, datas))
+    pd.DataFrame(res, columns=['author', 'cluster_id', 'x', 'y'])
+
+    # 2）聚类结果输出到csv文件
+    pd.DataFrame(res, columns=['author', 'cluster_id', 'x', 'y']).to_csv('res/cluster_result.csv')
+    # TODO 3）写数据发送和前端接口
