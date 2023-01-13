@@ -110,8 +110,8 @@ if __name__ == "__main__":
 
     # sklearn里的DBSCAN 算法
     # 分类器     # 半径      min_points           对datas进行聚类
-    db = DBSCAN(eps=eps, min_samples=min_points).fit(datas)
-    skl_labels = db.labels_
+    clustering = DBSCAN(eps=eps, min_samples=min_points).fit(datas)
+    skl_labels = clustering.labels_
     print("labs of sk-DBSCAN")
     print(skl_labels)
     # 画出
@@ -141,7 +141,8 @@ if __name__ == "__main__":
         # argmin返回最小值的索引
         res = np.argmin(dis)
         # 将噪声点的skl_labels改为最近的簇的skl_labels
-        skl_labels[skl_labels == -1][i] = res
+        index = noise_index[i]
+        skl_labels[index] = res
     # 将簇id与数据实例绑定
     a = np.array(author_set)[:, np.newaxis]  # 转置
     s = np.array(skl_labels)[:, np.newaxis]
