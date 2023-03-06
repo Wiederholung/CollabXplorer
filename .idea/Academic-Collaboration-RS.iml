@@ -6,7 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/back-end/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/.idea/dataSources" />
     </content>
-    <orderEntry type="jdk" jdkName="acrs" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.8 (deeplearning)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="PyDocumentationSettings">
