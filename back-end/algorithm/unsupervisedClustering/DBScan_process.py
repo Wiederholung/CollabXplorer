@@ -100,6 +100,7 @@ if __name__ == "__main__":
 
     # 数据正则化，让参与的数据减去均值出方差，是临均值，标准差成了1
     datas = StandardScaler().fit_transform(datas)  # 计算训练数据的均值和方差，并基于计算出来的均值和方差来转换训练数据，从而把数据转换成标准的正态分布
+
     eps = 0.35
     min_points = 5
     # 手动实现DBSCAN
@@ -114,8 +115,6 @@ if __name__ == "__main__":
     skl_labels = clustering.labels_
     print("labs of sk-DBSCAN")
     print(skl_labels)
-    # 画出
-    draw_cluster(datas, skl_labels, cluster_num)
 
     # dbscan 输出，123表示聚类点，-1表示噪声点
     # sklearn 输出  012表示聚类点，-1表示噪声点
@@ -151,4 +150,6 @@ if __name__ == "__main__":
 
     # 2）聚类结果输出到csv文件
     pd.DataFrame(res, columns=['author', 'cluster_id', 'x', 'y']).to_csv('res/cluster_result.csv')
+    # 画出
+    draw_cluster(datas, skl_labels, cluster_num)
     # TODO 3）写数据发送和前端接口
