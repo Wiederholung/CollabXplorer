@@ -96,7 +96,7 @@ if __name__ == "__main__":
     # 定义变量
     author_set = db.get_all_name_en()
     # 加载2维数据
-    datas = torch.load("res/author_vec_set_2d.pt")
+    datas = torch.load("res/author_vec_set-2d.pt")
 
     # 数据正则化，让参与的数据减去均值出方差，是临均值，标准差成了1
     datas = StandardScaler().fit_transform(datas)  # 计算训练数据的均值和方差，并基于计算出来的均值和方差来转换训练数据，从而把数据转换成标准的正态分布

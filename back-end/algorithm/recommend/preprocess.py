@@ -7,7 +7,7 @@ from torchtext.vocab import GloVe
 from utils import article_utils
 from utils.dao import db_utils
 
-GloVe_dim = 50
+GloVe_dim = 100
 # 从res/model加载glove模型
 glove = GloVe(name='6B', dim=GloVe_dim, cache='res/model')
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")  # 使用 CUDA
@@ -84,7 +84,7 @@ def get_author_vec_set():
 def get_2d_vec(vec_set):
     x = vec_set.numpy()
     x_embedded = TSNE(n_components=2).fit_transform(x)
-    torch.save(x_embedded, 'res/author_vec_set_2d.pt')
+    torch.save(x_embedded, 'res/author_vec_set-2d.pt')
     return x_embedded
 
 
@@ -111,12 +111,13 @@ def write_sim():
             j += 1
         print(all_name[i] + " cost: " + str(time.time() - start))  # 计时结束
     # 将tensor写入文件
-    torch.save(all_sim, 'res/all_sim.pt')
+    torch.save(all_sim, 'res/all_sim-'+str(GloVe_dim)+'d.pt')
 
 
 if __name__ == '__main__':
-    v = get_author_vec('Anfu_Zhou')
-    res = get_similarity('Anfu_Zhou', "Anlong_Ming")
+    # v = get_author_vec('Anfu_Zhou')
+    # res = get_similarity('Anfu_Zhou', "Anlong_Ming")
     # a = get_author_vec_set()
     # get_2d_vec(a)
+    write_sim()
     print("done")
