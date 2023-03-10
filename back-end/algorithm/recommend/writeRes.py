@@ -2,7 +2,7 @@
 import torch
 
 from utils.dao import db_utils
-import preproccess
+import preprocess
 
 # TODO: 获取所有人的名字
 allName = db_utils.get_all_name_en()
@@ -13,7 +13,7 @@ def writeFileSim():
     all_sim = torch.zeros(len(allName), len(allName))
     for i in range(len(allName)):
         for j in range(len(allName)):
-            all_sim[i][j] = preproccess.get_similarity(allName[i], allName[j])
+            all_sim[i][j] = preprocess.get_similarity(allName[i], allName[j])
             print(all_sim[i][j])
     print(all_sim)
     # 将tensor写入文件
