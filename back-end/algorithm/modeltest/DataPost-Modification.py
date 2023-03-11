@@ -5,7 +5,7 @@ import numpy as np
 from random import *
 
 # 将sim.csv中数据导入OriginalSimilarity中
-file_name = '../../res/all_sim.csv'
+file_name = '../../res/all_sim-50d.csv'
 OriginalSimilarity = np.array(pd.read_csv(file_name))[:, 1:]
 
 ResultSimilarity = np.zeros((126, 126))
