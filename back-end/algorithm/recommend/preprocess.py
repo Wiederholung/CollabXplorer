@@ -7,7 +7,7 @@ from torchtext.vocab import GloVe
 from utils import article_utils
 from utils.dao import db_utils
 
-GloVe_dim = 100
+GloVe_dim = 300
 # 从res/model加载glove模型
 glove = GloVe(name='6B', dim=GloVe_dim, cache='res/model')
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")  # 使用 CUDA
