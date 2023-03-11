@@ -32,7 +32,9 @@ for i in range(0, 126):
 #简单归一化
 #maxnumber=1.1917427432817727
 #Normalisation Number = 1.21
-NormalisationNumber = np.max(ResultSimilarity) + 0.02
+# change_number = 0.02
+# NormalisationNumber = np.max(ResultSimilarity) + change_number
+NormalisationNumber = 1.2
 for i in range(0, 126):
     for j in range(i+1, 126):
         ResultSimilarity[i][j] = ResultSimilarity[i][j]/NormalisationNumber
