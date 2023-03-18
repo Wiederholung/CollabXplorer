@@ -374,8 +374,8 @@ should be determined by all words in the abstract together.
 For the word vector \(\vec W\), we take the paper abstracts in the
 database (data type: String), slice them into words, and then map each
 word (token), into GloVe's pre-trained model to obtain a
-50-dimensional word vector. In this paper, we use GloVe's
-pre-trained model (6B tokens, 400K vocab, uncased, 50d vectors), which
+100-dimensional word vector. In this paper, we use GloVe's
+pre-trained model (6B tokens, 400K vocab, uncased, 100d vectors), which
 is trained on the Wikipedia corpus.
 
 \subsection{Scholar Embedding}
@@ -596,7 +596,7 @@ Table \ref{tab:addlabel} shows that the accuracy of the model for the scholar
 similarity task increases and then decreases as the dimensionality of
 the word vector increases, and the highest accuracy is achieved at 100
 dimensions. We attribute this improvement in accuracy to the fact that a
-50-dimensional scholar vector does not reflect more features of the
+100-dimensional scholar vector does not reflect more features of the
 scholar. Therefore, we choose 100 dimensions as the dimensionality of the
 word vector.
 
