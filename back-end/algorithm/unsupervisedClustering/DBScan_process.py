@@ -7,7 +7,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import DBSCAN
 from sklearn import metrics
 from utils.dao import db_utils as db
-
+from sklearn.metrics import silhouette_score, davies_bouldin_score, calinski_harabasz_score
 UNCLASSIFIED = 0  # 点未被标记
 NOISE = -1  # 噪声点标记
 
@@ -115,6 +115,7 @@ if __name__ == "__main__":
     skl_labels = clustering.labels_
     print("labs of sk-DBSCAN")
     print(skl_labels)
+    print("over")
 
     # dbscan 输出，123表示聚类点，-1表示噪声点
     # sklearn 输出  012表示聚类点，-1表示噪声点
@@ -142,6 +143,22 @@ if __name__ == "__main__":
         # 将噪声点的skl_labels改为最近的簇的skl_labels
         index = noise_index[i]
         skl_labels[index] = res
+
+    # 给出评估指标
+    # Calculate silhouette coefficient
+    silhouette_avg = silhouette_score(datas, skl_labels)
+
+    # Calculate Davies-Bouldin Index (DBI)
+    dbi_score = davies_bouldin_score(datas, skl_labels)
+
+    # Calculate Calinski-Harabasz Index (CH)
+    ch_score = calinski_harabasz_score(datas, skl_labels)
+
+    # Print the evaluation metrics
+    print("Silhouette Coefficient: {:.3f}".format(silhouette_avg))
+    print("Davies-Bouldin Index: {:.3f}".format(dbi_score))
+    print("Calinski-Harabasz Index: {:.3f}".format(ch_score))
+
     # 将簇id与数据实例绑定
     a = np.array(author_set)[:, np.newaxis]  # 转置
     s = np.array(skl_labels)[:, np.newaxis]
