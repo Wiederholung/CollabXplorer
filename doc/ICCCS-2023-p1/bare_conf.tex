@@ -68,7 +68,7 @@
 
 
 \begin{abstract}
- Interdisciplinary collaboration has become a driving force for scientific breakthroughs, and evaluating scholars' performance in interdisciplinary researches is essential for promoting such collaborations. However, traditional scholar evaluation methods based solely on individual achievements do not consider interdisciplinary cooperation, creating a challenge for interdisciplinary scholar evaluation and recommendation. To address this issue, we propose a scholar embedding model that quantifies and represents scholars based on global semantic information and social influence, enabling real-time tracking of scholars' research trends. Our model incorporates semantic information and social influence for interdisciplinary scholar evaluation, laying the foundation for future interdisciplinary collaboration discovery and recommendation projects. We demonstrate the effectiveness of our model on a sample of scholars from the Beijing University of Posts and Telecommunications.
+Interdisciplinary collaboration has become a driving force for scientific breakthroughs, and evaluating scholars' performance in interdisciplinary researches is essential for promoting such collaborations. However, traditional scholar evaluation methods based solely on individual achievements do not consider interdisciplinary cooperation, creating a challenge for interdisciplinary scholar evaluation and recommendation. To address this issue, we propose a scholar embedding model that quantifies and represents scholars based on global semantic information and social influence, enabling real-time tracking of scholars' research trends. Our model incorporates semantic information and social influence for interdisciplinary scholar evaluation, laying the foundation for future interdisciplinary collaboration discovery and recommendation projects. We demonstrate the effectiveness of our model on a sample of scholars from the Beijing University of Posts and Telecommunications.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -98,7 +98,7 @@ of science. Therefore, we need a systematic discovery and recommendation
 solution of interdisciplinary cooperation network, that is, to discover
 and evaluate the interdisciplinary cooperation among scholars, and
 recommend suitable cooperation objects according to the needs of the scholar,
-so as to promote interdisciplinary cooperation among scholars. 
+so as to promote interdisciplinary cooperation among scholars.
 The premise of studying the above problems is to complete the scholar
 evaluation under the interdisciplinary background.
 
@@ -118,8 +118,8 @@ traditional method based on the characteristics of the subject is
 accurate, it requires a huge amount of manpower and material resources,
 and it has a considerable lag. With the rapid development of
 interdisciplinary research, the traditional scholar assessment based on the
-characteristics of the subject can not adapt to the features of 
-interdisciplinary research, including numerous, more subdivisions, 
+characteristics of the subject can not adapt to the features of
+interdisciplinary research, including numerous, more subdivisions,
 complex structure, and rapid development. Specifically, almost every year,
 multiple interdisciplinary studies are born, which combine
 characteristics from different subjects and may undergo structural
@@ -141,7 +141,7 @@ scholar embedding model for scholar representation in the form of vector, as sho
 input of our model consists of global semantic information and
 social influence. Among them, semantic input refers to
 the abstract of all the papers of the scholar, which represents all the
-academic achievements of the scholar in various subjects. 
+academic achievements of the scholar in various subjects.
 The introduction of semantic input allows us to break through barriers between different subjects,
 and assess the interdisciplinary scholar in a more fine-grained semantic dimension with universal applicability.
 Social influence input is a comprehensive measure of the scholar's influence and
@@ -274,7 +274,7 @@ propose new embedding methods that can be applied to our problem.
 % reference/describe all of them (a), (b), etc., within the main caption.
 
 
-% An example of a floating table. Note that, for IEEE style tables, the 
+% An example of a floating table. Note that, for IEEE style tables, the
 % \caption command should come BEFORE the table. Table text will default to
 % \footnotesize as IEEE normally uses this smaller font for tables.
 % The \label must come after \caption as always.
@@ -454,7 +454,7 @@ where \(m\) denotes the total number of documents written by scholar
 scholar, and we call the above process Scholar Embedding.
 
 \subsection{Model Complexity}
-As can be seen from Equation \ref{eq:E}, the time complexity of calculating the influence of an author in an article depends on the time complexity of calculating 
+As can be seen from Equation \ref{eq:E}, the time complexity of calculating the influence of an author in an article depends on the time complexity of calculating
 \(E_{Rij}\) and \(E_{Cij}\). As can be seen from
 Equation \ref{eq:Er}, \(E_{Rij}\) depends on the extent of the author's
 contribution in this article (i.e., the authorship order of this
@@ -477,7 +477,7 @@ by authors after the GloVe calculation, the time complexity of this
 model is: \(O(1)\) and is positively correlated with the number of
 articles as follows.
 
-\begin{equation}\label{eq:A}
+\begin{equation}\label{eq:complexity}
     \mid n \mid \backsim O(1)
 \end{equation}
 
@@ -491,7 +491,7 @@ impact of authors is (where \(O(|C|^{0.8})\) is the time complexity of
 the GloVe algorithm and \(n\) is the total number of publications by
 authors):
 
-\begin{equation}\label{eq:A}
+\begin{equation}\label{eq:complexity2}
     O(n \cdot |C|^{0.8})
 \end{equation}
 The model uses GloVe, which is currently the best performing word vector
