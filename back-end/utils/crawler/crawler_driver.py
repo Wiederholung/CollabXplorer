@@ -1,9 +1,14 @@
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 
-driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
 
+try:
+    # selenium 4
+    from selenium.webdriver.chrome.service import Service as ChromeService
+    driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+except TypeError:
+    # selenium 3
+    driver = webdriver.Chrome(ChromeDriverManager().install())
 
 def init_driver(url):
     driver.implicitly_wait(30)  # 这是延时等待。由于网速时快时慢，
