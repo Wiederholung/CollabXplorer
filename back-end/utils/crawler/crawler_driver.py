@@ -1,14 +1,26 @@
 from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
 
+# Chrome
+# try:
+#     # selenium 4
+#     from webdriver_manager.chrome import ChromeDriverManager
+#     from selenium.webdriver.chrome.service import Service as ChromeService
+#
+#     driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+# except TypeError:
+#     # selenium 3
+#     driver = webdriver.Chrome(ChromeDriverManager().install())
 
+# Edge
 try:
     # selenium 4
-    from selenium.webdriver.chrome.service import Service as ChromeService
-    driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+    from webdriver_manager.microsoft import EdgeChromiumDriverManager
+    from selenium.webdriver.edge.service import Service as EdgeService
+
+    driver = webdriver.Edge(service=EdgeService(EdgeChromiumDriverManager().install()))
 except TypeError:
-    # selenium 3
-    driver = webdriver.Chrome(ChromeDriverManager().install())
+    driver = webdriver.Edge(EdgeChromiumDriverManager().install())
+
 
 def init_driver(url):
     driver.implicitly_wait(30)  # 这是延时等待。由于网速时快时慢，
