@@ -19,6 +19,7 @@ try:
 
     driver = webdriver.Edge(service=EdgeService(EdgeChromiumDriverManager().install()))
 except TypeError:
+    # selenium 3
     driver = webdriver.Edge(EdgeChromiumDriverManager().install())
 
 
