@@ -2,12 +2,12 @@
 
 # Abstract
 
-The paper introduces CollabXplorer, a system designed to facilitate the discovery and recommendation of potential interdisciplinary collaborators, as well as the interdisciplinary collaboration networks. Global semantic information and social influence are utilized to create scholar embedding model, which converts academic information into vector representations to identify potential collaborators from various scholarly fields. To suggest suitable collaborators, the system applies a recommendation algorithm based on user prompts and scholar influence. User-friendly visual interface aids in presenting the system's outcomes. Furthermore, we conducted evaluation and testing, which shows that the system provides good vector representation effect and high recommendation accuracy, thus, making it suitable for large-scale applications.
+The paper introduces CollabXplorer, a system designed to facilitate the discovery and recommendation of potential interdisciplinary collaborators, as well as interdisciplinary collaboration networks. Global semantic information and social influence are utilized to create a scholar embedding model, which converts academic information into vector representations to identify potential collaborators from various scholarly fields. To suggest suitable collaborators, the system applies a recommendation algorithm based on user prompts and scholars' influence. User-friendly visual interface aids in presenting the system's outcomes. Furthermore, we conducted evaluation and testing, which shows that the system provides a good scholar vector representation and high recommendation accuracy, thus, making it suitable for large-scale applications.
 
 # Keywords
 
 <!-- TODO -->
-<!-- interdisciplinary collaboration, scholar embedding, a global information and social influence, recommendation engine algorithm, visual interface. -->
+<!-- interdisciplinary collaboration, scholar embedding, the global information and social influence, recommendation engine algorithm, visual interface. -->
 
 # Introduction
 
@@ -17,13 +17,13 @@ The convergence of diverse fields offers a promising avenue for innovation and s
 
 Despite the benefits of interdisciplinary collaboration, it presents various challenges, including subject specialization, knowledge boundaries, communication barriers, and data exchange limitations `\cite{}`. Thus, the development of interdisciplinary collaborative discovery and recommendation systems with high accuracy and real-time performance is imperative.
 
-Conventional methods of discovering and recommending collaborative opportunities among scholars primarily rely on the direction and substance of their studies within a given field `\cite{}`, making it challenging to identify and leverage the potential of scholars from different subject areas for collaborative purposes. This approach frequently depends on various data, such as research areas, academic titles, academic accomplishments, work experiences, and other relevant details that are disseminated across different sources, including the researchers' institutions, personal web pages, and multiple scholar databases. These data necessitate significant manual annotation and routine maintenance and pose challenges for ensuring data integrity and real-time performance. Furthermore, integrating this data is a major challenge since different institutions and scholar databases have disparate data formats, and often not entirely open to the public.
+Conventional methods of discovering and recommending collaborative opportunities among scholars primarily rely on the direction and substance of their studies within a given field `\cite{}`, making it challenging to identify and leverage the potential of scholars from different subject areas for collaborative purposes. This approach frequently depends on various data, such as research areas, academic titles, academic accomplishments, work experiences, and other relevant details that are disseminated across different sources, including the researchers' institutions, personal web pages, and multiple academic databases. These data necessitate significant manual annotation and routine maintenance and pose challenges for ensuring data integrity and real-time performance. Furthermore, integrating this data is a major challenge since different institutions and scholar databases have disparate data formats, and often not entirely open to the public.
 
 Additionally, certain approaches `\cite{}` rely on multimodal data, including courseware and classroom recording data, which are prohibitively expensive and not widely accessible. Consequently, conventional methods of discovering and recommending collaborative opportunities among scholars fall short in promoting an in-depth examination of collaborative relationships among scholars and fail to address the challenges introduced by the swift advancements in interdisciplinary collaboration.
 
-To tackle the aforementioned challenges, this paper presents CollabXplorer, a system designed to facilitate interdisciplinary collaboration discovery and recommendation. It is imperative to evaluate the research directions of scholars appropriately to recommend suitable interdisciplinary collaborators. Hence, this paper emphasizes the quantification and representation of scholars by embedding them into a lower dimensional continuous vector space, which is achieved by using a novel scholar embedding model that acquires vectors for author representation using global semantic information and social influence. The semantic input pertains to the abstracts of all papers of the scholars and represents their academic achievements in various disciplines in a fine-grained semantic dimension that cuts across interdisciplinary barriers. On the other hand, the social influence input reflects a comprehensive measure of scholars' expertise and collaboration in interdisciplinary subjects within their respective discipline. Both of these inputs are computed based on abstracts, number, and citations of papers in real-time, enabling us to monitor the research dynamics of scholars in real-time.
+To tackle the aforementioned challenges, this paper presents CollabXplorer, a system designed to facilitate interdisciplinary collaboration discovery and recommendation. It is imperative to evaluate the research directions of scholars appropriately to recommend suitable interdisciplinary collaborators. Hence, this paper emphasizes the quantification and representation of scholars by embedding them into a lower dimensional continuous vector space, which is achieved by using a novel scholar embedding model that acquires vectors for author representation using global semantic information and social influence. The semantic input pertains to the abstracts of all papers of the scholars and represents their academic achievements in various disciplines in a fine-grained semantic dimension that cuts across interdisciplinary barriers. On the other hand, the social influence input reflects a comprehensive measure of scholars' expertise and collaboration in interdisciplinary subjects within their respective disciplines. Both of these inputs are computed based on abstracts, number, and citations of papers in real-time, enabling us to monitor the research dynamics of scholars in real-time.
 
-After successfully obtaining the scholar vector, CollabXplorer recommends appropriate interdisciplinary collaborators to users according to their research needs and preferences. The algorithm behind the recommendation engine lists candidates by considering the suitability among scholars, social influence of collaborators, and users' input prompt. Users can interact with the system through a user-friendly interface to explore and connect with collaborators in their respective research fields. To ensure optimal performance and stability, the system is supported by a multi-layered architecture and contemporary software technologies. The design, implementation, and experimental evaluation of CollabXplorer are described in detail in this paper. We invited experts and scholars from Beijing University of Posts and Telecommunications (BUPT) to test and evaluate this tool, which successfully confirmed its high accuracy and effectiveness.
+After successfully obtaining the scholar vector, CollabXplorer recommends appropriate interdisciplinary collaborators to users according to their research needs and preferences. The algorithm behind the recommendation engine lists candidates by considering the suitability among scholars, the social influence of collaborators, and users' input prompt. Users can interact with the system through a user-friendly interface to explore and connect with collaborators in their respective research fields. To ensure optimal performance and stability, the system is supported by a multi-layered architecture and contemporary software technologies. The design, implementation, and experimental evaluation of CollabXplorer are described in detail in this paper. We invited experts and scholars from the Beijing University of Posts and Telecommunications (BUPT) to test and evaluate this tool, which successfully confirmed its high accuracy and effectiveness.
 
 Overall, this paper proposes an effective approach for discovering and taking advantage of interdisciplinary collaboration opportunities. The methods and algorithms of CollabXplorer offer practical and efficient tools to encourage interdisciplinary cooperation in academia and foster creative research outcomes.
 
@@ -31,7 +31,7 @@ Overall, this paper proposes an effective approach for discovering and taking ad
 
 Recommender systems have garnered considerable attention from researchers and have proven to be useful in a variety of fields. Similarly, recommender systems are also crucial in the field of interdisciplinary collaboration.
 
-We have seen different solutions to the problem of interdisciplinary collaboration. Among them, `\cite{}` focus on recommending the most suitable interdisciplinary major, simplifying and correcting the work of decision-makers, and promoting interdisciplinary major reform. However, the practical problem, in this case, is that there is no more consideration of the specific cooperation needs of scholars in these fields, and blind field crossover may lead to an insufficient collaboration of scholars in scientific research and waste of scientific research resources. On the other hand, the system requires multimodal data input of papers, and courese recordings, and requires a large amount of manually labelled data, which is not suitable for large-scale application in global institutions and subject fields.
+We have seen different solutions to the problem of interdisciplinary collaboration. Among them, `\cite{}` focus on recommending the most suitable interdisciplinary major, simplifying and correcting the work of decision-makers, and promoting interdisciplinary major reform. However, the practical problem, in this case, is that there is no more consideration of the specific cooperation needs of scholars in these fields, and blind field crossover may lead to an insufficient collaboration of scholars in scientific research and a waste of scientific research resources. On the other hand, the system requires multimodal data input of papers, and course recordings, and requires a large amount of manually labelled data, which is not suitable for large-scale application in global institutions and subject fields.
 
 In addition, according to `\cite{}`, scholars in the same field are recommended based on author and relevant publication information. The rankings are determined by evaluating factors such as paper content, journal quality, and others. Evaluation scores are then generated, and a scholar similarity is calculated after weight distribution to perform scholar matching. However, this approach has a significant limitation for interdisciplinary collaboration because it only provides recommendations for scholars in similar fields, thus lacking the potential for collaboration across fields.
 
@@ -39,7 +39,7 @@ The core advantage of CollabXplorer is analyzing the entire publications of scho
 
 The contributions of this paper are summarized as follows:
 
-- CollabXplorer focuses on the summarization of all scholar publications and considers the social influence and collaboration network of scholars to construct a more comprehensive vector representation.
+- CollabXplorer focuses on the summarization of scholars' all publications and considers the social influence and collaboration network of scholars to construct a more comprehensive vector representation.
 - CollabXplorer doesn't require scattered structured data about academic fields, job titles, academic achievements, work histories, etc., for feature extraction because these data require a lot of manual maintenance, are difficult to integrate, and their integrity and real-time performance cannot be guaranteed. Instead, CollabXplorer directly embeds scholars into a low-dimensional vector space according to the content of their publication for subsequent analysis.
 - CollabXplorer's embedded model can be used directly for collaborator recommendation without constructing scholarly evaluation and recommendation methods for specific subject areas.
 - CollabXplorer also doesn't need a lot of manually annotated data to train the recommendation mode. CollabXplorer only requires users to input the prompt text, and then it recommends the (interdisciplinary) cooperators that match the description and have a high fit for the user.
@@ -48,7 +48,7 @@ The contributions of this paper are summarized as follows:
 
 This section describes the system design, implementation, and interaction design of CollabXplorer.
 The part of system design and implementation focuses on the system architecture, data sources, scholar embedding model, scholar recommendation algorithm and the implementation of key components of CollabXplorer. The user interaction experience part mainly covers the interface design, function and user experience of the system.
-The main goal of the system is to find meaningful interdisciplinary cooperation potential from a large number of unstructured academic data, and present it to users in a visual way through the recommendation algorithm.
+The main goal of the system is to find meaningful interdisciplinary cooperation potential from a large number of unstructured academic data and present it to users in a visual way through the recommendation algorithm.
 
 ## System Design and Implementation
 
@@ -69,7 +69,7 @@ The system adopts the development mode of front-end and back-end separation, in 
 - Front-end:
   - Receive and parse JSON data, refresh page recommendation statistics and list of recommendations.
   - Render interdisciplinary collaboration networks locally.
-  - Listen for user interactions, such as clicking on scholars in the recommendation list, clicking on nodes in the interdisciplinary collaboration network, etc., and call back-end APIs to persist user behavior records.
+  - Listen for user interactions, such as clicking on scholars in the recommendation list, clicking on nodes in the interdisciplinary collaboration network, etc., and calling back-end APIs to persist user behaviour records.
 
 ![framework](https://my-typora-p1.oss-cn-beijing.aliyuncs.com/typoraImgs/202304142351559.png)
 
@@ -117,7 +117,7 @@ $$
 similarity(w_i, w_j) = cos(θ) = (w_i^T *w_j) / (|w_i|* |w_j|)
 $$
 
-It measures the similarity between two word vectors $w_i$ and $w_j$ by calculating the cosine of the angle between them. High cosine similarity values indicate that words are semantically similar and that cosine similarity is superior when performing similarity calculations for searches.
+It measures the similarity between word vectors $w_i$ and $w_j$ by calculating the cosine of the angle between them. High cosine similarity values indicate that words are semantically similar and that cosine similarity is superior when performing similarity calculations for searches.
 
 When applying GloVe to the problem of this article, i.e., constructing a semantic and combined influence-based cooperative network, the corresponding principle is to transform the abstracts of scholars' papers into vectors using GloVe's pre-trained model, a process called paper embedding. Then, based on the combined influence of each paper, a weighted average operation is performed on these paper vectors to obtain the scholar vectors, a process called scholar embedding.
 
@@ -135,7 +135,7 @@ For the word vector $\vec W$, we use the NLTK library to perform text segmentati
 
 #### Scholar Embedding
 
-First we define some notation. $x_{ij}$ represents the total number of co-authors in paper $j$ of scholar $i$. In general, for a paper, the higher the author's ranking, the greater his contribution to that paper. Therefore, we can assume that the scholar's contribution is non-uniformly proportional to his ranking in that paper, using an exponential function to represent, shown in Fighure `\ref{}`.
+First, we define some notation. $x_{ij}$ represents the total number of co-authors in paper $j$ of scholar $i$. In general, for a paper, the higher the author's ranking, the greater his contribution to that paper. Therefore, we can assume that the scholar's contribution is non-uniformly proportional to his ranking in that paper, using an exponential function to represent, shown in Figure `\ref`{}`.
 
 ![e](https://my-typora-p1.oss-cn-beijing.aliyuncs.com/typoraImgs/202303082319201.png)
 
@@ -175,7 +175,7 @@ $$
 \vec{A_i} = \frac{\sum_{j=1}^{m} E_{ij} \vec{P_{ij}}}{m}
 $$
 
-where $m$ denotes the total number of papers written by scholar $i$. By this method we can obtain a vector representation of each scholar, and we call the above process author embedding.
+where $m$ denotes the total number of papers written by scholar $i$. By this method, we can obtain a vector representation of each scholar, and we call the above process author embedding.
 
 ### Collaborator Recommendation
 
@@ -213,7 +213,7 @@ $$
 
 here we introduce variable coefficients $\beta$ to weigh the importance of $s_{ij}$ and $E_{ij}$. The $\beta$ can vary according to the needs of the central scholar. Specifically, a larger $\beta$ is taken if the central scholar values the suitability with the collaborator more, and a smaller $\beta$ is taken if the social influence of the collaborator is more important.
 
-At this point, we have the vector representation of scholar $A_i$ modulated by prompt:
+At this point, we have the vector representation of scholar $A_i$ modulated by the prompt:
 
 $$
 \vec{A_i} = \frac{\sum_{j=1}^{m} W_{ij} \vec{P_{ij}}}{m}
@@ -235,7 +235,7 @@ We sort $S_1 \backsim S_{126}$ in descending order and recommend the top-ranked 
 
 ![dashboard](https://web.metattri.com/i/2023/04/18/643eb58608c41.png)
 
-Users can use this system after authenticating their academic identity and choosing to allow this system to include their academic data. After successful login, the user will enter dashboard shown in Figure `\ref{fig:dashboard}`, which is divided into three parts: sidebar console, a display interface and message notification interface. Here we will mainly introduce the display interface.
+Users can use this system after authenticating their academic identity and choosing to allow this system to include their academic data. After successful login, the user will enter the dashboard shown in Figure `\ref{fig:dashboard}`, which is divided into three parts: a sidebar console, a display interface and a message notification interface. Here we will mainly introduce the display interface.
 
 The following are described in order from left to right, top to bottom. The first is the personal information section, where the user's personal information will be displayed, such as name, organization, email, etc., and the subject and specific subdivision tags can be added by the user. The above information can be modified, saved and revoked.
 
@@ -243,7 +243,7 @@ The top four rectangular boxes are the number of papers published by an individu
 
 Of the four partitions below, the first is the top-left line chart area, which in the current plot refers to the number of times per month you are referred to other scholars when they make a query. The bottom-left bar area refers to the scholars recommended to you based on your prompt, ranked from top to bottom in terms of potential collaboration possibilities.
 
-Through the search box on the top right, users can enter unstructured prompt text that describe the research content of the collaborators they expect to seek. Based on the prompt text, the system will recommend collaborators with high suitability to the user. It is worth noting that the social influence of collaborators is also one of the recommendation metrics. Users can go to the "Setting" option to adjust their personal preference, that is, suitability first or influence first, corresponding to the size of the parameter $\beta$ in Equation `\ref{eq:}`.The system will analyze all the recommended collaborators, classify and colour them according to the research field. Relevant statistics are presented in the "Areas of Recommend Cooperators" section.
+Through the search box on the top right, users can enter the unstructured prompt text that describes the research content of the collaborators they expect to seek. Based on the prompt text, the system will recommend collaborators with high suitability to the user. It is worth noting that the social influence of collaborators is also one of the recommendation metrics. Users can go to the "Setting" option to adjust their personal preference, that is, suitability first or influence first, corresponding to the size of the parameter $\beta$ in Equation `\ref{eq:}`.The system will analyze all the recommended collaborators, classify and colour them according to the research field. Relevant statistics are presented in the "Areas of Recommend Cooperators" section.
 
 The relationship network diagram at the bottom right is the key to our recommendation system. In this diagram, you can visually observe the potential cooperation potential between you and the recommended person. The dots in the graph represent scholars, and their sizes change accordingly with the change in cooperation potential. Wired means that two scholars have previously appeared as co-authors on the same paper; The colour of the points indicates the different fine molecular fields under the current search domain, thus helping the user to make a better choice.
 
@@ -251,7 +251,7 @@ In summary, this system shows the user's personal information, the level of acad
 
 # Evaluation
 
-To evaluate our system, we generated scholar documents mentioned in Section `\ref{}` for 126 scholars from BUPT and wrote them to the database. This work was supported by the BUPT Personnel Office and the library, and all data were manually proofread to ensure accuracy of the data. For this system, we designed two experiments, which are used to evaluate the effect of author embedding and recommendation respectively.
+To evaluate our system, we generated scholar documents mentioned in Section `\ref{}` for 126 scholars from BUPT and wrote them to the database. This work was supported by the BUPT Personnel Office and the library, and all data were manually proofread to ensure the quality of the data. For this system, we designed two experiments, which are used to evaluate the effect of author embedding and recommendation respectively.
 
 ## Embedding Evaluation
 
@@ -265,7 +265,7 @@ $$
 
 Here, $\vec{A_i}$ denotes the vector of scholar $i$, and $\vec{A_j}$ denotes the vector of scholar $j$.
 
-According to the above method, the similarity between scholar $i$ and all other scholars $\vec{s_i}$ that the expert evaluation result $\vec{t_{i}}$ can be obtained in the same way. We choose the cosine similarity between $\vec{s_i}$ and $\vec{t_i}$ as the evaluation metric for the author similarity task, where closer to 1 indicates that our author embedding is more accurate. We define the accuracy of the author similarity task:
+According to the above method, the similarity between scholar $i$ and all other scholars $\vec{s_i}$ that the expert evaluation result in $\vec{t_{i}}$ can be obtained in the same way. We choose the cosine similarity between $\vec{s_i}$ and $\vec{t_i}$ as the evaluation metric for the author similarity task, where closer to 1 indicates that our author embedding is more accurate. We define the accuracy of the author similarity task:
 
 $$
 accuracy = \frac{\vec{s_i} \cdot \vec{t_{i}}}{{\mid \vec{s_i} \mid} \cdot {\mid \vec{t_{i}} \mid}}
@@ -273,7 +273,7 @@ $$
 
 ### Results
 
-We show the similarity between the two sets of data in `Fig.`. We chose to calculate the average accuracy for each of the 10 data points in the steps of 10 scholars. You can see that the average accuracy is roughly $(0.75, 0.95)$. The average accuracy of 126 data points is **0.91**, which indicates that our scholar embedding model can accurately reflect the collaboration between scholars.![acc](https://my-typora-p1.oss-cn-beijing.aliyuncs.com/typoraImgs/202303120043420.png)
+We show the similarity between the two sets of data in Figure `\ref{fig:lambda}`. We chose to calculate the average accuracy for each of the 10 data points in the steps of 10 scholars. You can see that the average accuracy is roughly $(0.75, 0.95)$. The average accuracy of 126 data points is **0.91**, which indicates that our scholar embedding model can accurately reflect the collaboration between scholars.![acc](https://my-typora-p1.oss-cn-beijing.aliyuncs.com/typoraImgs/202303120043420.png)
 
 ### Model Analysis: $\lambda$ Selection
 
