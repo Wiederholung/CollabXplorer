@@ -4,7 +4,9 @@ from utils.crawler.rules import AAAI, arxiv, cvpr, acm, sciencedirect, springer,
 
 def get_abstract_by_crawler(url):
     try:
+        # browser是一个webdriver对象，用于获取网页源代码
         browser = crawler_driver.init_driver(url)
+        # c_url是当前网页的网址
         c_url = browser.current_url
         # 如果是 IEEE 的网址
         if c_url.find('ieee.org') != -1:
