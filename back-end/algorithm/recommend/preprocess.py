@@ -27,12 +27,14 @@ def token2vec(tokens):
 
 
 # 计算E_Cij,返回一个list
-def get_E_Cij(cite_list):
+def get_E_Cij(name_en):
     """
-    计算E_Cij
-    :param cite_list:
-    :return:
+    计算该老师的E_Cij_list
+    :param cite_list:该作者的全部文章的引用次数列表
+    :return:返回一个E_Cij的list
     """
+    # 从数据库中获取该作者的全部文章的引用次数列表
+    cite_list = db_utils.get_all_citation_per_person(name_en)
     # ni_max是cite_list中的最大值
     ni_max = max(cite_list)
     E_Cij_list = []
@@ -48,7 +50,7 @@ def get_E_Cij(cite_list):
         # 使用E_Cij_list保存每个E_Cij
         E_Cij_list.append(E_Cij)
 
-    return E_Cij
+    return E_Cij_list
 
 
 # 计算每个作者的所有摘要向量
