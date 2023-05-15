@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Collaboration-RS</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+<div class="content-body">
+    <div class="header">
+        <div class="header-left">
+            <span>Academic Collaboration-RS</span>
+        </div>
+        <div class="header-time">
+            <span id="time"></span>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="content-con">
+            <div class="left-body">
+                <div class="left-top public-bg">
+                    <div class="public-title">主要研究方向</div>
+                    <div class="top-body">
+                        <div class="title-nav" id="yanjiu"></div>
+
+                    </div>
+
+                </div>
+                <div class="left-con public-bg">
+                    <div class="public-title">个人发表趋势</div>
+                    <div class="title-nav" id="leida"></div>
+                </div>
+                <div class="left-bottom public-bg">
+                    <div class="public-title">总体论文数量</div>
+                    <div class="title-nav" id="wuran"></div>
+                </div>
+            </div>
+
+            <div class="center-body">
+                <div class="map" id="map"></div>
+            </div>
+
+            <div class="right-body">
+                <div class="right-top public-bg">
+                    <div class="public-title">相关论文</div>
+                    <div class="title-nav">
+                        <div class="top5-ul">
+                            <ul>
+                                <li>
+                                    <span>1</span>
+                                    <span>计算机</span>
+                                    <span>IEEE</span>
+                                    <span>Computer science accreditation and the curriculum</span>
+                                </li>
+                                <li>
+                                    <span>2</span>
+                                    <span>计算机</span>
+                                    <span>SCI</span>
+                                    <span>Al Processor based-on 5-Peta FLOPS Al Server System</span>
+                                </li>
+                                <li>
+                                    <span>3</span>
+                                    <span>计算机</span>
+                                    <span>IEEE</span>
+                                    <span>The Al Chip Race</span>
+                                </li>
+                                <li>
+                                    <span>4</span>
+                                    <span>医疗</span>
+                                    <span>SCI</span>
+                                    <span>Application of Neural Network in Brain Interface</span>
+                                </li>
+                                <li>
+                                    <span>5</span>
+                                    <span>医疗</span>
+                                    <span>SCI</span>
+                                    <span>Brain Computer Interface for the Function Restoration</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-con public-bg">
+                    <div class="public-title">文章类别</div>
+                    <div class="title-nav" id="huaxing"></div>
+                </div>
+                <div class="right-bottom public-bg">
+                    <div class="public-title">@平台声明</div>
+                    <div class="title-nav" id="zhexian">
+                        <p class="shuoming">&nbsp&nbsp&nbsp本项目旨在通过对学者的研究成果进行语义分析，构建基于语义、社会关系等因素的多维合作网络，从而实现对跨学科潜在学术合作关系发现与推荐。<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>如有问题请联系我们!<br/>邮箱：1111111111@bupt.cn<br/>电话：11111111111</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.4.1/dist/echarts.min.js"></script>
+<script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="js/china.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+
+<script>
+    //顶部时间
+    function getTime(){
+        var myDate = new Date();
+        var myYear = myDate.getFullYear(); //获取完整的年份(4位,1970-????)
+        var myMonth = myDate.getMonth()+1; //获取当前月份(0-11,0代表1月)
+        var myToday = myDate.getDate(); //获取当前日(1-31)
+        var myDay = myDate.getDay(); //获取当前星期X(0-6,0代表星期天)
+        var myHour = myDate.getHours(); //获取当前小时数(0-23)
+        var myMinute = myDate.getMinutes(); //获取当前分钟数(0-59)
+        var mySecond = myDate.getSeconds(); //获取当前秒数(0-59)
+        var week = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+        var nowTime;
+
+        nowTime = myYear+'年'+fillZero(myMonth)+'月'+fillZero(myToday)+'日'+'&nbsp;&nbsp;'+fillZero(myHour)+':'+fillZero(myMinute)+':'+fillZero(mySecond)+'&nbsp;&nbsp;'+week[myDay]+'&nbsp;&nbsp;';
+        //console.log(nowTime);
+        $('#time').html(nowTime);
+    };
+    function fillZero(str){
+        var realNum;
+        if(str<10){
+            realNum	= '0'+str;
+        }else{
+            realNum	= str;
+        }
+        return realNum;
+    }
+    //大屏
+    setInterval(getTime,1000);
+</script>
