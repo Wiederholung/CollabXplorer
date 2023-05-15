@@ -103,5 +103,23 @@ def get_all_author_rank_per_person(name_en):
     return author_ranks
 
 
+
+# 获取当前作者在每篇文章中是第几作者，类型为dict {rank：作者排名},并将数据存入数据库中的article中
+def get_author_rank_dict(name_en, pid):
+    collection = db.bupt[name_en]
+    articles = collection.find().skip(2)[0]['Article']
+    rank_dict = {}
+    for article in articles:
+        if pid in articles[article]['author']:
+            rank_dict[article] = articles[article]['author'].index(pid) + 1
+    collection.update_one(
+        {"name": name_en},
+        {
+            '$set': {"author_rank": rank_dict.values()}
+        }
+    )
+    print("更新author_rank成功")
+
 if __name__ == '__main__':
-    get_all_abs_per_person()
+#    get_author_rank_dict("Anfu Zhou", "65/9612")
+    get_all_abs_per_person("Anfu Zhou")
