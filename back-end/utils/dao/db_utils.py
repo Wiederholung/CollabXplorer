@@ -82,6 +82,26 @@ def get_auth_info(id_s, name_ch, name_en, category):
 def get_all_name_en():
     return db.bupt.list_collection_names()
 
+# TODO:数据库完成后待修改
+# 获取该作者的全部文章的引用次数，返回一个 list
+def get_all_citation_per_person(name_en):
+    cite_list = []
+    collection = db.bupt[name_en]
+    articles = collection.find().skip(2)[0]['Article']
+    for article in tqdm(articles):
+        cite_list.append(articles[article]['citation'])
+    return cite_list
+
+# TODO:数据库完成后待修改
+# 获取该作者的分别是全部文章的第几作者，返回一个 list
+def get_all_author_rank_per_person(name_en):
+    author_ranks = []
+    collection = db.bupt[name_en]
+    articles = collection.find().skip(2)[0]['Article']
+    for article in tqdm(articles):
+        author_ranks.append(articles[article]['author_rank'])
+    return author_ranks
+
 
 if __name__ == '__main__':
     get_all_abs_per_person()
