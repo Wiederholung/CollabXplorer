@@ -24,7 +24,7 @@ export default {
 
     // 获取json信息
     var starturl = 'http://dev.metattri.com:5000/graph/coworker/'
-    starturl = starturl + '丰雷'
+    starturl = starturl + '石川'
     $.getJSON(starturl, function (graph) {
 
       // 处理合作人数饼状图信息
