@@ -142,6 +142,84 @@
     setInterval(getTime,1000);
     //按钮点击事件
     $('.button-13').click(function(){
-        //
+        var myChart = echarts.init(document.getElementById('map'));
+	myChart.showLoading();
+	//2 6 11 12 15 18 22 23 24 25
+        var choose = [2,6,11,12,15,18,22,23,24,25]
+        var i = choose[Math.floor(Math.random()*choose.length)];
+	$.getJSON('./picture/result'+i+'.json', function (graph) {
+		myChart.hideLoading();
+		graph.nodes.forEach(function (node) {
+			node.label = {
+				show: node.symbolSize > 25
+			};
+		});
+		option = {
+			title: {
+				text: '跨学科合作推荐',
+				subtext: 'Default layout',
+				top: 'bottom',
+				left: 'right'
+			},
+			tooltip: {},
+			legend: [
+				{
+					// selectedMode: 'single',
+					data: graph.categories.map(function (a) {
+						return a.name;
+					}),
+					textStyle: {
+						color: '#fff'
+					},
+				}
+			],
+			//设置字体
+			textStyle: {
+				//字体风格,'normal','italic','oblique'
+				fontStyle: 'oblique',
+				textbordercolor: '#FFF',
+				fontSize: 12,
+				color: '#FFF',
+				fontWeight: 'bold',
+				textshadowColor: '#FFFFFF',
+			},
+			animationDuration: 1500,
+			animationEasingUpdate: 'quinticInOut',
+			series: [
+				{
+					name: '跨学科合作推荐',
+					type: 'graph',
+					layout: 'none',
+					data: graph.nodes,
+					links: graph.links,
+					categories: graph.categories,
+					roam: true,
+					label: {
+						position: 'right',
+						formatter: '{b}'
+					},
+					lineStyle: {
+						color: 'source',
+						curveness: 0.3
+					},
+					emphasis: {
+						focus: 'adjacency',
+						lineStyle: {
+							width: 10
+						}
+					},
+
+				}
+			]
+		};
+		myChart.setOption(option);
+	});
+	// myChart.on('click', function (params) {
+	// 	console.log(params);
+	// });
+	myChart.setOption(option);
+	window.addEventListener("resize", function () {
+		myChart.resize();
+	});
     })
 </script>
