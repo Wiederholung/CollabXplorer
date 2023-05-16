@@ -29,107 +29,110 @@ $(function () {
 
 
 function map() {
-		var myChart = echarts.init(document.getElementById('map'));
-		var option = null;
-		myChart.showLoading();
-		var starturl = 'http://dev.metattri.com:5000/graph/coworker/'
-		starturl = starturl + '丰雷'
-		$.getJSON(starturl, function (graph) {
-
-				// 关闭加载动画
-				myChart.hideLoading();
-
-				// 中心关系图设置
-				option = {
-					// 标题设置
-					title: {
-						text: '跨领域合作关系表',
-						subtext: 'Default layout',
-						top: 'bottom',
-						left: 'right'
-					},
-					textStyle: {
-						//字体风格,'normal','italic','oblique'
-						fontStyle: 'oblique',
-						textbordercolor: '#FFF',
-						fontSize: 12,
-						color: '#FFF',
-						fontWeight: 'bold',
-						textshadowColor: '#FFFFFF',
-					},
-					// 提示框设计
-					tooltip: {
-						trigger: 'item',
-						formatter: function (parms) {
-							if (parms.data.type == "node") {
-								return parms.data.name + "</br>文献数量:" + parms.data.value;
-							} else if (parms.data.type == "link") {
-								for (var i = 0; i < graph.nodes.length; i++) {
-									if (parms.data.target === graph.nodes[i].id) {
-										var endpoint = graph.nodes[i].name;
-										break
-									}
-								}
-								//"主笔人:"+startpoint+"</br>合作者:"+endpoint+"</br>此关系下合作数:"+parms.data.value
-								return "合作者:" + endpoint + "</br>合作篇数:" + parms.data.value;
-							} else {
-								return ""
-							}
-						}
-					},
-					// 工具栏设置
-					toolbox: {
-						feature: {
-							saveAsImage: {},
-							dataView: {},
-							restore: {}
-						}
-					},
-					// 筛选栏设置
-					legend: [
-						{
-							// selectedMode: 'single',
-							data: graph.categories.map(function (a) {
-								return a.name;
-							})
-						}
-					],
-					color: ["#845EC2", "#66CCFF", "#FF6F91", "#FF9671", "#FFC75F", "#C4FCEF", "#F3C5FF", "#00C9A7", "#F9F871"],
-					// 动画设置
-					animationDuration: 1500,
-					animationEasingUpdate: 'quinticInOut',
-					// 数据设置
-					series: [
-						// 关系图数据设置
-						{
-							name: '学者详细信息',
-							type: 'graph',
-							layout: 'none',
-							data: graph.nodes,
-							links: graph.links,
-							categories: graph.categories,
-							roam: false,
-							label: {
-								position: 'right',
-								formatter: '{b}'
-							},
-							lineStyle: {
-								color: 'source',
-								curveness: 0,
-							},
-							emphasis: {
-								//adjacency
-								focus: 'adjacency',
-								lineStyle: {
-									width: 10
-								}
-							},
-						},
-					]
-				};
-				myChart.setOption(option);
-			}
-		);
+		// var myChart = echarts.init(document.getElementById('map'));
+		// myChart.showLoading();
+		// $.getJSON('./fenglei.json', function (graph) {
+		//
+		// 		// 关闭加载动画
+		// 		myChart.hideLoading();
+		//
+		// 		graph.nodes.forEach(function (node) {
+		// 	node.label = {
+		// 		show: node.symbolSize > 25
+		// 	};
+		// });
+		//
+		// 		// 中心关系图设置
+		// 		option = {
+		// 			// 标题设置
+		// 			title: {
+		// 				text: '跨领域合作关系表',
+		// 				subtext: 'Default layout',
+		// 				top: 'bottom',
+		// 				left: 'right'
+		// 			},
+		// 			textStyle: {
+		// 				//字体风格,'normal','italic','oblique'
+		// 				fontStyle: 'oblique',
+		// 				textbordercolor: '#FFF',
+		// 				fontSize: 12,
+		// 				color: '#FFF',
+		// 				fontWeight: 'bold',
+		// 				textshadowColor: '#FFFFFF',
+		// 			},
+		// 			// 提示框设计
+		// 			tooltip: {
+		// 				trigger: 'item',
+		// 				formatter: function (parms) {
+		// 					if (parms.data.type == "node") {
+		// 						return parms.data.name + "</br>文献数量:" + parms.data.value;
+		// 					} else if (parms.data.type == "link") {
+		// 						for (var i = 0; i < graph.nodes.length; i++) {
+		// 							if (parms.data.target === graph.nodes[i].id) {
+		// 								var endpoint = graph.nodes[i].name;
+		// 								break
+		// 							}
+		// 						}
+		// 						//"主笔人:"+startpoint+"</br>合作者:"+endpoint+"</br>此关系下合作数:"+parms.data.value
+		// 						return "合作者:" + endpoint + "</br>合作篇数:" + parms.data.value;
+		// 					} else {
+		// 						return ""
+		// 					}
+		// 				}
+		// 			},
+		// 			// 工具栏设置
+		// 			toolbox: {
+		// 				feature: {
+		// 					saveAsImage: {},
+		// 					dataView: {},
+		// 					restore: {}
+		// 				}
+		// 			},
+		// 			// 筛选栏设置
+		// 			legend: [
+		// 				{
+		// 					// selectedMode: 'single',
+		// 					data: graph.categories.map(function (a) {
+		// 						return a.name;
+		// 					})
+		// 				}
+		// 			],
+		// 			color: ["#845EC2", "#66CCFF", "#FF6F91", "#FF9671", "#FFC75F", "#C4FCEF", "#F3C5FF", "#00C9A7", "#F9F871"],
+		// 			// 动画设置
+		// 			animationDuration: 1500,
+		// 			animationEasingUpdate: 'quinticInOut',
+		// 			// 数据设置
+		// 			series: [
+		// 				// 关系图数据设置
+		// 				{
+		// 					name: '学者详细信息',
+		// 					type: 'graph',
+		// 					layout: 'none',
+		// 					data: graph.nodes,
+		// 					links: graph.links,
+		// 					categories: graph.categories,
+		// 					roam: false,
+		// 					label: {
+		// 						position: 'right',
+		// 						formatter: '{b}'
+		// 					},
+		// 					lineStyle: {
+		// 						color: 'source',
+		// 						curveness: 0,
+		// 					},
+		// 					emphasis: {
+		// 						//adjacency
+		// 						focus: 'adjacency',
+		// 						lineStyle: {
+		// 							width: 10
+		// 						}
+		// 					},
+		// 				},
+		// 			]
+		// 		};
+		// 		myChart.setOption(option);
+		// 	}
+		// );
 		// myChart.on('click', function (params) {
 		// 	console.log(params);
 		// });
@@ -138,6 +141,82 @@ function map() {
 		// window.addEventListener("resize", function () {
 		// 	myChart.resize();
 		// });
+	var myChart = echarts.init(document.getElementById('map'));
+	myChart.showLoading();
+	$.getJSON('./fake.json', function (graph) {
+		myChart.hideLoading();
+		graph.nodes.forEach(function (node) {
+			node.label = {
+				show: node.symbolSize > 25
+			};
+		});
+		option = {
+			title: {
+				text: '跨学科合作推荐',
+				subtext: 'Default layout',
+				top: 'bottom',
+				left: 'right'
+			},
+			tooltip: {},
+			legend: [
+				{
+					// selectedMode: 'single',
+					data: graph.categories.map(function (a) {
+						return a.name;
+					}),
+					textStyle: {
+						color: '#fff'
+					},
+				}
+			],
+			//设置字体
+			textStyle: {
+				//字体风格,'normal','italic','oblique'
+				fontStyle: 'oblique',
+				textbordercolor: '#FFF',
+				fontSize: 12,
+				color: '#FFF',
+				fontWeight: 'bold',
+				textshadowColor: '#FFFFFF',
+			},
+			animationDuration: 1500,
+			animationEasingUpdate: 'quinticInOut',
+			series: [
+				{
+					name: '跨学科合作推荐',
+					type: 'graph',
+					layout: 'none',
+					data: graph.nodes,
+					links: graph.links,
+					categories: graph.categories,
+					roam: true,
+					label: {
+						position: 'right',
+						formatter: '{b}'
+					},
+					lineStyle: {
+						color: 'source',
+						curveness: 0.3
+					},
+					emphasis: {
+						focus: 'adjacency',
+						lineStyle: {
+							width: 10
+						}
+					},
+
+				}
+			]
+		};
+		myChart.setOption(option);
+	});
+	// myChart.on('click', function (params) {
+	// 	console.log(params);
+	// });
+	myChart.setOption(option);
+	window.addEventListener("resize", function () {
+		myChart.resize();
+	});
 
 }
 
