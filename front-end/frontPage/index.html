@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-
 <div class="content-body">
     <div class="header">
         <div class="header-left">
@@ -16,8 +15,8 @@
         </div>
         <div class="header-search">
             <span>
-                <input type="text" placeholder="请输入学者姓名" id="search">
-                <button id="search-btn">搜索</button>
+                <input type="text" placeholder="Prompt" id="search">
+                <button class="button-13" role="button" onclick="">enter</button>
             </span>
         </div>
         <div class="header-time">
@@ -32,7 +31,6 @@
                     <div class="public-title">主要研究方向</div>
                     <div class="top-body">
                         <div class="title-nav" id="yanjiu"></div>
-
                     </div>
 
                 </div>
@@ -142,4 +140,8 @@
     }
     //大屏
     setInterval(getTime,1000);
+    //按钮点击事件
+    $('.button-13').click(function(){
+        //
+    })
 </script>
