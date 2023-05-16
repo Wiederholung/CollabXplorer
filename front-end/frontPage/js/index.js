@@ -143,7 +143,8 @@ function map() {
 		// });
 	var myChart = echarts.init(document.getElementById('map'));
 	myChart.showLoading();
-	$.getJSON('./fake.json', function (graph) {
+	i = 9
+	$.getJSON('./result'+i+'.json', function (graph) {
 		myChart.hideLoading();
 		graph.nodes.forEach(function (node) {
 			node.label = {
