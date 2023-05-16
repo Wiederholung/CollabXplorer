@@ -1,4 +1,4 @@
-from utils.dao import db_connector
+import db_connector
 from tqdm import *
 
 db = db_connector.get_connection()  # 连接数据库
@@ -105,21 +105,30 @@ def get_all_author_rank_per_person(name_en):
 
 
 # 获取当前作者在每篇文章中是第几作者，类型为dict {rank：作者排名},并将数据存入数据库中的article中
-def get_author_rank_dict(name_en, pid):
+def get_author_rank_dict(name_en, pid, url):
     collection = db.bupt[name_en]
     articles = collection.find().skip(2)[0]['Article']
     rank_dict = {}
     for article in articles:
         if pid in articles[article]['author']:
             rank_dict[article] = articles[article]['author'].index(pid) + 1
-    collection.update_one(
-        {"name": name_en},
-        {
-            '$set': {"author_rank": rank_dict.values()}
-        }
-    )
-    print("更新author_rank成功")
+    print(rank_dict.values())
+    # collection.update_one(
+    #     {"url": url},
+    #     {
+    #         '$set': {"author_rank": rank_dict.values()}
+    #     }
+    # )
+    # print("更新author_rank成功")
 
 if __name__ == '__main__':
-   get_author_rank_dict("Anfu Zhou", "65/9612")
+   get_author_rank_dict("Anfu Zhou", "65/9612", "https://doi.org/10.1109/ICME52920.2022.9860000")
     # get_all_abs_per_person("Anfu Zhou")
+
+
+def get_all_authorNum_per_person(name_en):
+    return None
+
+
+def get_all_rank_per_person(name_en):
+    return None
