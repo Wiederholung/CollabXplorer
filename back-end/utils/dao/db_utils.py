@@ -121,5 +121,5 @@ def get_author_rank_dict(name_en, pid):
     print("更新author_rank成功")
 
 if __name__ == '__main__':
-#    get_author_rank_dict("Anfu Zhou", "65/9612")
-    get_all_abs_per_person("Anfu Zhou")
+   get_author_rank_dict("Anfu Zhou", "65/9612")
+    # get_all_abs_per_person("Anfu Zhou")
