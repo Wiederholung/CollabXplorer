@@ -1,4 +1,4 @@
-import db_connector
+from utils.dao import db_connector
 from tqdm import *
 
 db = db_connector.get_connection()  # 连接数据库
@@ -42,7 +42,8 @@ def update_abstract(name_en, abstract, url):
 def get_all_abs_per_person(name_en):
     abstracts = []
     collection = db.bupt[name_en]
-    articles = collection.find().skip(2)[0]['Article']
+    # articles = collection.find().skip(2)[0]['Article']
+    articles = collection.find().skip(1)[0]['Article']
     for article in tqdm(articles):
         # if len(articles[article]['abstract']) > 0:  # 如果文章有摘要
         #     abstracts.append(articles[article]['abstract'])
@@ -121,14 +122,25 @@ def get_author_rank_dict(name_en, pid, url):
     # )
     # print("更新author_rank成功")
 
-if __name__ == '__main__':
-   get_author_rank_dict("Anfu Zhou", "65/9612", "https://doi.org/10.1109/ICME52920.2022.9860000")
-    # get_all_abs_per_person("Anfu Zhou")
 
 
+# 从数据库中读取作者的全部文章的作者数列表X_ij_list
 def get_all_authorNum_per_person(name_en):
-    return None
+    authorNum_list = []
+    collection = db.bupt[name_en]
+    articles = collection.find().skip(2)[0]['Article']
+    for article in tqdm(articles):
+        paper_authors = articles[article]['author']
+        # authors 是一个字典，key为作者名，value为作者id，现在我们只需要作者名
+        authorNum_list.append(len(paper_authors))
+    return authorNum_list
 
-
+# 从数据库中读取作者在每篇文章中的排名K_ij_list
 def get_all_rank_per_person(name_en):
     return None
+
+if __name__ == '__main__':
+   # get_author_rank_dict("Anfu Zhou", "65/9612", "https://doi.org/10.1109/ICME52920.2022.9860000")
+    # get_all_abs_per_person("Anfu Zhou")
+    # authors = get_all_authorNum_per_person("Anfu Zhou")
+   get_all_abs_per_person("Anfu Zhou")

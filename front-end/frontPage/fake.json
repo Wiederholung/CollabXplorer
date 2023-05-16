@@ -102,7 +102,7 @@
     {
       "id": "11",
       "name": "Scholars12",
-      "symbolSize": 66.66666666666667,
+      "symbolSize": 76.66666666666667,
       "x": -87.93029,
       "y": -6.8120565,
       "value": 100,
@@ -514,51 +514,6 @@
       "category": 6
     },
     {
-      "id": "57",
-      "name": "Scholar58",
-      "symbolSize": 20.95238266666667,
-      "x": 597.6618,
-      "y": 135.18481,
-      "value": 31.428574,
-      "category": 8
-    },
-    {
-      "id": "58",
-      "name": "Scholar59",
-      "symbolSize": 28.266666666666666,
-      "x": 355.78366,
-      "y": -74.882454,
-      "value": 42.4,
-      "category": 8
-    },
-    {
-      "id": "59",
-      "name": "Scholar60",
-      "symbolSize": 20.95238266666667,
-      "x": 515.2961,
-      "y": -46.167564,
-      "value": 31.428574,
-      "category": 8
-    },
-    {
-      "id": "60",
-      "name": "Prouvaire",
-      "symbolSize": 17.295237333333333,
-      "x": 614.29285,
-      "y": -69.3104,
-      "value": 25.942856,
-      "category": 8
-    },
-    {
-      "id": "61",
-      "name": "Scholar62",
-      "symbolSize": 20.95238266666667,
-      "x": 550.1917,
-      "y": -128.17537,
-      "value": 31.428574,
-      "category": 8
-    },
-    {
       "id": "62",
       "name": "Scholar63",
       "symbolSize": 24.609526666666667,
@@ -611,42 +566,6 @@
       "y": 204.65488,
       "value": 4,
       "category": 8
-    },
-    {
-      "id": "68",
-      "name": "Gueulemer",
-      "symbolSize": 19.12381,
-      "x": 78.4799,
-      "y": -347.15146,
-      "value": 28.685715,
-      "category": 7
-    },
-    {
-      "id": "69",
-      "name": "Babet",
-      "symbolSize": 19.12381,
-      "x": 150.35959,
-      "y": -298.50797,
-      "value": 28.685715,
-      "category": 7
-    },
-    {
-      "id": "70",
-      "name": "Claquesous",
-      "symbolSize": 19.12381,
-      "x": 137.3717,
-      "y": -410.2809,
-      "value": 28.685715,
-      "category": 7
-    },
-    {
-      "id": "71",
-      "name": "Montparnasse",
-      "symbolSize": 17.295237333333333,
-      "x": 234.87747,
-      "y": -400.85983,
-      "value": 25.942856,
-      "category": 7
     },
     {
       "id": "72",

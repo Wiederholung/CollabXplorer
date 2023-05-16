@@ -1,1 +1,155 @@
-{"nodes": [{"id": "101", "name": "丰雷", "symbolSize": 60, "x": 0, "y": 0, "value": "94", "category": 0, "type": "node"}, {"id": "118", "name": "周凡钦", "symbolSize": 63, "x": 173.5842773400258, "y": 163.2196556131247, "value": "61", "category": 0, "type": "node"}, {"id": "28", "name": "邱雪松", "symbolSize": 51, "x": 183.4144883095142, "y": 66.85835048888985, "value": "293", "category": 0, "type": "node"}, {"id": "90", "name": "郭少勇", "symbolSize": 19, "x": 27.718391748992673, "y": 82.86125627061706, "value": "111", "category": 0, "type": "node"}, {"id": "26", "name": "熊翱", "symbolSize": 13, "x": 1.6865419912363642, "y": 59.273337438254835, "value": "22", "category": 0, "type": "node"}, {"id": "37", "name": "王智立", "symbolSize": 12, "x": 55.640260967534715, "y": 38.15961998958187, "value": "43", "category": 0, "type": "node"}, {"id": "102", "name": "邵苏杰", "symbolSize": 11, "x": 2.223647257634312, "y": 52.06938926177784, "value": "26", "category": 0, "type": "node"}, {"id": "49", "name": "王颖", "symbolSize": 11, "x": 53.49666678022869, "y": 34.91367691277934, "value": "263", "category": 0, "type": "node"}, {"id": "51", "name": "高志鹏", "symbolSize": 11, "x": 26.367099847787447, "y": 56.10961761044763, "value": "118", "category": 0, "type": "node"}], "links": [{"source": "101", "target": "118", "type": "link", "value": 53}, {"source": "101", "target": "28", "type": "link", "value": 41}, {"source": "101", "target": "90", "type": "link", "value": 9}, {"source": "101", "target": "26", "type": "link", "value": 3}, {"source": "101", "target": "37", "type": "link", "value": 2}, {"source": "101", "target": "102", "type": "link", "value": 1}, {"source": "101", "target": "49", "type": "link", "value": 1}, {"source": "101", "target": "51", "type": "link", "value": 1}], "categories": [[{"name": "计算机学院"}, {"name": "数字媒体与设计艺术学院"}, {"name": "其他"}]]}
+{
+    "nodes": [
+        {
+            "id": "101",
+            "name": "丰雷",
+            "symbolSize": 60,
+            "x": 0,
+            "y": 0,
+            "value": "94",
+            "category": 0,
+            "type": "node"
+        },
+        {
+            "id": "118",
+            "name": "周凡钦",
+            "symbolSize": 63,
+            "x": 173.5842773400258,
+            "y": 163.2196556131247,
+            "value": "61",
+            "category": 0,
+            "type": "node"
+        },
+        {
+            "id": "28",
+            "name": "邱雪松",
+            "symbolSize": 51,
+            "x": 183.4144883095142,
+            "y": 66.85835048888985,
+            "value": "293",
+            "category": 0,
+            "type": "node"
+        },
+        {
+            "id": "90",
+            "name": "郭少勇",
+            "symbolSize": 19,
+            "x": 27.718391748992673,
+            "y": 82.86125627061706,
+            "value": "111",
+            "category": 0,
+            "type": "node"
+        },
+        {
+            "id": "26",
+            "name": "熊翱",
+            "symbolSize": 13,
+            "x": 1.6865419912363642,
+            "y": 59.273337438254835,
+            "value": "22",
+            "category": 0,
+            "type": "node"
+        },
+        {
+            "id": "37",
+            "name": "王智立",
+            "symbolSize": 12,
+            "x": 55.640260967534715,
+            "y": 38.15961998958187,
+            "value": "43",
+            "category": 0,
+            "type": "node"
+        },
+        {
+            "id": "102",
+            "name": "邵苏杰",
+            "symbolSize": 11,
+            "x": 2.223647257634312,
+            "y": 52.06938926177784,
+            "value": "26",
+            "category": 0,
+            "type": "node"
+        },
+        {
+            "id": "49",
+            "name": "王颖",
+            "symbolSize": 11,
+            "x": 53.49666678022869,
+            "y": 34.91367691277934,
+            "value": "263",
+            "category": 0,
+            "type": "node"
+        },
+        {
+            "id": "51",
+            "name": "高志鹏",
+            "symbolSize": 11,
+            "x": 26.367099847787447,
+            "y": 56.10961761044763,
+            "value": "118",
+            "category": 0,
+            "type": "node"
+        }
+    ],
+    "links": [
+        {
+            "source": "101",
+            "target": "118",
+            "type": "link",
+            "value": 53
+        },
+        {
+            "source": "101",
+            "target": "28",
+            "type": "link",
+            "value": 41
+        },
+        {
+            "source": "101",
+            "target": "90",
+            "type": "link",
+            "value": 9
+        },
+        {
+            "source": "101",
+            "target": "26",
+            "type": "link",
+            "value": 3
+        },
+        {
+            "source": "101",
+            "target": "37",
+            "type": "link",
+            "value": 2
+        },
+        {
+            "source": "101",
+            "target": "102",
+            "type": "link",
+            "value": 1
+        },
+        {
+            "source": "101",
+            "target": "49",
+            "type": "link",
+            "value": 1
+        },
+        {
+            "source": "101",
+            "target": "51",
+            "type": "link",
+            "value": 1
+        }
+    ],
+    "categories": [
+            {
+                "name": "计算机学院"
+            },
+            {
+                "name": "数字媒体与设计艺术学院"
+            },
+            {
+                "name": "其他"
+            }
+    ]
+}

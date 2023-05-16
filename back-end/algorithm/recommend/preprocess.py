@@ -35,9 +35,9 @@ def get_E_Rij(name_en):
     :return: 返回一个E_Rij的list
     """
     # 从数据库中读取作者的全部文章的作者数列表X_ij_list
-    X_ij_list = db_utils.get_all_authorNum_per_person(name_en)  # TODO：写一个函数，从数据库中读取作者的全部文章的作者数列表X_ij_list
+    X_ij_list = db_utils.get_all_authorNum_per_person(name_en)
     # 从数据控中读取作者在每篇文章中的排名K_ij_list
-    K_ij_list = db_utils.get_all_rank_per_person(name_en)  # TODO：写一个函数，从数据库中读取作者在每篇文章中的排名K_ij_list
+    K_ij_list = db_utils.get_all_rank_per_person(name_en)
     # E_Rij_list用于保存每个E_Rij
     E_Rij_list = []
 
