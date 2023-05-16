@@ -51,6 +51,11 @@ def get_abstract_by_crawler(url):
 
 
 def retrieve_citations(doi):
+    """
+    获取某篇论文的引用数
+    :param doi:
+    :return:
+    """
     # Construct the URL for the given DOI
     citations = 0
     url = f'https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q={doi}&btnG='
@@ -87,8 +92,8 @@ if __name__ == '__main__':
     print(get_abstract_by_crawler(url0))
 
     # Get the DOI from the user
-    DOI = input('Enter DOI: ')
-    # DOI = "10.1109/MCOM.2017.1500657CM"
+    # DOI = input('Enter DOI: ')
+    DOI = "10.1109/MCOM.2017.1500657CM"
 
     # Call the retrieve_citations() function and print the result
     print(f'{DOI} has {retrieve_citations(DOI)} citations.')
