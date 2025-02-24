@@ -1,2 +1,3 @@
 # CollabXplore: Mining and Recommendation of Interdisciplinary Academic Collaboration
-本项目旨在通过对学者的研究成果进行语义分析，构建基于语义、社会关系等因素的多维合作网络，从而实现对跨学科潜在学术合作关系发现与推荐。
+
+The project introduces CollabXplorer, a system designed to facilitate interdisciplinary collaborations and the discovery of potential collaborators. Global semantic information and social influence are utilized to create a scholar embedding model, which converts academic information into vector representations to identify potential collaborators from various scholarly fields. To suggest suitable collaborators, the system applies a recommendation algorithm based on user prompts and scholars’ influence. User-friendly visual interface aids in presenting the system’s outcomes. We also conducted evaluation and testing experiments, which show that the system provides a good scholar vector representation and high recommendation accuracy, thus, making it suitable for large-scale applications.
